@@ -2,57 +2,508 @@
 \chapter{METODE PENELITIAN} \label{Bab III}
 
 \section{Alur Penelitian} \label{III.Alur}
-Pada penelitian ini, alur dirancang untuk memastikan setiap tahapan pemrosesan dilakukan secara sistematis dan efisien. Alur penelitian ini mencerminkan langkah-langkah utama terkait bagaimana proses yang dilakukan dalam penelitian, dari awal sampai dengan akhir. Gambarkan dalam bentuk diagram alir (\textit{flowchart}) seperti yang terlihat pada Gambar \ref{fig:3.alur}. \par
-
+Adapun alur penelitian pengembangan sistem pembagian kelompok yang dapat dilihat pada gambar 3.1.
 \begin{figure}[H] % Kalau menggunakan H, posisi gambar akan tepat dibawah teks
-    \centering
-    \includegraphics[width=0.6\textwidth]{figure/flowchart.jpg}
-    \caption{Alur Penelitian}
-    \label{fig:3.alur}
+	\centering
+	\includegraphics[width=0.56\textwidth]{figure/chapter-3/alur.pdf}
+	\caption{Alur Penelitian}
+	\label{fig:3.alur}
 \end{figure}
 
 \section{Penjabaran Langkah Penelitian} \label{III.Jabar Alur}
-Jelaskan secara general langkah-langkah alur penelitian, yang sudah tergambar dalam flowchart di subbab \ref{III.Alur}. Subsubbab berikut harus sesuai dengan jumlah entitas langkah pada alur penelitian. \par
+Bagian ini akan menjelaskan secara detail tentang diagram alur penelitian yang telah dibuat.
 
-\subsection{Langkah 1} \label{III.Langkah 1}
-Penjelasan Langkah 1. \par
+\subsection{Identifikasi Masalah} \label{III.Langkah 1}
+Tahap ini mengidentifikasi permasalahan dalam proses pembagian kelompok mahasiswa yang dilakukan secara manual. Metode tradisional, seperti pembagian berdasarkan nomor urut, daftar absen, atau pertemanan, sering kali menghasilkan kelompok yang tidak seimbang. Masalah ini dapat menyebabkan ketidakseimbangan keterampilan antaranggota, konflik pribadi, dan motivasi belajar yang menurun. Sebagai solusi, sistem berbasis \textit{Edu2Com API}, yang dikembangkan oleh \textit{CSIC}, memungkinkan pembagian kelompok secara otomatis berdasarkan 4 parameter utama: kesesuaian keterampilan (\textit{skill match}), kompatibilitas kepribadian, preferensi tugas, dan kohesi tim. Berdasarkan hasil observasi, sistem ini memerlukan \textit{dashboard} yang dapat digunakan oleh dosen dan mahasiswa. Penelitian ini fokus pada pengembangan sistem berbasis metodologi \textit{Agile Kanban}. \par
 
-\subsection{Langkah 2} \label{III.Langkah 2}
-Penjelasan Langkah 2. \par
+\subsection{Studi Literatur} \label{III.Langkah 2}
+Pada tahap ini, dilakukan kajian pustaka dengan menganalisis metode dan pendekatan yang mencakup studi-studi terdahulu yang berkaitan dengan pembentukan kelompok berbasis \textit{AI} dan metode pengembangan perangkat lunak. Materi literatur ini dirangkum dalam tabel kajian pustaka pada bab 2 untuk memberikan gambaran terkait kontribusi penelitian sebelumnya serta relevansinya dengan penelitian yang dilakukan. \par
+
+\subsection{Implementasi Metode Agile Kanban} \label{III.Langkah 3}
+Melakukan penelitian dan pengembangan dengan menggunakan metode \textit{Agile Kanban} yang akan dijelaskan pada sub-bab 3.4. Dalam pengembangan menggunakan metode \textit{Agile Kanban}, tahapan yang dilakukan meliputi 4 tahapan mulai dari perencanaan, pengembangan, dan pengujian/evaluasi sistem. \par
+
+\subsection{Pembahasan} \label{III.Langkah 4}
+Hasil penelitian akan dibahas secara mendetail, mencakup analisis kinerja sistem, tingkat efektivitas pembagian kelompok, dan kemudahan penggunaan \textit{dashboard}. Evaluasi dilakukan secara kuantitatif berdasarkan \textit{Grey Box Testing}. Jika terdapat masalah atau kekurangan pada bagian pengujian, iterasi pengembangan dilakukan sebanyak 2 kali untuk memastikan semua komponen bekerja optimal. \par
+
+\subsection{Kesimpulan} \label{III.Langkah 5}
+Tahap akhir penelitian ini menyimpulkan hasil pengembangan sistem pembagian kelompok. Hasil kesimpulan ini menekankan pencapaian utama dari penelitian serta membuka peluang untuk pengembangan lebih lanjut. \par
 
 \section{Alat dan Bahan Tugas Akhir} \label{III.Alat dan Bahan}
 Berisi alat-alat dan bahan-bahan yang digunakan dalam penelitian. \par
 
 \subsection{Alat} \label{III.Alat}
-Alat yang digunakan untuk melakukan penelitian, dapat berupa computer, PC, Arduino, raspberry, etc. Contoh: \par
+Alat yang digunakan untuk melakukan penelitian yaitu: \par
 \begin{enumerate}[noitemsep]
-	\item \textit{Notebook} dengan spesifikasi minumum sistem operasi Windows 11, processor AMD Ryzen 5 7430 CPU @ 6 core/2,3 GHz, RAM 16GB DDR4, grafis AMD Radeon RX Vega 7 2GB, SSD 512 GB.
-	\item \textit{Smartphone} dengan spesifikasi OS Android OS 12, CPU Snapdragon 778G Octa-core, GPU Adreno 642L, memori 128 GB, RAM 6 GB.
-	\item Platform game engine Godot v4.3
-	\item Code editor Microsoft Visual Studio Code
-	\item Github
+	\item Laptop dengan spesifikasi:
+	      \begin{enumerate}[noitemsep]
+		      \item \textit{Processor} \textit{AMD Ryzen} 5 5500U (12) @ 4.06 GHz
+		      \item \textit{RAM} 16GB
+		      \item Sistem Operasi \textit{Fedora Linux} 64-bit
+		      \item \textit{SSD} 512GB
+	      \end{enumerate}
+	\item \textit{Zed Editor}
+	\item \textit{Bun}
+	\item \textit{Git}
+	\item \textit{Helium Browser}
+	\item \textit{LaTeX}
+	\item \textit{Draw.io}
 \end{enumerate}
 
 \subsection{Bahan} \label{III.Bahan}
 Bahan yang digunakan/diperlukan untuk melakukan penelitian, dapat berupa: \par
 \begin{enumerate}[noitemsep]
-	\item Dataset pihak lain yang diperoleh dengan izin atau dalam lisensi yang diizinkan untuk digunakan secara langsung,
-	\item Dataset pihak pertama yang disusun sendiri melalui quisioner, observasi, atau interview,
-	\item Dokumen panduan yang mengacu pada standar, hasil tugas akhir, atau artikel yang disitasi dan digunakan. 
+	\item Pertanyaan \textit{MBTI} yang diperoleh dari \textit{Openpsychometrics} yang bersifat \textit{open source}.
+	\item Spesifikasi \textit{API Edu2Com} untuk layanan pembentukan kelompok otomatis.
 \end{enumerate}
 
 \section{Metode Pengembangan} \label{III.Metode}
-Membahas mengenai metode yang digunakan dalam penelitian, berdasarkan dasar teori yang sebelumnya sudah dijelaskan pada subbab \ref{II.Teori}. Setiap Tugas Akhir wajib memiliki metode dalam pelaksanaannya yang sesuai dengan penelitian yang dikerjakan: \par
-\begin{enumerate}[noitemsep]
-	\item Alur pengembangan tugas akhir, menggunakan flowchart
-	\item Cara pengumpulan data yang digunakan (Kuesioner, Wawancara, pengujian, dan lainnya)
-	\item Metode pengembangan tugas akhir (Metode Waterfall, Agile, RAD, dan lainnya).
-	\item Metode pengujian penelitian
-\end{enumerate}
-Subbab ini akan berhubungan erat dengan Bab \ref{Bab IV}. \par
 
-\section{Ilustrasi Perhitungan Metode} \label{III.Ilustrasi}
-Penjelasan contoh perhitungan bagi penelitian tugas akhir yang menggunakan algoritma perhitungan tertentu. Rumus perhitungan berdasarkan rumus yang sudah dijelaskan sebelumnya di Bab \ref{II.Teori}. \par
+\subsection{Tahap Perencanaan} \label{III.Perencanaan}
+Tahap perencanaan meliputi identifikasi kebutuhan pengguna, pembuatan daftar fitur, dan perumusan \textit{backlog} awal. Diskusi dilakukan bersama calon pengguna (dosen), rekan proyek, serta \textit{brainstorming} mandiri untuk menentukan fitur prioritas yang akan dikembangkan. \textit{Backlog} disusun berdasarkan kebutuhan pengguna yang dikumpulkan dari proses wawancara \textit{stakeholder} (Dosen dan Mahasiswa Informatika Institut Teknologi Sumatera) dan ditampilkan dalam papan \textit{Kanban} dengan kolom-kolom: \textit{To Do}, \textit{In Progress}, \textit{Testing}, dan \textit{Done}. Pembatasan \textit{WIP} diberlakukan untuk menjaga fokus pengembang dan menghindari \textit{multitasking} berlebih, untuk penelitian ini \textit{WIP} dibatasi menjadi 2 progres per tugas pengembangan.
 
-\section{Rancangan Pengujian} \label{III.Rancang_Uji}
-Penjabaran terkait rancangan pengujian, pengujian perangkat keras, lunak, fungsional, dan non-fungsional. Berikan juga hipotesis hasil yang diharapkan dari penelitian. \par
+\subsubsection{Kebutuhan Fungsional} \label{III.Kebutuhan_Fungsional}
+Menganalisis kebutuhan fungsional sistem berdasarkan proses-proses yang akan dijalankan oleh sistem, disesuaikan dengan kebutuhan pengguna. Dari analisis tersebut, dapat dirumuskan beberapa poin pada tabel 3.1 berikut:
+
+\begin{longtable}{| b{0.1\textwidth}|p{0.3\textwidth}|p{0.4\textwidth}|}
+	\caption{Kebutuhan Fungsional}
+	\label{table:3.fungsional}                                                                              \\
+	\hline
+	\textbf{Kode} & \textbf{Aktor Pengguna} & \textbf{Deskripsi}                                            \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Kode} & \textbf{Aktor Pengguna} & \textbf{Deskripsi}                                            \\
+	\hline
+	\endhead
+	F-01          & Mahasiswa dan Dosen     & Melakukan autentikasi                                         \\
+	\hline
+	F-02          & Mahasiswa dan Dosen     & Melihat hasil pembagian kelompok                              \\
+	\hline
+	F-03          & Mahasiswa dan Dosen     & Melihat persebaran \textit{MBTI} dan \textit{skill} mahasiswa \\
+	\hline
+	F-04          & Mahasiswa dan Dosen     & Melihat penjelasan \textit{MBTI}                              \\
+	\hline
+	F-05          & Mahasiswa dan Dosen     & Mengganti bahasa                                              \\
+	\hline
+	F-06          & Dosen                   & Membuat \textit{class}                                        \\
+	\hline
+	F-07          & Dosen                   & Membuat \textit{task}                                         \\
+	\hline
+	F-08          & Dosen                   & Membuat kuesioner                                             \\
+	\hline
+	F-09          & Dosen                   & Melihat riwayat pertanyaan kuesioner                          \\
+	\hline
+	F-10          & Dosen                   & Membagikan tautan kuesioner                                   \\
+	\hline
+	F-11          & Dosen                   & Melihat daftar mahasiswa                                      \\
+	\hline
+	F-12          & Dosen                   & Melihat jawaban kuesioner mahasiswa                           \\
+	\hline
+	F-13          & Dosen                   & Melakukan pembagian kelompok                                  \\
+	\hline
+	F-14          & Dosen                   & Melihat kualitas kelompok                                     \\
+	\hline
+	F-16          & Dosen                   & \textit{Import} hasil pembagian kelompok                      \\
+	\hline
+	F-17          & Mahasiswa               & Mengerjakan kuesioner                                         \\
+	\hline
+	F-18          & Mahasiswa               & Melihat hasil kuesioner sendiri                               \\
+	\hline
+	F-19          & Mahasiswa               & Melihat riwayat pembagian kelompok                            \\
+	\hline
+\end{longtable}
+
+\subsubsection{Kebutuhan Non-Fungsional} \label{III.Kebutuhan_NonFungsional}
+Menentukan kebutuhan yang berfokus pada properti perilaku yang dimiliki oleh sistem. Analisis kebutuhan non-fungsional dilakukan untuk menentukan spesifikasi kebutuhan sistem. Berikut ini adalah tabel 3.2 kebutuhan non-fungsional:
+
+\begin{longtable}{| b{0.1\textwidth}|p{0.2\textwidth}|p{0.5\textwidth}|}
+	\caption{Kebutuhan Non-Fungsional}
+	\label{table:3.nonfungsional}                                                                                                                         \\
+	\hline
+	\textbf{Kode} & \textbf{Parameter}      & \textbf{Deskripsi}                                                                                          \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Kode} & \textbf{Parameter}      & \textbf{Deskripsi}                                                                                          \\
+	\hline
+	\endhead
+	NF-01         & \textit{Reliability}    & Sistem berjalan dengan semestinya dan sesuai dengan tujuan di rancangan awal                                \\
+	\hline
+	NF-02         & \textit{Portability}    & Sistem dapat dijalankan diberbagai \textit{web browser}, seperti Google Chrome, Microsoft Edge, dan lainnya \\
+	\hline
+	NF-03         & \textit{Responsiveness} & Sistem dapat memuat halaman dan hasil pembagian dengan cepat                                                \\
+	\hline
+	NF-04         & \textit{Supportability} & Sistem dapat menggunakan Bahasa Indonesia dan Bahasa Inggris                                                \\
+	\hline
+	NF-05         & \textit{Security}       & Sistem dapat digunakan oleh pengguna yang telah terotentikasi                                               \\
+	\hline
+\end{longtable}
+
+\subsubsection{Backlog Awal} \label{III.Backlog_Awal}
+Pada tahap perencanaan, seluruh kebutuhan fungsional dan teknis yang telah diidentifikasi dirumuskan menjadi daftar \textit{backlog} awal, yang berfungsi sebagai dasar proses pengembangan menggunakan metode \textit{Agile Kanban}. \textit{Backlog} ini memuat daftar fitur dan tugas utama yang akan direalisasikan selama siklus pengembangan, baik dari sisi pengguna (dosen dan mahasiswa) maupun sisi teknis (inisialisasi proyek, integrasi API, pengujian, dan \textit{deployment}).
+
+Setiap item \textit{backlog} didefinisikan berdasarkan fungsi sistem, peran pengguna, serta tanggung jawab teknis pengembang, dan diurutkan berdasarkan tingkat prioritas terhadap keberhasilan sistem. Fitur seperti \textit{login}, pembentukan kelompok otomatis, dan pengerjaan kuesioner memiliki prioritas tinggi karena menjadi inti dari sistem, sedangkan fitur tambahan seperti visualisasi persebaran MBTI atau penggantian bahasa diletakkan pada prioritas rendah karena tidak berdampak langsung terhadap kelayakan fungsi utama.
+
+\textit{Backlog} ini juga mencakup aktivitas teknis non-fungsional, seperti inisialisasi proyek \textit{backend} dan \textit{frontend}, pengaturan struktur \textit{database}, serta integrasi API Edu2Com. Hal ini mencerminkan kenyataan bahwa dalam penelitian ini, peneliti berperan sebagai pengembang tunggal yang bertanggung jawab terhadap keseluruhan aspek teknis sistem.
+
+Setiap item \textit{backlog} akan dipetakan ke dalam papan \textit{Kanban} dengan status awal berada di kolom \textit{To Do}, dan akan berpindah ke kolom \textit{Doing}, \textit{Testing}, dan \textit{Done} seiring progres pengembangan. Dengan demikian, \textit{backlog} awal ini berfungsi sebagai acuan visual sekaligus operasional dalam menjalankan tahapan \textit{Agile Kanban} secara sistematis.
+
+\begin{longtable}{| b{0.08\textwidth}|p{0.5\textwidth}|p{0.22\textwidth}|}
+	\caption{Tabel Backlog Awal}
+	\label{table:3.backlog}                                                                                             \\
+	\hline
+	\textbf{No} & \textbf{Tugas / Fitur}                                                           & \textbf{Prioritas} \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{No} & \textbf{Tugas / Fitur}                                                           & \textbf{Prioritas} \\
+	\hline
+	\endhead
+	1           & Inisialisasi \textit{frontend}                                                   & SANGAT TINGGI      \\
+	\hline
+	2           & Inisialisasi \textit{backend}                                                    & SANGAT TINGGI      \\
+	\hline
+	3           & \textit{Setup Database} dan \textit{ERD}                                         & SANGAT TINGGI      \\
+	\hline
+	4           & Integrasi \textit{API Edu2Com}                                                   & SANGAT TINGGI      \\
+	\hline
+	5           & Autentikasi \textit{login} dan Manajemen \textit{Sesi}                           & TINGGI             \\
+	\hline
+	6           & \textit{Logout} dari sistem                                                      & TINGGI             \\
+	\hline
+	7           & Pemilihan bahasa (Inggris dan Indonesia)                                         & RENDAH             \\
+	\hline
+	8           & Membuat \textit{class} dan Mengelola \textit{classroom}                          & TINGGI             \\
+	\hline
+	9           & Membuat \textit{task}                                                            & TINGGI             \\
+	\hline
+	10          & Melihat Daftar Mahasiswa                                                         & SEDANG             \\
+	\hline
+	11          & Membuat kuesioner kepribadian, \textit{skill}, preferensi                        & TINGGI             \\
+	\hline
+	12          & Mengerjakan kuesioner oleh mahasiswa                                             & TINGGI             \\
+	\hline
+	13          & Menyimpan hasil kuesioner ke \textit{database}                                   & TINGGI             \\
+	\hline
+	14          & Melihat hasil kuesioner                                                          & TINGGI             \\
+	\hline
+	15          & Membagikan tautan kuesioner                                                      & TINGGI             \\
+	\hline
+	16          & Proses pembentukan kelompok otomatis melalui \textit{API}                        & SANGAT TINGGI      \\
+	\hline
+	17          & Validasi respon \textit{API} \& \textit{mapping} data ke \textit{Database}       & TINGGI             \\
+	\hline
+	18          & Melihat hasil pembagian kelompok                                                 & TINGGI             \\
+	\hline
+	19          & Melihat riwayat pertanyaan kuesioner                                             & TINGGI             \\
+	\hline
+	20          & Melihat kualitas kelompok                                                        & SEDANG             \\
+	\hline
+	21          & \textit{Import} hasil pembagian kelompok                                         & SEDANG             \\
+	\hline
+	22          & Dosen dapat \textit{edit} anggota kelompok (\textit{manual override})            & SEDANG             \\
+	\hline
+	23          & Melihat persebaran \textit{MBTI} dan \textit{skill} mahasiswa (\textit{diagram}) & RENDAH             \\
+	\hline
+	24          & Melihat penjelasan \textit{MBTI}                                                 & SEDANG             \\
+	\hline
+	25          & Pengujian \textit{Grey Box} terhadap fitur utama                                 & TINGGI             \\
+	\hline
+	26          & \textit{Deployment} aplikasi ke \textit{server}                                  & SEDANG             \\
+	\hline
+\end{longtable}
+
+\subsubsection{Use Case Diagram} \label{III.UseCase}
+\textit{Use case diagram} merupakan suatu diagram yang menggambarkan fungsi dasar pada sistem dan juga sebagai alat yang menggambarkan interaksi sistem dengan lingkungannya. Diagram ini menjelaskan aktivitas apa saja yang dapat dilakukan oleh setiap aktor pada sistem. Berikut \textit{use case diagram} yang digunakan pada penelitian, yang dijelaskan pada gambar 3.2 berikut:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{figure/chapter-3/usecase.pdf}
+	\caption{\textit{Use Case Diagram} Sistem Pembagian Kelompok}
+	\label{fig:3.usecase}
+\end{figure}
+
+\subsubsection{Activity Diagram} \label{III.ActivityDiagram}
+\textit{Activity diagram} merupakan teknik permodelan sistem yang digunakan untuk mengilustrasikan alur ataupun kegiatan utama dan hubungan diantara kegiatan yang terjadi dengan sistem. Adapun \textit{activity diagram} pada penelitian ini, yaitu sebagai berikut:
+
+\paragraph{a. Activity Diagram Melakukan Autentikasi}
+Gambar \ref{fig:3.activity-login} menampilkan proses \textit{login} dosen dan mahasiswa ke dalam sistem menggunakan akun Google. Proses dimulai ketika pengguna mengakses \textit{web}, lalu sistem menampilkan halaman awal (\textit{landing page}). Pengguna kemudian menekan tombol \textit{login}, dan sistem akan menampilkan halaman \textit{login}. Setelah pengguna memilih akun Google, sistem melakukan proses verifikasi akun. Jika verifikasi gagal, proses \textit{login} dihentikan. Namun, jika verifikasi berhasil, sistem akan menampilkan \textit{dashboard} sesuai peran pengguna.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-login.pdf}
+	\caption{\textit{Activity Diagram Login}}
+	\label{fig:3.activity-login}
+\end{figure}
+
+Gambar \ref{fig:3.activity-registrasi} menampilkan alur proses \textit{login} dan pengisian data awal oleh pengguna yang terdiri dari mahasiswa dan dosen. Proses dimulai ketika pengguna mengakses \textit{web} dan sistem menampilkan halaman awal, kemudian dilanjutkan dengan menekan tombol \textit{login} dan memilih akun Google. Setelah sistem memverifikasi akun, pengguna akan diarahkan ke halaman pemilihan \textit{role}. Jika pengguna memilih \textit{role} sebagai dosen, maka sistem meminta \textit{input} kode \textit{token} untuk validasi. Jika \textit{token} valid, dosen diminta mengisi data diri, dan apabila data sesuai kriteria, proses dilanjutkan ke halaman \textit{dashboard}. Sebaliknya, jika pengguna memilih \textit{role} sebagai mahasiswa, maka setelah mengisi data diri yang sesuai kriteria, sistem menampilkan halaman tes kepribadian untuk diisi. Setelah data tes kepribadian disimpan, sistem akan mengarahkan mahasiswa ke halaman \textit{dashboard}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-registrasi.pdf}
+	\caption{\textit{Activity Diagram} Registrasi Akun}
+	\label{fig:3.activity-registrasi}
+\end{figure}
+
+Gambar \ref{fig:3.activity-logout} menampilkan proses \textit{logout} dari sistem yang dilakukan oleh dosen maupun mahasiswa. Proses dimulai ketika pengguna telah berada pada tampilan \textit{dashboard} dan memilih untuk keluar dari akun dengan menekan tombol \textit{logout}. Sistem kemudian menampilkan \textit{pop-up} notifikasi untuk meminta konfirmasi apakah pengguna benar-benar ingin keluar. Jika pengguna membatalkan, maka proses berhenti dan tetap berada di \textit{dashboard}. Namun, jika pengguna menyetujui untuk keluar, maka sistem akan mengarahkan kembali ke halaman awal (\textit{landing page}) sebagai akhir dari proses \textit{logout}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-logout.pdf}
+	\caption{\textit{Activity Diagram Logout}}
+	\label{fig:3.activity-logout}
+\end{figure}
+
+\paragraph{b. Activity Diagram Melihat Hasil Pembagian Kelompok}
+Gambar \ref{fig:3.activity-lihat-kelompok} menampilkan proses yang dilakukan oleh dosen atau mahasiswa untuk melihat hasil pembagian kelompok. Proses dimulai ketika pengguna mengakses halaman \textit{dashboard} dan memilih \textit{task} atau menu yang berkaitan dengan informasi pembagian kelompok. Sistem kemudian akan memeriksa apakah proses pembagian kelompok telah dilakukan. Jika kelompok belum terbagi, maka sistem tidak menampilkan apa pun. Namun jika pembagian kelompok sudah dilakukan, maka sistem akan menampilkan daftar kelompok yang telah terbentuk kepada pengguna.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-lihat-kelompok.pdf}
+	\caption{\textit{Activity Diagram} Melihat Hasil Pembagian Kelompok}
+	\label{fig:3.activity-lihat-kelompok}
+\end{figure}
+
+\paragraph{c. Activity Diagram Melihat Persebaran MBTI, Keahlian, Preferensi, dan Jenis Kelamin Mahasiswa}
+Gambar \ref{fig:3.activity-persebaran} menampilkan proses yang dilakukan oleh dosen dan mahasiswa untuk melihat persebaran MBTI dan keterampilan dalam suatu kelas. Proses dimulai saat pengguna mengakses kelas, kemudian memilih \textit{task} atau tugas yang berkaitan. Setelah itu, sistem menampilkan halaman \textit{task} yang memuat informasi terkait. Pada halaman tersebut, sistem secara otomatis menampilkan diagram visual yang menunjukkan persebaran tipe kepribadian MBTI, keterampilan, preferensi dan jenis kelamin dari seluruh anggota kelas, yang dapat digunakan sebagai dasar untuk analisis atau pembentukan kelompok.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-persebaran.pdf}
+	\caption{\textit{Activity Diagram} Melihat Persebaran MBTI, Keahlian, Preferensi, dan Jenis Kelamin Mahasiswa}
+	\label{fig:3.activity-persebaran}
+\end{figure}
+
+\paragraph{d. Activity Diagram Melihat Penjelasan MBTI}
+Gambar \ref{fig:3.activity-penjelasan-mbti} menampilkan proses interaksi dosen dan mahasiswa untuk melihat penjelasan dari tipe kepribadian MBTI. Proses dimulai saat pengguna mengakses kelas, kemudian membuka halaman \textit{task} yang berkaitan. Setelah sistem menampilkan diagram persebaran MBTI dari seluruh anggota kelas, pengguna dapat mengklik salah satu tipe MBTI yang ada pada diagram tersebut. Sistem kemudian akan menampilkan penjelasan lengkap mengenai tipe MBTI yang dipilih, sehingga pengguna dapat memahami karakteristik kepribadian tersebut secara lebih mendalam.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-penjelasan-mbti.pdf}
+	\caption{\textit{Activity Diagram} Melihat Penjelasan MBTI}
+	\label{fig:3.activity-penjelasan-mbti}
+\end{figure}
+
+\paragraph{e. Activity Diagram Mengganti Bahasa}
+Gambar \ref{fig:3.activity-ganti-bahasa} menampilkan proses pemilihan bahasa tampilan sistem oleh dosen dan mahasiswa. Proses dimulai ketika pengguna mengakses \textit{dashboard}, kemudian memilih opsi untuk mengganti bahasa. Sistem akan menampilkan pilihan bahasa yang tersedia, yaitu Bahasa Indonesia dan Bahasa Inggris. Pengguna kemudian memilih salah satu bahasa sesuai preferensinya, dan sistem akan menyimpan pilihan tersebut melalui proses \textit{submit}, sehingga tampilan sistem akan disesuaikan dengan bahasa yang dipilih.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-ganti-bahasa.pdf}
+	\caption{\textit{Activity Diagram} Mengganti Bahasa}
+	\label{fig:3.activity-ganti-bahasa}
+\end{figure}
+
+\paragraph{f. Activity Diagram Membuat Kelas}
+Gambar \ref{fig:3.activity-buat-kelas} menampilkan proses yang dilakukan oleh dosen untuk membuat kelas baru dalam sistem. Proses dimulai ketika dosen mengakses \textit{dashboard}, lalu memilih menu \textit{Create Class}. Setelah itu, sistem akan menampilkan halaman pembuatan kelas. Dosen kemudian mengisi nama kelas dan deskripsi kelas yang ingin dibuat. Proses ini bertujuan untuk mendefinisikan informasi dasar sebelum kelas dapat digunakan untuk aktivitas pembelajaran atau pembentukan kelompok.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-buat-kelas.pdf}
+	\caption{\textit{Activity Diagram} Membuat Kelas}
+	\label{fig:3.activity-buat-kelas}
+\end{figure}
+
+\paragraph{g. Activity Diagram Membuat Tugas}
+Gambar \ref{fig:3.activity-buat-tugas} menampilkan proses pembuatan \textit{task} oleh dosen dalam sebuah kelas. Proses dimulai ketika dosen mengakses halaman kelas, lalu memilih opsi \textit{Create Task}. Sistem kemudian menampilkan halaman untuk pembuatan \textit{task}. Dosen mengisi nama \textit{task}, deskripsi \textit{task}, serta jumlah kelompok yang diinginkan. Proses ini bertujuan untuk mendefinisikan tugas yang akan digunakan sebagai dasar dalam pembentukan kelompok atau aktivitas pembelajaran mahasiswa dalam kelas tersebut.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-buat-tugas.pdf}
+	\caption{\textit{Activity Diagram} Membuat Tugas}
+	\label{fig:3.activity-buat-tugas}
+\end{figure}
+
+\paragraph{h. Activity Diagram Membuat Kuesioner}
+Gambar \ref{fig:3.activity-kuesioner-skill} menjelaskan alur kerja saat dosen menambahkan komponen \textit{skill} ke dalam sebuah tugas. Proses ini diawali ketika dosen mengakses fitur pembuatan tugas dan mengisi persyaratan umumnya. Selanjutnya, dosen menuju ke bagian \textit{skill}, di mana sistem akan menampilkan daftar \textit{skill} yang sudah tersedia. Pada tahap ini, dosen dihadapkan pada pilihan untuk menambah \textit{skill} baru: jika dosen memilih untuk tidak menambah \textit{skill} baru, maka ia akan memilih salah satu \textit{skill} dari daftar yang ada. Namun, jika dosen memilih untuk menambah \textit{skill} baru, maka ia akan menuliskan nama untuk \textit{skill} baru tersebut. Setelah \textit{skill} dipilih atau dibuat, sistem akan meng-\textit{input} data \textit{skill} tersebut ke dalam tugas, dan alur aktivitas pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-kuesioner-skill.pdf}
+	\caption{\textit{Activity Diagram} Membuat Kuesioner \textit{Skill}}
+	\label{fig:3.activity-kuesioner-skill}
+\end{figure}
+
+Gambar \ref{fig:3.activity-kuesioner-preferensi} menampilkan alur kerja saat dosen menambahkan komponen preferensi pada sebuah tugas. Proses ini diawali saat dosen mengakses fitur pembuatan tugas dan mengisi persyaratan dasarnya. Setelah itu, dosen menuju ke bagian (\textit{section}) preferensi, dan sistem akan menampilkan daftar preferensi yang sudah ada. Dosen kemudian dihadapkan pada pilihan: jika tidak ingin menambah preferensi baru, ia akan memilih salah satu preferensi yang tersedia dari daftar. Sebaliknya, jika ingin membuat preferensi baru, ia akan menuliskan nama untuk preferensi baru tersebut. Setelah preferensi dipilih atau dibuat, sistem akan menyimpan data yang di-\textit{input} dan proses penambahan preferensi ini pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-kuesioner-preferensi.pdf}
+	\caption{\textit{Activity Diagram} Membuat Kuesioner Preferensi}
+	\label{fig:3.activity-kuesioner-preferensi}
+\end{figure}
+
+\paragraph{i. Activity Diagram Melihat Riwayat Pertanyaan Kuesioner}
+Gambar \ref{fig:3.activity-riwayat-kuesioner} menampilkan alur kerja dosen untuk melihat riwayat pertanyaan yang terkait dengan \textit{skill} atau preferensi. Proses ini dimulai saat dosen mengakses halaman tugas, kemudian langsung menuju ke bagian (\textit{section}) \textit{skill} atau preferensi. Sistem akan merespons dengan menampilkan halaman \textit{Edit Question}. Dari halaman tersebut, dosen mengklik \textit{bar} pencarian untuk melihat riwayat pertanyaan. Setelah itu, sistem akan menampilkan riwayat pertanyaan yang tersimpan, dan proses untuk melihat riwayat ini pun berakhir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-riwayat-kuesioner.pdf}
+	\caption{\textit{Activity Diagram} Melihat Riwayat Pertanyaan Kuesioner}
+	\label{fig:3.activity-riwayat-kuesioner}
+\end{figure}
+
+\paragraph{j. Activity Diagram Membagikan Tautan Kuesioner}
+Gambar \ref{fig:3.activity-bagikan-tautan} menampilkan proses dosen saat akan membagikan kelas kepada mahasiswa. Alur dimulai ketika dosen mengakses halaman kelas yang ingin dibagikan, lalu sistem akan menampilkan detail dari halaman kelas tersebut. Pada halaman itu, dosen menekan tombol "bagikan". Setelahnya, dosen menyalin tautan atau \textit{token} yang disediakan oleh sistem untuk dibagikan, dan proses untuk mendapatkan tautan kelas ini pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-bagikan-tautan.pdf}
+	\caption{\textit{Activity Diagram} Membagikan Tautan Kuesioner}
+	\label{fig:3.activity-bagikan-tautan}
+\end{figure}
+
+\paragraph{k. Activity Diagram Melihat Daftar Mahasiswa}
+Gambar \ref{fig:3.activity-daftar-mahasiswa} menjelaskan alur kerja dosen untuk melihat daftar mahasiswa yang terkait dengan sebuah kelas. Proses dimulai saat dosen mengakses halaman \textit{dashboard}, kemudian ia memilih salah satu kelas yang ingin dilihat. Setelah itu, tampilan akan beralih ke halaman kelas dan daftar mahasiswa juga akan ditampilkan di halaman tersebut.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-daftar-mahasiswa.pdf}
+	\caption{\textit{Activity Diagram} Melihat Daftar Mahasiswa}
+	\label{fig:3.activity-daftar-mahasiswa}
+\end{figure}
+
+\paragraph{l. Activity Diagram Melihat Jawaban Kuesioner Mahasiswa}
+Gambar \ref{fig:3.activity-jawaban-mahasiswa} menggambarkan alur kerja dosen ketika akan melihat jawaban mahasiswa pada suatu tugas. Proses diawali ketika dosen mengakses salah satu kelasnya, dan sistem menampilkan halaman kelas tersebut. Dari halaman kelas, dosen kemudian memilih salah satu tugas (\textit{task}) yang ingin diperiksa, lalu sistem akan menampilkan halaman detail tugas itu. Selanjutnya, dosen menekan tombol "lihat jawaban", dan sistem akan merespons dengan menampilkan hasil jawaban dari mahasiswa untuk tugas yang dipilih, kemudian proses pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-jawaban-mahasiswa.pdf}
+	\caption{\textit{Activity Diagram} Melihat Jawaban Kuesioner Mahasiswa}
+	\label{fig:3.activity-jawaban-mahasiswa}
+\end{figure}
+
+\paragraph{m. Activity Diagram Melakukan Pembagian Kelompok}
+Gambar \ref{fig:3.activity-bagi-kelompok} menjelaskan alur kerja dosen dalam mengelola kelompok mahasiswa untuk suatu tugas. Proses dimulai saat dosen mengakses \textit{dashboard} dan memilih tugas yang diinginkan. Setelah itu, sistem akan memeriksa apakah kelompok untuk tugas tersebut sudah terbagi atau belum. Jika kelompok sudah ada, sistem akan langsung menampilkan daftar kelompok mahasiswa. Namun, jika kelompok belum terbagi, dosen akan melakukan aksi dengan menekan tombol "bagi kelompok" untuk memulai proses pembagian. Alur kerja ini berakhir setelah kelompok ditampilkan atau setelah dosen memulai aksi untuk membagi kelompok.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-bagi-kelompok.pdf}
+	\caption{\textit{Activity Diagram} Melakukan Pembagian Kelompok}
+	\label{fig:3.activity-bagi-kelompok}
+\end{figure}
+
+\paragraph{n. Activity Diagram Melihat Kualitas Kelompok}
+Gambar \ref{fig:3.activity-kualitas-kelompok} menunjukkan alur kerja dosen untuk melihat kualitas sebuah kelompok pada tugas tertentu. Proses diawali saat dosen mengakses \textit{dashboard} dan memilih salah satu tugas. Sistem kemudian akan memeriksa apakah kelompok pada tugas tersebut sudah terbagi; jika ya, sistem akan menampilkan daftar kelompok yang ada. Selanjutnya, dosen memilih salah satu kelompok dari daftar tersebut. Setelah kelompok dipilih, sistem akan merespons dengan menampilkan detail mengenai kualitas dari kelompok tersebut, dan alur kerja untuk melihat kualitas kelompok ini pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-kualitas-kelompok.pdf}
+	\caption{\textit{Activity Diagram} Melihat Kualitas Kelompok}
+	\label{fig:3.activity-kualitas-kelompok}
+\end{figure}
+
+\paragraph{p. Activity Diagram Import Hasil Pembagian Kelompok}
+Gambar \ref{fig:3.activity-import-kelompok} menjelaskan dua alur kerja yang berbeda terkait pengelolaan kelompok dalam sebuah tugas, tergantung pada status pembagian kelompok. Proses diawali saat dosen mengakses halaman tugas, kemudian sistem akan memeriksa apakah kelompok sudah terbagi. Jika kelompok belum ada (alur "Tidak"), dosen dapat memulai proses pembagian dengan menekan tombol "bagi kelompok", lalu memilih untuk meng-\textit{import} berkas guna membuat kelompok baru. Sebaliknya, jika kelompok sudah ada (alur "Ya"), sistem akan menampilkan daftar kelompok dan menyediakan berkas berisi data kelompok tersebut untuk diunduh. Kedua alur kerja tersebut berakhir setelah aksi masing-masing selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-import-kelompok.pdf}
+	\caption{\textit{Activity Diagram Import} Hasil Pembagian Kelompok}
+	\label{fig:3.activity-import-kelompok}
+\end{figure}
+
+\paragraph{q. Activity Diagram Mengerjakan Kuesioner}
+Gambar \ref{fig:3.activity-kerjakan-kuesioner} menjelaskan alur kerja yang dialami mahasiswa saat perlu mengisi kuesioner awal pada sebuah tugas. Proses dimulai ketika mahasiswa mengakses \textit{dashboard} dan masuk ke halaman tugas (\textit{task}). Sistem akan memeriksa apakah kuesioner sudah diisi sebelumnya. Jika belum, sistem akan menampilkan kuesioner yang harus dikerjakan, dimulai dengan menampilkan tes \textit{skill}. Mahasiswa kemudian mengerjakan tes tersebut dengan memilih tingkat kemahiran \textit{skill}-nya. Setelah itu, sistem menampilkan tes preferensi, dan mahasiswa menentukan preferensinya. Setelah semua bagian diisi, mahasiswa menekan tombol \textit{submit} untuk mengirimkan seluruh data, dan alur proses pun berakhir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-kerjakan-kuesioner.pdf}
+	\caption{\textit{Activity Diagram} Mengerjakan Kuesioner}
+	\label{fig:3.activity-kerjakan-kuesioner}
+\end{figure}
+
+\paragraph{r. Activity Diagram Melihat Hasil Kuesioner Sendiri}
+Gambar \ref{fig:3.activity-hasil-sendiri} menjelaskan alur kerja seorang mahasiswa ketika akan melihat hasil jawabannya sendiri pada sebuah tugas. Proses ini dimulai saat mahasiswa mengakses halaman tugas yang telah dikerjakan, dan sistem akan menampilkan halaman tersebut. Selanjutnya, mahasiswa menekan tombol atau menu "data mahasiswa" untuk melihat detail pengerjaannya. Sistem kemudian akan merespons dengan menampilkan hasil jawaban yang telah dikirim oleh mahasiswa tersebut, dan alur untuk melihat jawaban ini pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-hasil-sendiri.pdf}
+	\caption{\textit{Activity Diagram} Melihat Hasil Kuesioner Sendiri}
+	\label{fig:3.activity-hasil-sendiri}
+\end{figure}
+
+\paragraph{s. Activity Diagram Melihat Riwayat Pembagian Kelompok}
+Gambar \ref{fig:3.activity-riwayat-kelompok} menjelaskan alur kerja seorang mahasiswa untuk melihat status keanggotaan kelompoknya. Proses dimulai ketika mahasiswa mengakses halaman \textit{dashboard} utama, kemudian memilih menu manajemen. Sebagai respons, sistem akan menampilkan sebuah daftar yang berisi informasi kelompok, yang dibedakan antara kelompok di mana mahasiswa tersebut sudah bergabung dan kelompok yang belum ia masuki. Alur untuk melihat daftar status kelompok ini pun selesai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/chapter-3/activity/activity-riwayat-kelompok.pdf}
+	\caption{\textit{Activity Diagram} Melihat Riwayat Pembagian Kelompok}
+	\label{fig:3.activity-riwayat-kelompok}
+\end{figure}
+
+\subsubsection{\textit{Entity Relationship Diagram} (ERD)}
+Gambar ERD di bawah ini memiliki beberapa entitas yang digunakan untuk mengelola anggota tim. Hubungan antar entitas dijelaskan melalui proses seperti pembagian tugas, pengumpulan data mahasiswa, dan pembentukan tim menggunakan Edu2Com API.
+
+\paragraph{1. Entitas \textit{User}}
+Entitas ini menyimpan data pengguna, baik dosen maupun mahasiswa. Atribut yang dimiliki adalah:
+\begin{itemize}
+	\item \texttt{id}: \textit{Primary Key} untuk mengidentifikasi pengguna.
+	\item \texttt{email}: Alamat \textit{email} pengguna.
+	\item \texttt{password}: \textit{Hash password} untuk otentikasi.
+	\item \texttt{gender}: \textit{Gender} pengguna (Pria/Wanita).
+	\item \texttt{role\_id}: \textit{foreign key} untuk entitas \textit{Role}.
+\end{itemize}
+
+\paragraph{2. Entitas \textit{Role}}
+Mendefinisikan peran: LECTURER atau STUDENT
+
+\paragraph{3. \textit{LecturerProfile} dan \textit{StudentProfile}}
+Sistem menggunakan dua entitas profil terpisah:
+\begin{itemize}
+	\item \textit{LecturerProfile}: profil khusus untuk dosen
+	\item \textit{StudentProfile}: profil khusus untuk mahasiswa yang menyimpan data MBTI (ei, sn, tf, pj) dan status penyelesaian tes kepribadian
+\end{itemize}
+
+\paragraph{4. Entitas \textit{Classroom}}
+Entitas ini merepresentasikan kelas virtual yang dikelola oleh dosen. Atribut yang dimiliki adalah:
+\begin{itemize}
+	\item \texttt{id}: \textit{primary key} untuk mengidentifikasi kelas
+	\item \texttt{name}: nama kelas
+	\item \texttt{code}: kode unik untuk mahasiswa bergabung
+	\item \texttt{lecturer\_id}: \textit{foreign key} yang menghubungkan ke dosen pemilik
+	\item \texttt{is\_closed}: status apakah kelas masih aktif
+\end{itemize}
+
+\paragraph{5. Entitas \textit{ClassroomTask}}
+Entitas ini menyimpan tugas-tugas yang dibuat dosen untuk pembentukan tim. Atribut yang dimiliki adalah:
+\begin{itemize}
+	\item \texttt{id}: \textit{primary key} untuk mengidentifikasi tugas
+	\item \texttt{title}: judul tugas
+	\item \texttt{classroom\_id}: \textit{foreign key} yang menghubungkan ke kelas tertentu
+	\item \texttt{team\_size}: jumlah anggota dalam satu tim (diperlukan oleh API Edu2Com)
+\end{itemize}
+
+\paragraph{6. Entitas MBTI}
+Kuisioner MBTI untuk pengguna dengan \textit{role} \textit{Student}:
+\begin{itemize}
+	\item \texttt{question}: pertanyaan individual dalam kuesioner
+	\item \texttt{options}: jawaban mahasiswa terhadap pertanyaan
+\end{itemize}
+
+\paragraph{7. Entitas \textit{TaskPreference}}
+Entitas ini menyimpan preferensi mahasiswa terhadap tugas tertentu dengan skala 0-1.
+
+\paragraph{8. Entitas \textit{TeamFormationRequest}}
+Entitas ini mencatat setiap permintaan pembentukan tim ke API Edu2Com. Atribut yang dimiliki adalah:
+\begin{itemize}
+	\item \texttt{task\_id}: tugas yang akan dibentuk timnya
+	\item \texttt{status}: status pembentukan (PENDING, PROCESSING, COMPLETED, FAILED)
+	\item \texttt{alpha}, \texttt{beta}, \texttt{gamma}, \texttt{delta}: parameter pembentukan tim
+	\item \texttt{request\_payload} \& \texttt{response\_payload}: data JSON yang dikirim dan diterima dari API
+\end{itemize}
+
+\paragraph{9. Entitas \textit{Team} \& \textit{TeamMember}}
+Entitas ini menyimpan hasil pembentukan tim:
+\begin{itemize}
+	\item \texttt{team}: tim yang terbentuk dengan skor kualitas dari Edu2Com
+	\item \texttt{team\_member}: anggota-anggota dalam sebuah tim
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figure/chapter-3/erd.pdf}
+	\caption{\textit{Entity Relationship Diagram} (ERD)}
+	\label{fig:3.erd}
+\end{figure}
