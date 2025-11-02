@@ -2,109 +2,90 @@
 \chapter{TINJAUAN PUSTAKA} \label{Bab II}
 
 \section{Tinjauan Pustaka} \label{II.Tinjauan}
-Berisi penelitian terdahulu yang menjadi konsep / pendukung penelitian yang dilakukan. Lakukan pembahasan secara sistematis dengan menjelaskan masalah apa yang diangkat di penelitian terdahulu, metode yang digunakan, kontribusi yang diberikan, serta analisis penulis terkait dengan keunggulan atau keterbatasannya. Tuangkan perbandingan penelitian terdahulu dengan penelitian yang akan dikerjakan, minimal 5 jurnal pembanding (4-5 tahun terakhir). Kemudian penulis sebaiknya melakukan rangkuman terutama terkait dengan peluang pengembangan atau tugas akhir yang akan dilakukan \par
-
-Perujukan literatur dapat dilakukan dengan menambahkan entri baru dalam file \verb|references.bib|. Cara merujuk sitasi menggunakan \verb|\cite{nama label sitasi}|. Hasil sitasi seperti ini: \cite{knuth2001art}, \cite{Vogels2006Am}, atau \cite{Suryanto2019MAE}\cite{Ivanny2014Banding}. Daftar Pustaka hanya akan memunculkan sitasi yang direferensikan menggunakan command \verb|\cite{}|. \par
-
-Tuliskan \textbf{judul jurnal, penulis jurnal, tahun jurnal terbit, penjelasan isi jurnal, metode penelitian, hasil penelitian \& pengujian}. \par
+Tinjauan Pustaka ini disusun untuk memberikan gambaran komprehensif tentang
+penelitian terdahulu yang relevan dengan pembentukan kelompok berbasis
+kecerdasan buatan (AI) dan metode pengembangan perangkat lunak menggunakan
+Agile Kanban. Analisis dilakukan dengan mengelompokkan literatur berdasarkan
+dua pendekatan utama, yaitu:
 \begin{enumerate}[noitemsep]
-	\item Sistem Informasi Pendaftaran Haji dan Umroh Di PT Multazam Sriwijaya Barakah Palembang Menggunakan Metode Rapid Application Development. \blindtext
-	\item Sistem Informasi Umroh Di PT XYZ Lampung Menggunakan Metode Rapid Application Development. \blindtext
+	\item Masalah yang diangkat dalam pembentukan kelompok kolaboratif.
+	\item Metode yang digunakan dalam pengembangan dan implementasi sistem.
 \end{enumerate}
+Pembahasan setiap kategori dirangkum secara sistematis dalam tabel untuk
+mempermudah pembaca memahami kontribusi dan keterbatasan dari penelitian terdahulu. Detailnya dapat dilihat pada Tabel 2.1
 
-Tabel ringkasan tinjauan pustaka ditulis setelah penjelasan masing-masing jurnal. \par
-\begin{longtable}{| b{0.05\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.15\textwidth}|p{0.25\textwidth}|} % Longtable berguna agar tabel dapat terpotong di halaman baru
-	\caption{Literasi Penelitian Terdahulu}
-	\label{table:2.literasi}                                                                                                                                                                                                                                                                                                              \\
+\begin{longtable}{| b{0.05\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|} % Longtable berguna agar tabel dapat terpotong di halaman baru
+	\caption{Tinjauan pustaka penelitian terdahulu}
+	\label{table:2.literasi}                                                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
 	\hline
-	\textbf{No.} & \textbf{Judul}                                                                                                                          & \textbf{Masalah}                                    & \textbf{Metode}               & \textbf{Hasil}                                                                         \\
+	\textbf{No.} & \textbf{Judul}                                                                                                        & \textbf{Masalah}                                                                                                                                           & \textbf{Metode}                                                            & \textbf{Hasil}                                                                                                       \\
 	\hline
 	\endfirsthead % Header tabel untuk halaman pertama
 	\hline
-	\textbf{No.} & \textbf{Judul}                                                                                                                          & \textbf{Masalah}                                    & \textbf{Metode}               & \textbf{Hasil}                                                                         \\
+	\textbf{No.} & \textbf{Judul}                                                                                                        & \textbf{Masalah}                                                                                                                                           & \textbf{Metode}                                                            & \textbf{Hasil}                                                                                                       \\
 	\hline
 	\endhead % Header tabel untuk halaman selanjutnya (repeat header row)
-	1.           & Sistem Informasi Pendaftaran Haji dan Umroh Di PT Multazam Sriwijaya Barakah Palembang Menggunakan Metode Rapid Application Development & Belum adanya sistem untuk pendaftaran haji \& umrah & Rapid Application Development & Sistem Informasi Pendaftaran Haji dan Umroh di PT Multazam Sriwijaya Barakah Palembang \\
+	1.           & \textit {An Apporach to Group Formation in Collaborative Learning Using Learning Paths in Learning Management System} & Fokus pada kelompok dengan kemampuan serupa, kurang membahsa kelompok dengan kemampuan berbeda atau data di luar dari \textit {Learning Management System} & Algoritma k-means clustering dengan metrik Euclidean, Manhattan dan cosine & Framework meningkatkan pembentukan kelompok melalui analisis perilaku siswa, 75\% siswa mengalami peningkatan nilai. \\
 	\hline
-	2.           & Sistem Informasi Umroh Di PT XYZ Lampung Menggunakan Metode Rapid Application Development                                               & Belum adanya sistem untuk pendaftaran haji \& umrah & Rapid Application Development & Sistem Informasi Pendaftaran Umroh di PT XYZ Lampung                                   \\
+	2.           & \textit {A Learner-Centered Technique for Collectively Configuring Inputs for an Algorithmic Team Formation Tool}     & Berfokus pada konfigurasi manual berbasis preferensi siswa.                                                                                                & Workflow berbasis preferensi siswa melalui survei dan diskusi              & Memberikan siswa kendali dalam menentukan kriteria pembentukan tim, meningkatkan kepuasan dan persepsi keadilan      \\
 	\hline
-	3.           & Sistem Informasi Umroh Di PT XYZ Lampung Menggunakan Metode Rapid Application Development                                               & Belum adanya sistem untuk pendaftaran haji \& umrah & Rapid Application Development & Sistem Informasi Pendaftaran Umroh di PT XYZ Lampung                                   \\
-	\hline
+	3 & \textit{FERN: Fair Team Formation for Mutually Beneficial Collaborative Learning} & Berfokus pada keadilan dan manfaat kolaboratif, lebih kompleks dibandingkan pendekatan berbasis API otomatis. & Multi-objektif optimisasi dengan algoritma heuristik (FERN).  & Meningkatkan keadilan antar kelompok dengan optimisasi manfaat individu dan kelompok. \\
+  \hline
+  4 & \textit{Software Project Management Systems Using Kanban Method in CV. Primavisi Globalindo} & Fokus pada proyek perangkat lunak umum; memerlukan adaptasi untuk konteks pendidikan. & Agile Kanban & Sistem Kanban meningkatkan fleksibilitas dan respons terhadap perubahan proyek; validitas sistem diuji dengan hasil 100\% \\
+  \hline
+  5 & \textit{Implementation of Kanban Techniques in Software Development Process: An Empirical Study Based on Benefits and Challenges} & Fokus pada pengembangan perangkat lunak umum, membutuhkan adaptasi untuk konteks pendidikan. & Studi empiris tentang penerapan Kanban dalam pengembangan perangkat lunak, melibatkan 241 responden dari 67 perusahaan. & Mengidentifikasi peningkatan efisiensi tim, komunikasi, dan pengelolaan risiko dengan penerapan Kanban. \\
+  \hline
 \end{longtable}
+
+Penelitian pertama oleh Ramos et al. (2021) menggunakan algoritma k-means clustering untuk membentuk kelompok berdasarkan data perilaku siswa yang diperoleh dari LMS \cite{Ramos2021}. Hasilnya menunjukkan bahwa framework ini meningkatkan performa siswa dalam kolaborasi kelompok, dengan 75\% siswa mencatat peningkatan nilai. Namun, pendekatan ini terbatas pada data LMS dan tidak membahas dinamika kelompok dan faktor non-akademik. Dalam konteks penelitian ini, metode Ramos et al. memberikan dasar untuk mengembangkan sistem pembentukan kelompok berbasis AI dengan mempertimbangkan faktor tambahan, seperti preferensi individu dan keterampilan interpersonal.
+
+Penelitian kedua oleh Hastings et al. (2022) memperkenalkan pendekatan berbasis preferensi siswa dalam menentukan bobot kriteria untuk alat pembentukan tim algoritmik \cite{Hastings2022}. Studi ini menunjukkan bahwa siswa lebih puas ketika mereka dilibatkan dalam proses penentuan kriteria, dengan prioritas tertinggi pada komitmen kursus dan kesesuaian jadwal. Meskipun studi ini berfokus pada konfigurasi manual berbasis survei dan diskusi, pendekatan ini dapat mendukung sistem EduTeams dengan memungkinkan preferensi siswa untuk meningkatkan keadilan dan efektivitas dalam pembentukan tim.
+
+Penelitian ketiga oleh Kalantzi et al. (2020) memperkenalkan FERN, sebuah kerangka kerja untuk pembentukan tim berbasis keadilan dalam pembelajaran kolaboratif \cite{Kalantzi2020}. Studi ini mengidentifikasi tantangan dalam memastikan keadilan dan manfaat tim, terutama terkait atribut yang dilindungi seperti gender dan ras. FERN menggunakan algoritma heuristik kompleks yang mempertimbangkan atribut yang dilindungi seperti gender dan ras, sambil mengoptimalkan manfaat individu dan kolektif dalam kelompok. Meskipun metode ini kompleks, hasil menunjukkan peningkatan signifikan dalam keadilan tim dan manfaat kolaboratif. Relevansi penelitian ini terletak pada kemampuan untuk mengatasi keterbatasan metode tradisional seperti pengelompokan acak.
+
+Penelitian keempat oleh Ilmi et al. (2020) mengeksplorasi penerapan Kanban dalam sistem manajemen proyek berbasis web untuk perusahaan perangkat lunak \cite{Ilmi2020}. Studi ini menyoroti keunggulan Kanban dalam visualisasi tugas, pengendalian \textit{Work In Progress} (WIP), dan fleksibilitas terhadap perubahan. Meskipun konteksnya adalah industri perangkat lunak, metode ini dapat diadaptasi untuk mendukung pengembangan sistem EduTeams di penelitian ini, yang juga membutuhkan pengelolaan tugas yang dinamis.
+
+Penelitian kelima oleh Riaz (2020) meneliti penerapan metode Kanban dalam proses pengembangan perangkat lunak melalui survei dan wawancara dengan profesional dari 67 perusahaan \cite{Kanban2019}. Studi ini menemukan bahwa Kanban meningkatkan efisiensi tim, mengurangi siklus pengembangan, dan menciptakan transparansi dalam pengelolaan proyek. Meskipun konteksnya adalah perangkat lunak umum, prinsip-prinsip Kanban seperti visualisasi alur kerja dan pembatasan WIP dapat diadaptasi untuk mendukung pengembangan sistem EduTeams dalam penelitian ini.
+
+Tinjauan pustaka ini mengungkap bahwa pembentukan kelompok kolaboratif bukanlah sekadar proses mekanis, melainkan sistem kompleks yang memerlukan pendekatan multidimensional. Penelitian sebelumnya telah menunjukkan berbagai strategi: dari clustering berbasis algoritma hingga pendekatan yang mempertimbangkan preferensi siswa dan isu keadilan.
+
+Berbeda dari penelitian sebelumnya, penelitian ini bertujuan untuk mengembangkan sistem pembentukan kelompok kolaboratif yang efisien dan praktis. Fokus utama penelitian ini adalah memanfaatkan API Edu2Com untuk otomatisasi pembentukan kelompok berdasarkan keterampilan, preferensi, dan kebutuhan tugas, serta menggunakan metodologi Agile Kanban untuk memastikan pengembangan sistem berjalan secara adaptif. Dengan pendekatan ini, penelitian ini tidak hanya menyelesaikan masalah teknis dalam pembentukan kelompok, tetapi juga memastikan kelompok yang terbentuk mendukung pembelajaran kolaboratif yang optimal dan memperhatikan aspek manusiawi seperti keadilan dan dinamika interpersonal.
 
 \section{Dasar Teori} \label{II.Teori}
 Berisi teori/konsep yang berkaitan/digunakan dalam tugas akhir yang dikerjakan. Gunakanlah data melalui buku/jurnal referensi, publikasi tugas akhir, penelitian, buku, dan informasi web yang dapat dipertanggungjawabkan, hindari penggunaan dasar teori melalui tautan Wikipedia, surat kabar, atau portal berita, yang dapat memiliki isi yang tidak bersifat fakta. \par
 
-\subsection{Teori 1} \label{II.Teori1}
-Berikut adalah contoh penyisipan tabel menggunakan \verb|\begin{longtable}{}|: \par
+\subsection{Sistem Informasi} \label{II.Teori1}
+Sistem informasi adalah salah satu teknologi yang diperlukan untuk memudahkan pencarian informasi yang dibutuhkan serta mengelola data dengan lebih efektif dan efisien \cite{Arief2022}. Sistem informasi juga dapat diartikan sebagai sebuah sistem dalam organisasi yang mengintegrasikan manusia, teknologi, sistem, media, fasilitas, prosedur, serta pengendalian dengan tujuan untuk menciptakan alur informasi dan transaksi yang lebih mudah dan terstruktur.
 
-\begin{longtable}{|c|c|c|c|}
-	\caption{Contoh Tabel}
-	\label{table:2.contoh}     \\
-	\hline
-	Col1 & Col2 & Col2  & Col3 \\
-	\hline
-	\endhead
-	1    & 6    & 87837 & 787  \\
-	\hline
-	2    & 7    & 78    & 5415 \\
-	\hline
-	3    & 545  & 778   & 7507 \\
-	\hline
-	4    & 545  & 18744 & 7560 \\
-	\hline
-	5    & 88   & 788   & 6344 \\
-	\hline
-\end{longtable}
+\subsection{Dashboard} \label{II.Teori2}
+\textit{Dashboard} adalah alat visualisasi data yang dapat diintegrasikan untuk tujuan tertentu, memungkinkan pengguna memantau aktivitas yang sedang berlangsung sekaligus mendukung proses pengambilan keputusan dan kebijakan \cite{Sarikaya2019}. Dalam dunia pendidikan, \textit{dashboard} memiliki fungsi untuk memantau dan menganalisis kinerja mahasiswa maupun dosen. Umumnya, sebuah dashboard dilengkapi dengan komponen seperti grafik, tabel, indikator, filter, serta data yang disajikan secara real-time \cite{Maulani2020}. Dengan dashboard, pengguna seperti mahasiswa dan dosen dapat lebih mudah mengakses dan memahami data yang telah dimasukkan atau diolah, karena disajikan dalam bentuk visual yang informatif.
 
-\subsubsection{Subsubbab} \label{II.Teori1.1}
-Berikut adalah contoh subsubbab. Ini adalah level subbab maksimal dalam laporan Tugas Akhir, dan tidak boleh lebih dalam. \par
+\subsection{Artificial Intelligence} \label{II.Teori3}
+\textit{Artificial Intelligence} merupakan istilah dalam bahasa Inggris yang terdiri dari kalimat buatan dan kecerdasan. Kecerdasan Buatan melibatkan sejumlah teknik dan metode, termasuk pembelajaran mesin, pemrosesan bahasa alami, penglihatan komputer, dan pendekatan kecerdasan buatan lainnya. Tujuan utama \textit{Artificial Intelligence} (AI) adalah menciptakan teknologi yang memungkinkan sebuah mesin untuk dapat menirukan perilaku manusia, memahami suatu pola, pemecahan masalah, dan pengambilan keputusan \cite{IBM_AI}.
 
-Gambar \ref{fig:2.contoh} adalah contoh Gambar yang diambil dari internet yang harus dicantumkan sumbernya dan memiliki lisensi Creative Common. Jika gambar adalah milik peneliti lain atau tidak dibuat atau diambil sendiri maka peneliti wajib meminta izin kepada peneliti lain tersebut untuk mencantumkan gambar. Gunakan \verb|\begin{figure}| untuk memasukkan gambar. Gunakan \verb|\caption{[nama caption]}| untuk memberikan caption gambar. Nomor caption akan diurutkan secara otomatis. Jangan lupa untuk melabeli setiap gambar dengan \verb|\label{[nama label]}|, agar bisa direferensi menggunakan \verb|\ref{[nama label]}| \par
-\begin{figure}[H] % Kalau menggunakan H, posisi gambar akan tepat dibawah teks
-	\centering
-	\includegraphics[width=0.6\textwidth]{figure/keyboard.jpg}
-	\caption{Contoh gambar dan caption}
-	\label{fig:2.contoh}
-	{\footnotesize Sumber: Contoh} % Untuk memberikan sumber
-\end{figure}
+\subsection{EduTeams} \label{II.Teori4}
+EduTeams adalah sebuah platform inovatif yang dirancang untuk mendukung kegiatan kolaboratif dalam konteks pendidikan. Platform ini memanfaatkan prinsip-prinsip kecerdasan buatan untuk meningkatkan efektivitas pembentukan dan pengelolaan kelompok kerja. Dengan fitur-fitur seperti pembagian tugas otomatis, penilaian kolektif, dan komunikasi tim, EduTeams membantu institusi pendidikan menciptakan kelompok yang lebih produktif dan efisien. Selain itu, platform ini memungkinkan adaptasi terhadap gaya belajar dan tingkat keterampilan pengguna yang berbeda, sehingga dapat meningkatkan kolaborasi dan hasil belajar.
 
-\subsection{Teori 2} \label{II.teori2}
-Untuk membuat sebuah rumus persamaan, gunakan kode \verb|\begin{equationcaptioned}| seperti dibawah: \par
+Pengembangan EduTeams dipimpin oleh \textit{Artificial Intelligence Research Institute} (IIIA), salah satu unit di bawah \textit{Spanish National Research Council} (CSIC), lembaga penelitian terbesar di Spanyol yang berada di bawah Kementerian Sains dan Inovasi Spanyol. Didirikan pada tahun 1939, CSIC memiliki peran utama dalam memajukan ilmu pengetahuan melalui riset dasar dan terapan di berbagai bidang, termasuk sains, teknologi, dan humaniora. Sebagai salah satu lembaga riset paling bergengsi di Eropa, CSIC mendorong inovasi teknologi melalui kolaborasi dengan institusi akademik dan industri, baik di tingkat nasional maupun internasional \cite{Bernal2011}.
 
-\begin{equationcaptioned}[eq:2.sederhana]{
-		x + 1 = 2
-	}{
-		Rumus sederhana % Caption rumus
-	}
-\end{equationcaptioned}
+\subsection{Edu2Com} \label{II.Teori5}
+Edu2Com adalah algoritma \textit{anytime heuristic} berbasis Feasible Team-For-Task Allocation Problem (FTAP) yang diimplementasikan melalui API REST untuk pembentukan tim mahasiswa secara optimal. Dirancang oleh tim pengembang EduTeams untuk menyelesaikan tantangan dalam dunia pendidikan, khususnya dalam hal penempatan mahasiswa pada pembagian kelompok. Algoritma ini bertujuan untuk membentuk tim-tim mahasiswa yang paling sesuai untuk melaksanakan tugas yang akan dikerjakan. Edu2Com bekerja dengan mempertimbangkan berbagai faktor penting, seperti keterampilan yang dibutuhkan untuk tugas tertentu, kemampuan yang dimiliki oleh mahasiswa, serta ukuran tim yang diperlukan \cite{Georgara2023}. Algoritma ini menggabungkan empat parameter utama ($\alpha$, $\beta$, $\gamma$, $\delta$) untuk menyeimbangkan faktor:
 
-Teks caption rumus tidak akan muncul di teks, tetapi akan muncul di Daftar Rumus. \par
+\begin{enumerate}
+ \item Kesesuaian Keterampilan ($\alpha$): Menghitung kesenjangan antara level keterampilan mahasiswa (\texttt{skills.level}) dan persyaratan tugas (\texttt{tasks.skills.level}).
+ \item Kompatibilitas Kepribadian ($\beta$): Menganalisis dimensi MBTI (misalnya, \textit{extraversion/introversion}) untuk meminimalkan konflik interpersonal.
+ \item Preferensi Tugas ($\gamma$): Memprioritaskan mahasiswa berdasarkan preferensi tugas (\texttt{taskPreference}) yang diinput melalui formulir.
+ \item Kohesi Tim ($\delta$): Mengoptimalkan kemiripan keterampilan antaranggota (\texttt{skillSimilarity.similarity}) untuk kolaborasi efektif.
+\end{enumerate}
 
-\begin{equationcaptioned}[eq:2.mae]{
-		MAE = \frac{1}{n} \sum_{i=1}^{n} \left| y_i - \hat{y}_i \right|
-	}{
-		Mean Absolute Error (MAE)
-	}
-\end{equationcaptioned}
+\subsection{Agile Kanban} \label{II.Teori6}
+Kanban adalah metode manajemen alur kerja visual yang berfungsi sebagai sistem penjadwalan yang memberikan informasi tentang apa yang perlu dilakukan, kapan harus dilakukan, dan dalam jumlah berapa. Inti dari Kanban adalah visualisasi proses kerja melalui papan yang dibagi menjadi kolom-kolom yang mewakili tahapan pekerjaan (seperti \texttt{Backlog}, \texttt{In Progress}, \texttt{Testing}, dan \texttt{Done}). Setiap tugas atau pekerjaan diwakili oleh kartu yang bergerak melintasi kolom-kolom tersebut, mencerminkan status dan tahapan pekerjaan \cite{Alaidaros2021}.
 
-Berikut adalah contoh penulisan persamaan yang lebih kompleks, yaitu persamaan distribusi normal. \par
+Berbeda dengan metodologi berbasis iterasi seperti Scrum yang memaksakan progress yang telah ditentukan sebelumnya pada tim, Kanban berfokus pada visualisasi alur kerja dan pembatasan pekerjaan-dalam-proses (Work-In-Progress atau WIP). Pendekatan ini memungkinkan penyesuaian proses yang berkelanjutan, sesuai dengan kebutuhan siklus pengembangan iteratif dalam pengembangan sistem dan optimasi pengembangan. Metrik kunci yang sering dilacak dalam Kanban meliputi waktu siklus rata-rata untuk menyelesaikan fitur, tingkat throughput fitur baru, dan jumlah antrian pekerjaan (WIP) \cite{Alaidaros2021}.
 
-\begin{equationcaptioned}[eq:2.mae]{
-	P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}e^{{{ - \left( {x - \mu } \right)^2 } \mathord{\left/ {\vphantom {{ - \left( {x - \mu } \right)^2 } {2\sigma ^2 }}} \right. \kern-\nulldelimiterspace} {2\sigma ^2 }}}
-	}{
-	Distribusi Normal
-	}
-\end{equationcaptioned}
+Metode ini sangat fleksibel dan dapat disesuaikan dengan berbagai lingkungan kerja, menjadikannya alat yang sangat efektif untuk memperbaiki alur kerja secara berkelanjutan dan meningkatkan kualitas hasil akhir. Dalam pengembangan perangkat lunak, Kanban telah diadaptasi sebagai metodologi Agile, yang membantu tim dalam mengelola dan mengoptimalkan proses pengembangan secara lebih iteratif dan responsif, terutama dalam situasi dengan kebutuhan yang berubah-ubah dan prioritas yang bervariasi.
 
-Jika menuliskan banyak persamaan secara berurutan, gunakan  \verb|\begin{split}|: \par
+\subsubsection{Work In Progress (WIP)} \label{II.Teori6.1}
+\textit{Work In Progress} (WIP) adalah jumlah pekerjaan yang sedang berlangsung dalam sistem pada waktu tertentu, namun belum selesai. Dalam konteks Kanban, WIP merujuk pada semua kartu atau \textit{work item} yang telah berada dalam kartu \textit{Progress} dan belum mencapai kolom "\texttt{Done}" \cite{Anderson2010}. Konsep WIP menjadi fundamental dalam metodologi Kanban karena berkaitan erat dengan efisiensi aliran kerja dan kualitas hasil akhir.
 
-\begin{equationcaptioned}[eq:2.mae]{
-		\begin{split}
-			2x - 5y &=  8 \\
-			3x + 9y &=  -12
-		\end{split}
-	}{
-		Sistem persamaan linier
-	}
-\end{equationcaptioned}
+Membatasi WIP (\textit{WIP limits}) adalah salah satu prinsip inti dalam Kanban yang bertujuan untuk mencegah tim mengambil terlalu banyak pekerjaan secara bersamaan. Ketika tim memiliki terlalu banyak pekerjaan yang sedang berlangsung, hal ini dapat menyebabkan multitasking yang berlebihan, meningkatkan \textit{lead time}, dan menurunkan kualitas hasil kerja. Dengan menetapkan batas WIP, tim dapat mempertahankan aliran kerja yang stabil dan fokus pada penyelesaian tugas yang ada sebelum memulai pekerjaan baru \cite{Vacanti2015}.
