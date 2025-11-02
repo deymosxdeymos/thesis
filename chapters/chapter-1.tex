@@ -1,68 +1,193 @@
 \newpage
-\chapter{PENDAHULUAN} \label{Bab I}
+\chapter{Pendahuluan} \label{Bab I}
 
-\section{Latar Belakang} \label{I.Latar Belakang}
-Latar Belakang berisi dasar pemikiran, kebutuhan atau alasan yang menjadi ide dari topik tugas akhir. Tujuan utamanya adalah untuk memberikan informasi secukupnya kepada pembaca agar memahami topik yang akan dibahas. Terdapat dua hal yang wajib dikemukakan: \par
+\section{Latar Belakang Masalah} \label{I.Latar Belakang}
+Kemampuan manusia untuk berkolaborasi merupakan fondasi fundamental dalam
+membangun peradaban modern. Di era globalisasi dan transformasi digital,
+kolaborasi menjadi semakin kritis seiring dengan meningkatnya kompleksitas
+tantangan global seperti perubahan iklim, kesehatan publik, dan inovasi
+teknologi. Penelitian terbaru menunjukkan bahwa manusia memiliki dorongan kuat
+untuk bekerja sama dengan orang lain, yang menjadi penggerak utama transformasi
+sosial di era digital \cite{Zygmuntowski2022}.
 
-\begin{enumerate}[noitemsep]
-	\item Deskripsi yang luas dan longgar yang berkaitan dengan bidang/masalah di masyarakat, industry dan atau bidang-bidang lainnya. Deskripsi ini mewakili bidang/masalah secara umum yang berkaitan dengan Teknik Informatika, bekerja dan akan terlibat di dalamnya. Sangat disarankan di sini, sebisa mungkin tidak ada Batasan tentang pilihan teknologi yang akan digunakan. Contoh: bidang transportasi, bidang telekomunikasi, bidang Pendidikan, bidang manufaktur, bidang renewable energi, pariwisata, militer, transportasi, kesehatan, pertanian, pengelolaan infrastruktur dan sebagainya.
-	\item Deskripsi lebih khusus dan mendetail yang didapatkan dari poin 1 di atas. Dari deskripsi umum di atas, selanjutkan fokuskan pada fenomena masalah yang akan diangkat. Pendetailan harus mampu membawa masalah kepada masalah yang mennjukkan peran Anda dalam penelitian 
-\end{enumerate}
+Dalam konteks pendidikan, khususnya pembelajaran kolaboratif, kolaborasi
+memainkan peran krusial dalam meningkatkan keterampilan akademik dan sosial
+siswa. Pembelajaran kolaboratif melibatkan siswa yang bekerja sama secara aktif
+untuk mencapai tujuan bersama, yang tidak hanya meningkatkan pemahaman
+konseptual tetapi juga mengembangkan keterampilan interpersonal dan pemecahan
+masalah \cite{Kotsonis2022}. Menurut penelitian tentang peran pembelajaran
+kolaboratif dalam pendidikan online, kolaborasi memungkinkan siswa
+mengembangkan keterampilan berpikir kritis dan komunikasi serta mengurangi
+perasaan isolasi yang sering dirasakan dalam pembelajaran individu
+\cite{Lu2022}. Seiring dengan berkembangnya kompleksitas dunia modern,
+institusi pendidikan kini dihadapkan pada tantangan untuk mempersiapkan siswa
+menghadapi lingkungan yang semakin terkoneksi dan dinamis. Keberhasilan di masa
+depan tidak hanya bergantung pada penguasaan materi akademik, tetapi juga pada
+kemampuan untuk berkolaborasi secara efektif dalam tim yang beragam. Hal ini
+menjadikan pembelajaran kolaboratif bukan hanya sebagai metode pengajaran,
+tetapi sebagai komponen vital dalam membentuk generasi yang siap menghadapi
+tantangan masa depan.
+
+Selain itu, kolaborasi merupakan salah satu keterampilan lulusan yang
+fundamental dalam pendidikan tinggi dan sering menjadi atribut utama dalam
+penilaian kualitas pendidikan. Kolaborasi yang efektif membantu siswa
+mengembangkan kemampuan bekerja dalam tim, berpikir kritis, dan keterampilan
+pemecahan masalah yang sangat relevan dengan dunia kerja. Ellis et al. (2021)
+menekankan bahwa kolaborasi dalam kelompok kecil dengan pendekatan pembelajaran
+mendalam, siswa dapat bekerja lebih efektif dan saling mendukung dalam memahami
+materi \cite{Ellis2021}.
+
+Meskipun memiliki banyak manfaat, pembelajaran kolaboratif juga menghadapi
+tantangan signifikan, terutama dalam pembentukan kelompok yang seimbang.
+Kesulitan ini sering muncul karena kurangnya informasi tentang keterampilan,
+preferensi, dan dinamika pribadi siswa, terutama di awal semester ketika
+pengajar belum familiar dengan profil siswa \cite{Mburasek2021}. Pengajar
+biasanya harus membentuk kelompok secara manual dengan mengamati langsung
+interaksi siswa, menilai keterampilan dan preferensi mereka berdasarkan
+pengalaman pribadi, atau menggunakan metode pengelompokan sederhana seperti
+pembagian acak. Pendekatan ini tidak hanya memakan waktu tetapi juga sering
+gagal menghasilkan kelompok yang optimal. Akibatnya, terjadi berbagai masalah
+seperti ketidakseimbangan keterampilan antar anggota kelompok, konflik
+interpersonal, dan partisipasi yang tidak merata. Hal ini dapat menurunkan
+efektivitas kolaborasi, menurunkan motivasi siswa, dan pada akhirnya
+mempengaruhi kualitas hasil pembelajaran \cite{Vinella2022}. Fenomena ini
+menjadi semakin menantang dalam konteks pembelajaran hybrid dan daring, di mana
+interaksi tatap muka terbatas dan pengajar memiliki kesulitan lebih besar dalam
+memahami dinamika kelas. Oleh karena itu, dibutuhkan sistem pembentukan tim
+yang dapat mempertimbangkan berbagai faktor ini untuk meningkatkan kualitas
+pembelajaran kolaboratif.
+
+Termotivasi dari permasalahan di atas, satu solusi inovatif yang menjanjikan
+datang dari Spanish National Research Council (CSIC). CSIC adalah institusi
+penelitian publik terbesar di Spanyol yang berdidikasi untuk penelitian imiah
+dan teknologi di berbagai bidang termasuk bidang edukasi \cite{Bernal2011}.
+Mereka mengembangkan platform yang bernama EduTeams, dibuat sebagai sistem
+pembagian kelompok bernama dalam lingkungan kelas secara otomatis menggunakan
+bantuan kecerdasan buatan atau Aritficial Intelligence (AI) berdasarkan
+keterampilan, kepribadian dan preferensi mahasiswa. Sistem ini bekerja dengan
+mengumpulkan data yang diperlukan dari setiap mahasiswa di kelas seperti
+tingkat keterampilan, kepribadian dan preferensi dari tugas yang diberikan.
+Setelah data selesai dikumpulkan, setiap mahasiswa akan terbagi secara merata
+berdasarkan data yang telah mereka isi \cite{Georgara2023}.
+
+Saat ini tim pengembang EduTeams menyediakan \textit{Application Programming
+	Interface} (API) \cite{Nawaz2022} untuk algoritma EduTeams yang bernama Edu2Com
+yang akan digunakan oleh peneliti untuk mengembangkan sistem pembagian kelompok
+menggunakan kecerdasan buatan. Untuk mengimplementasikan sistem pembagian
+kelompok dengan kecerdasan buatan, diperlukan pengembangan dengan performa yang
+baik dan dapat dijalankan oleh semua pengguna. Oleh karena itu, peran
+pengembangan (\textit{development}) sangat penting untuk berlangsungnya sistem
+yang berjalan dengan mulus \cite{Govea2023}. Faktor lain yang harus
+dipertimbangkan untuk kelancaran proses pengembangan adalah metode
+\textit{Software Development Life Cycle} (SDLC) yang akan digunakan.
+
+Dalam proyek ini, kami mengadopsi \textit{Agile Kanban} sebagai kerangka kerja
+\textit{SDLC}, yang berfokus pada visualisasi alur kerja dan pembatasan
+pekerjaan-dalam-proses atau \textit{work in progress} (WIP). Pendekatan ini
+sangat kontras dengan metode berbasis iterasi seperti \textit{Scrum}, yang
+memaksakan progress yang telah ditentukan sebelumnya pada tim, berpotensi
+menyebabkan keterlambatan dalam beradaptasi dengan perubahan yang muncul dari
+hasil pengembangan dan umpan balik dari pengujian sistem. Alaidaros et al. (2021) mencatat bahwa kanban memungkinkan penyesuaian proses yang berkelanjutan, sesuai dengan kebutuhan siklus pengembangan iteratif dalam pengembangan sistem dan optimasi pengembangan. Peneliti secara khusus akan melacak metrik kunci seperti waktu siklus rata-rata untuk menyelesaikan fitur, tingkat throughput fitur baru, dan jumlah WIP. Dengan demikian, ketahanan kami dalam menanggapi kebutuhan yang berkembang seiring dengan berjalannya kebutuhan dan desain dari sistem \cite{Alaidaros2021}.
+
+
+Dalam proses pengembangan, peneliti menggunakan teknik \textit{grey box
+	testing}, yang menggabungkan teknik \textit{black box} (pengujian dari
+perspektif pengguna, tanpa pengetahuan tentang kode internal) dengan teknik
+\textit{white box} (verifikasi struktur kode dan logika). Tidak seperti
+pengujian \textit{black box murni}, yang mungkin gagal menemukan kesalahan yang
+berkaitan dengan pemrosesan data atau integrasi api, \textit{grey box testing}
+memungkinkan pemeriksaan komponen dan alur data kunci tanpa memerlukan akses
+penuh ke kode sumber yang mendasarinya \cite{Khan2012}. Khususnya, peneliti
+akan menggunakan skenario \textit{grey box} untuk memvalidasi kebenaran data
+yang diterima dari API edu2com, memastikan bahwa struktur data JSON diproses
+dengan benar dan bahwa respons kesalahan ditangani dengan tepat. Hal ini
+dicapai melalui analisis model data API edu2com dan menghasilkan kasus
+pengujian yang menargetkan alur transformasi data yang kritis. Selain itu, kami
+akan menggunakan \textit{grey box testing} untuk memverifikasi implementasi
+algoritma pembentukan tim yang dipandu oleh AI. Dengan berfokus pada perilaku
+sistem terhadap berbagai kombinasi data siswa, bertujuan untuk mengidentifikasi
+potensi bias, anomali, atau perilaku tak terduga yang mungkin tidak muncul
+melalui pengujian black box saja.
+
+Penelitian ini sangat relevan dalam konteks tantangan pendidikan modern, yang
+menekankan inklusi dan kesetaraan. Meskipun sistem pembentukan tim berbasis AI
+memiliki potensi untuk meningkatkan keseimbangan dalam hal gender, latar
+belakang, dan keterampilan, kami menyadari bahwa teknologi saja tidak dapat
+menjamin hasil yang adil. Sebaliknya, kami bertujuan untuk mengeksplorasi
+bagaimana sistem ini dapat digunakan secara bertanggung jawab untuk mendukung
+pengambilan keputusan manusia, memberikan wawasan tentang dinamika kelompok
+yang mungkin terlewatkan oleh pengajar, dan menciptakan lingkungan belajar yang
+lebih inklusif.
 
 \section{Rumusan Masalah} \label{I.Rumusan Masalah}
-Merumuskan masalah secara konkrit, bentuk pertanyaan fakta / kebenaran yang masih dipertanyakan \par
+Dari permasalahan yang telah diidentifikasikan pada latar belakang, maka
+rumusan masalah yang menjadi fokus penelitian adalah sebagai berikut:
 
-Dari pendahuluan di atas, mahasiswa diharapkan dapat memformulasikan masalah engineering yang solid. Masalah yang kemudian akan diformulasi mahasiswa harus terdefinisi dengan baik (harus jelas, tidak ambigu/ada makna ganda, tanpa menggunakan jargon), masalah harus real (benar-benar ada masalah terebut) sehingga nantinya akan ada solusi yang konkrit. Perlu dipertimbangkan juga masalah tersebut harus bisa dipecahkan dalam waktu maksimal 1 semester oleh mahasiswa dengan alokasi waktu per minggu tidak lebih dari 20 jam per minggu. \par
-
-Lebih jelasnya masalah yang diharapkan adalah seperti dalam 3 poin di bawah ini. Jika tidak mengandung semua unsur dibawah maka tugas akhir ini tidak memenuhi syarat sebagai tugas akhir. \par
-
-\begin{enumerate}[noitemsep]
-	\item Harus ada proses perancangan yang utuh dari penentuan masalah real yang perlu dipecahkan, 
-	\item Harus menjelaskan spesifikasi yang akan dibuat
-	\item Harus ada implementasi dalam bentuk salah satu di bawah ini:
-	\begin{enumerate}
-		\item Hardware/perangkat keras
-		\item Software/perangkat lunak
-		\item Proses/simulasi yang dibuat sendiri (Matlab, C/C++, Python, dan lain-lain) bukan melalui software yang murni dan sudah paten dan tinggal memasukkan data (ETAP, EDSA, SPSS, dan lain-lain)
-	\end{enumerate}
+\begin{enumerate}
+	\item Bagaimana merancang sistem pembagian kelompok berbasis kecerdasan buatan yang efektif menggunakan API Edu2Com?
+	\item Bagaimana hasil pengujian terhadap sistem pembagian kelompok berbasis kecerdasan buatan yang efektif menggunakan API Edu2Com?
 \end{enumerate}
-
-Hasil rancangan dalam bentuk hardware/software/simulasi tersebut harus diuji dan diverifikasi apakah bekerja dengan baik atau belum Jika belum bekerja baik, mahasiswa harus bisa menjelaskan alasannya dan perbaikannya ke depan (walau pun saat tugas akhir ini selesai, alat/software/simulasi belum bisa bekerja).\par
-
-Selain itu, rumusan sangat disarankan untuk melibatkan pengalaman multidisiplin. Misalnya melibatkan unsur-unsur seperti seni, ekonomi, mekanik, politik, proses kimia, etika, kesehatan, dan sebagainya. Contoh-contoh rumusan masalah yang \textbf{tidak disarankan}: \par
-
-\begin{enumerate}[noitemsep]
-	\item \textbf{Masalah tidak real dan tidak terlalu hipotetis}. Misalnya, topik riset atau topik untuk lomba (contoh: mencari metode paling cepat untuk menentukan posisi kebakaran di dalam hutan).
-	\item Rumusan untuk membuat alat/produk yang \textbf{tidak dapat diimplemetasikan dan diukur/diuji dalam waktu maksimal 2 semester}. Misalnya membuat roket dengan daya jangkau 500 km.
-	\item \textbf{Solusi terlalu kompleks} sehingga dalam satu tahun hanya dapat menghasilkan bagian kecil dari solusi yang diharapkan Rumusan masalah berisi ringkasan fenomena dan masalah.
-\end{enumerate}
-
-Rumusan masalah akan dijawab di \nameref{V.Kesimpulan}. Rumusan Masalah disarankan untuk ditulis per poin.
 
 \section{Tujuan Penelitian} \label{I.Tujuan}
-Tujuan diisikan tujuan dari penelitian yang dilakukan, berdasarkan sub-bab \nameref{I.Latar Belakang} dan \nameref{I.Rumusan Masalah} dilengkapi dengan spesifikasinya. Tuliskan Tujuan sesuai dengan poin Rumusan Masalah. \par
+Tujuan dari penelitian ini adalah:
 
-\section{Batasan Masalah} \label{I.Batasan}
-Batasan yang dimaksud disini ialah batasan dari penelitian tugas akhir yang dilakukan. Batasan masalah ditujukan agar tugas akhir yang dilakukan tidak terlalu luas, dan menjadi lebih realistis untuk diselesaikan. \par
+\begin{enumerate}
+	\item Merancang dan mengembangkan sistem pembagian kelompok berbasis AI
+	      menggunakan API Edu2Com dari CSIC, yang dapat mengotomatisasi proses
+	      pembentukan tim berdasarkan keterampilan, kepribadian, dan preferensi siswa.
+	\item Mengimplementasikan metode Agile Kanban dalam proses pengembangan
+	      perangkat lunak untuk memastikan fleksibilitas dan kontinuitas perbaikan selama pengembangan.
+	\item Menggunakan metode \textit{grey box testing} untuk menguji
+	      fungsionalitas sistem secara menyeluruh.
+\end{enumerate}
+
+\section{Batasan Masalah}  \label{I.Batasan}
+Agar penelitian ini terfokus dan dapat diselesaikan dengan efektif dalam waktu
+yang ditentukan, maka ditetapkan beberapa batasan masalah sebagai berikut:
+
+\begin{enumerate}
+	\item Penelitian hanya dilakukan pada platform EduTeams.
+	\item Pengembangan dashboard dibuat hanya berbasis website.
+	\item Fokus pengembangan hanya pada dashboard pembagian kelompok pada sisi
+	      mahasiswa dan dosen.
+\end{enumerate}
 
 \section{Manfaat Penelitian} \label{I.Manfaat}
-Manfaat tugas akhir yang dilakukan didefinisikan sebagai manfaat yang diperoleh ketika tugas akhir telah selesai dilakukan. Manfaat dapat berupa manfaat untuk: \textbf{mahasiswa, program studi teknik informatika, ITERA, masyarakat, dunia akademisi, dan dunia penelitian}. \par
+Adapun manfaat dari penelitian ini sebagai berikut:
 
+\begin{enumerate}
+	\item Membantu dosen atau tenaga pendidik dalam membagi kelompok pada
+	      mahasiswa sesuai dengan jenis kelamin, keahlian, kepribadian, dan preferensi.
+	\item Mempermudah mahasiswa dalam menemukan kelompok
+\end{enumerate}
 
 \section{Sistematika Penulisan} \label{I.Sistematika}
-Sistematika penulisan berisi pembahasan apa yang akan ditulis disetiap Bab. Sistematika pada umumnya berupa paragraf yang setiap paragraf mencerminkan bahasan setiap Bab. \par
+Dalam sistematika penulisan ini dijabarkan poin-poin dari isi setiap bab.
+Sistematika penulisan pada penelitian adalah sebagai berikut :
 
-\subsection*{Bab I}
-Bab ini berisikan penjelasan latar belakang dari topik penelitian yang berlangsung, rumusan masalah dari masalah yang dihadapi pada penjelasan di latar belakang, tujuan dari penelitian, batasan dari penelitian, manfaat dari hasil penelitian, dan sistematika penulisan tugas akhir. \par
+\subsection{Bab I Pendahuluan}
+Pada penelitian ini, Bab I Pendahuluan akan membahas pengenalan penelitian yang
+mencakup Latar Belakang Masalah, Rumusan Masalah, Tujuan Penelitian, Batasan
+Masalah, Manfaat Penelitian, serta Sistematika Penulisan. Bagian ini memberikan
+gambaran awal mengenai pentingnya pengembangan dashboard pembagian kelompok
+berbasis \textit{Artificial Intelligence} menggunakan API Edu2Com dan
+metodologi Agile Kanban sebagai solusi dalam meningkatkan efektivitas
+kolaborasi mahasiswa.
 
-\subsection*{Bab II}
-Bab ini membahas mengenai tinjauan pustaka dari penelitan terdahulu dan dasar teori yang berkaitan dengan penelitian ini.
+\subsection{Bab II Tinjauan Pustaka}
+Pada penelitian ini, Bab II Tinjauan Pustaka akan mendiskusikan landasan teori
+dan kajian pustaka yang relevan, seperti konsep Sistem Informasi, Dashboard,
+\textit{Artificial Intelligence}, serta algoritma dan parameter yang digunakan
+pada API Edu2Com. Selain itu, akan dibahas pula metode Agile Kanban,
+\textit{Unified Modeling Language} (UML), \textit{Entity Relationship Diagram}
+(ERD), dan metode \textit{Grey Box Testing} yang mendukung pengembangan sistem
+ini. Kajian pustaka bertujuan untuk memberikan dasar teoritis yang kuat dalam
+pengembangan dan pengujian sistem.
 
-\subsection*{Bab III}
-Bab ini berisikan penjelasan alur kerja sistem, alat dan data yang digunakan, metode yang digunakan, dan rancangan pengujian.
-
-\subsection*{Bab IV}
-Bab ini membahas hasil implementasi dan pengujian dari penelitian yang dilakukan, serta analisis dan evaluasi yang dapat dipetik dari hasil.
-
-\subsection*{Bab V}
-Bab ini membahas kesimpulan dari hasil penelitian dan juga saran untuk penelitian selanjutnya.
+\subsection{Bab III Metode Penelitian}
+Pada penelitian ini, Bab III Metode Penelitian akan menjelaskan lebih rinci
+mengenai alur penelitian, langkah-langkah penelitian, alat dan bahan yang
+digunakan, serta metode pengembangan. Tahapan yang dijelaskan meliputi
+perencanaan fitur, implementasi metodologi Agile Kanban, dan pengujian sistem
+menggunakan \textit{Grey Box Testing}. Selain itu, Bab III juga akan membahas
+pengelolaan data dan skenario pengujian
