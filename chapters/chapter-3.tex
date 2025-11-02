@@ -501,9 +501,74 @@ Entitas ini menyimpan hasil pembentukan tim:
 	\item \texttt{team\_member}: anggota-anggota dalam sebuah tim
 \end{itemize}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{figure/chapter-3/erd.pdf}
-	\caption{\textit{Entity Relationship Diagram} (ERD)}
-	\label{fig:3.erd}
-\end{figure}
+\begin{landscape}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=\textheight,width=1.26\textwidth,keepaspectratio]{figure/chapter-3/erd.pdf}
+		\caption{\textit{Entity Relationship Diagram} (ERD)}
+		\label{fig:3.erd}
+	\end{figure}
+\end{landscape}
+
+\subsubsection{Tahap Pengembangan}
+
+Pada tahap pengembangan, pekerjaan mengikuti alur Kanban dengan empat kolom: \textit{To Do}, \textit{Doing}, \textit{Testing} dan \textit{Done}. Pengembang menarik (\textit{pull}) tugas dari \textit{To Do} ke \textit{Doing} saat siap mengerjakannya, mengikuti prinsip \textit{pull system} untuk menjaga ritme kerja sesuai kapasitas, bukan dorongan eksternal. Tugas mencakup pembuatan antarmuka web, logika aplikasi, integrasi API Edu2Com berbasis AI, serta pengujian. Bila ada hambatan (integrasi gagal, fitur tidak jelas), pengembang dapat mengalihkan fokus sementara ke \textit{To Do} lain, atau menyelesaikan masalah lewat riset/peninjauan ulang.
+
+Visualisasi tugas lewat papan Kanban memberi transparansi progres secara \textit{real-time}. Bahkan dalam tim kecil atau solo, ini membantu pemantauan pencapaian dan sisa pekerjaan. Peneliti seperti Ilmi et al. (2020) menekankan bahwa visualisasi kanban dapat meningkatkan fleksibilitas terhadap perubahan dalam suatu proyek, sejalan dengan pengembangan ini yang setiap perubahan langsung tercermin di \textit{backlog} dan papan kanban.
+
+Pengujian dan \textit{code review} dilakukan paralel dengan pengembangan. Setelah fitur (misal integrasi API) selesai, dibuat kartu uji di kolom \textit{Testing}. Jika ditemukan \textit{bug} (misal format JSON salah, \textit{error} tak tertangani), kartu baru akan dibuat dan ditambahkan ke \textit{backlog} dan diprioritaskan.
+
+\subsubsection{Tahap Pengujian}
+
+Tahap pengujian dilaksanakan segera setelah (dan bahkan bersamaan dengan) tahap pengembangan untuk menjamin kualitas setiap fitur yang dihasilkan. Peneliti menerapkan metode \textit{grey box testing}, yaitu kombinasi pengujian \textit{black box} dan \textit{white box}, guna memastikan fungsionalitas sistem sesuai spesifikasi sekaligus memverifikasi integrasi internalnya. Pengujian dilakukan dengan skenario-skenario yang mencakup: validasi respons dan data dari API AI Edu2Com, pengecekan algoritma pengelompokan AI terhadap berbagai kombinasi data mahasiswa, serta uji antarmuka dan alur navigasi pada \textit{dashboard}. Setiap skenario pengujian dicatat sebagai tugas pada papan Kanban (di kolom \textit{Testing}) agar dapat dimonitor progresnya. Jika suatu skenario uji menemukan kegagalan, langkah penanganannya adalah membuat kartu/item perbaikan di \textit{backlog}. Misalnya, bila sistem gagal menangani kasus \textit{error} dari API, maka diciptakan tugas baru untuk memperbaiki penanganan \textit{error} tersebut. Siklus ini menunjukkan bagaimana \textit{feedback loop} internal diatur dalam Kanban, hasil pengujian langsung menjadi masukan untuk \textit{backlog}, yang kemudian ditangani dalam alur pengembangan selanjutnya.
+
+Elemen dari \textit{grey box testing} seperti \textit{matrix test}, \textit{regression test}, \textit{pattern test} dan \textit{orthogonal array test} akan kita gunakan untuk melakukan rangkaian skenario pengujian yang telah dikelompokkan dalam Tabel \ref{tab:3.skenario-pengujian} di bawah ini.
+
+	{\scriptsize
+		\renewcommand{\arraystretch}{1.3}
+		\begin{longtable}{|c|p{1.4cm}|c|p{2.4cm}|p{1.3cm}|p{1.9cm}|}
+			\caption{Skenario Pengujian \textit{Grey Box Testing}}
+			\label{tab:3.skenario-pengujian}                                                                                                                                                                                                                                                                                                                                \\
+			\hline
+			\textbf{No} & \textbf{Komponen}          & \textbf{Kode} & \textbf{Skenario}                                                                                                                     & \textbf{Teknik Pengujian}                      & \textbf{Hasil yang Diharapkan}                                                                              \\
+			\hline
+			\endfirsthead
+			\hline
+			\textbf{No} & \textbf{Komponen}          & \textbf{Kode} & \textbf{Skenario}                                                                                                                     & \textbf{Teknik Pengujian}                      & \textbf{Hasil yang Diharapkan}                                                                              \\
+			\hline
+			\endhead
+			\hline
+			\endfoot
+			\hline
+			\endlastfoot
+			1           & \textit{Login}             & GB01          & Login berhasil menggunakan \textit{username}/\textit{password} valid melalui Edu2Com API                                              & \textit{Matrix}                                & Pengguna login sukses, sesi aktif, \textit{dashboard} muncul                                                \\
+			\cline{3-6}
+			            &                            & GB02          & Menguji login dengan \textit{username} valid tetapi \textit{password} salah                                                           & \textit{Pattern}                               & Login ditolak -- sistem menampilkan pesan kesalahan ``kredensial tidak valid''; akses tidak diberikan       \\
+			\hline
+			2           & Sesi Pengguna              & GB03          & Uji keamanan sesi, sesi aktif selama pengguna aktif, otomatis \textit{expired} setelah \textit{timeout}                               & \textit{Regression}                            & Sesi dikelola aman, login ulang diperlukan setelah sesi berakhir                                            \\
+			\hline
+			3           & Input Kuesioner            & GB04          & Pengisian \& penyimpanan kuesioner lengkap (uji simpan data ke \textit{database})                                                     & \textit{Orthogonal Array}                      & Data disimpan lengkap \& benar di \textit{database}                                                         \\
+			\cline{3-6}
+			            &                            & GB05          & Validasi \textit{form} input kuesioner (kosong, format salah, data tidak valid)                                                       & \textit{Regression}                            & Sistem menolak input invalid, pesan \textit{error} jelas. Tidak ada data salah tersimpan                    \\
+			\cline{3-6}
+			            &                            & GB06          & Edit kuesioner yang sudah dikirim sebelumnya (uji \textit{update database})                                                           & \textit{Matrix}                                & Data berhasil diperbarui secara konsisten tanpa \textit{bug} baru                                           \\
+			\hline
+			4           & Pembentukan Kelompok (API) & GB07          & Pengujian \textit{end-to-end} pembentukan tim dengan data lengkap dan valid (login $\rightarrow$ kuesioner $\rightarrow$ formasi tim) & \textit{Matrix}                                & API mengembalikan alokasi tim optimal sesuai parameter                                                      \\
+			\cline{3-6}
+			            &                            & GB08          & API menolak parameter permintaan tim yang invalid (ukuran tim tidak logis, data kosong)                                               & \textit{Orthogonal Array}                      & Mengembalikan pesan \textit{error} yang jelas dan informatif                                                \\
+			\cline{3-6}
+			            &                            & GB09          & Cek respons API dalam batas waktu tertentu dengan kombinasi jumlah permintaan berbeda ($\leq$ 5 detik, 10--100 pengguna bersamaan)    & \textit{Matrix} / \textit{Performance Testing} & Respons API memenuhi batas waktu yang ditetapkan                                                            \\
+			\hline
+			5           & Keamanan                   & GB10          & Verifikasi \textit{role-based access} (mahasiswa vs admin) terhadap fitur yang diizinkan \& tidak diizinkan                           & \textit{Regression Testing}                    & Akses dikontrol ketat, tidak ada pelanggaran \textit{auth}                                                  \\
+			\cline{3-6}
+			            &                            & GB11          & Uji input berbahaya pada \textit{form} (\textit{script injection}, CSRF, JSON invalid, \textit{upload file} berbahaya)                & \textit{Orthogonal Array}                      & Sistem menolak semua input berbahaya tanpa terkecuali                                                       \\
+			\hline
+			6           & Ketahanan Sistem           & GB12          & Simulasi \textit{error} API eksternal (Edu2Com API \textit{down}, \textit{timeout}, gagal respons)                                    & \textit{Regression}                            & Aplikasi tidak \textit{crash}, menangani \textit{error} eksternal dengan stabil, pesan \textit{error} jelas \\
+			\hline
+			7           & Kejelasan \textit{Error}   & GB13          & Kejelasan pesan \textit{error} di seluruh fitur (login, input \textit{form}, API respons gagal)                                       & \textit{Pattern}                               & Pesan \textit{error} informatif \& mudah dibaca pengguna                                                    \\
+			\hline
+			8           & Audit dan \textit{Logging} & GB14          & Pengujian pencatatan log untuk semua aksi penting (login/logout, \textit{submit form}, pembentukan tim)                               & \textit{Integration Regression}                & Log audit tercatat lengkap, akurat, dan bisa ditelusuri                                                     \\
+			\hline
+			9           & \textit{Logout}            & GB15          & Verifikasi \textit{logout} membersihkan sesi dan memastikan tidak ada akses lagi setelah \textit{logout}                              & \textit{Regression}                            & Sesi dihapus sepenuhnya, akses ke halaman dilindungi dicegah secara konsisten                               \\
+		\end{longtable}
+	}
