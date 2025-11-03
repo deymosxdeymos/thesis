@@ -8,6 +8,8 @@ Berisi hasil penelitian berdasarkan rancangan yang sudah dijelaskan pada Bab \re
 
 Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah diimplementasikan dalam sistem EduTeams menggunakan metodologi Agile Kanban. Implementasi menggunakan pendekatan iteratif dengan fokus pada fitur-fitur inti terlebih dahulu, kemudian dikembangkan ke fitur-fitur lanjutan. Status implementasi mengikuti alur kerja Kanban dengan tiga kategori: \textit{DONE} (fitur telah diimplementasikan dan diuji), \textit{IN PROGRESS} (fitur sedang dalam tahap pengembangan atau perbaikan), dan \textit{TODO} (fitur direncanakan namun belum diimplementasikan).
 
+\subsubsection*{Fitur Dosen (Dosen Features)}
+
 \begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
 \caption{Implementasi Fitur Sistem EduTeams}
 \label{tab:implementasi-fitur}\\
@@ -169,6 +171,335 @@ Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah 
 
 \noindent
 Dari total 59 fitur yang diidentifikasi, 50 fitur (84.7\%) telah selesai diimplementasikan dan diuji, 2 fitur (3.4\%) sedang dalam tahap pengerjaan berupa implementasi fitur tambahan untuk mahasiswa, serta 7 fitur (11.9\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap maturity yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi dengan rencana pengembangan berkelanjutan untuk fitur-fitur tambahan.
+
+\subsubsection{Halaman Landing Page}
+
+Halaman landing page merupakan tampilan awal yang dilihat pengunjung saat mengakses sistem EquiTeam. Halaman ini menyediakan informasi menyeluruh tentang sistem, meliputi penjelasan konsep, identifikasi masalah, solusi yang ditawarkan, dan manfaat bagi pengguna. Landing page menyediakan tombol login Google OAuth untuk autentikasi pengguna. Landing page mengimplementasikan tata letak responsif yang dapat menyesuaikan dengan berbagai ukuran layar. Gambar \ref{fig:4.landing-page} menunjukkan tampilan halaman landing page sistem EquiTeam.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/landing-page-equiteam.png}
+	\caption{Tampilan Halaman Landing Page Sistem EquiTeam}
+	\label{fig:4.landing-page}
+\end{figure}
+
+\subsubsection*{Fitur Dosen}
+
+Bagian ini mendokumentasikan fitur-fitur yang tersedia untuk dosen di sistem EquiTeam. Fitur-fitur ini dirancang untuk memfasilitasi manajemen kelas, pembuatan tugas, visualisasi analitik, dan koordinasi pembentukan kelompok berbasis AI.
+
+\subsubsection{Halaman Onboarding Data Diri}
+
+Halaman onboarding data diri merupakan bagian kedua dari alur onboarding sistem EquiTeam. Pada halaman ini, pengguna mengisi informasi data pribadi sesuai dengan peran yang telah dipilih sebelumnya. Untuk pengguna dengan peran Dosen, form ini mengumpulkan data nama lengkap, nomor identitas pegawai (NPM), dan jenis kelamin. Data yang dikumpulkan digunakan untuk identifikasi pengguna dalam sistem dan untuk membentuk kelompok yang seimbang berdasarkan aspek demografis. Gambar \ref{fig:4.onboarding-data-diri} menunjukkan tampilan halaman onboarding data diri untuk peran Dosen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/onboarding-data-diri-dosen.png}
+	\caption{Tampilan Halaman Onboarding Data Diri untuk Peran Dosen}
+	\label{fig:4.onboarding-data-diri}
+\end{figure}
+
+\subsubsection{Dashboard Dosen - Status Kosong}
+
+Setelah menyelesaikan proses onboarding, pengguna dengan peran Dosen akan diarahkan ke halaman dashboard. Dashboard ini merupakan halaman utama yang menampilkan ringkasan statistik dan informasi kelas yang dikelola oleh Dosen. Pada awalnya, ketika Dosen belum membuat kelas apapun, dashboard menampilkan pesan "Anda belum membuat kelas" dengan ilustrasi mascot yang ramah, serta tombol "Buat Kelas Baru" untuk memulai. Statistik yang ditampilkan menunjukkan nol tugas yang telah dibuat, nol kelompok yang berhasil dibentuk, dan kualitas kelompok yang belum tersedia (N/A). Gambar \ref{fig:4.dashboard-empty} menunjukkan tampilan dashboard dalam status kosong.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dashboard-empty-state.png}
+	\caption{Tampilan Dashboard Dosen dalam Status Kosong}
+	\label{fig:4.dashboard-empty}
+\end{figure}
+
+\subsubsection{Dialog Pembuatan Kelas}
+
+Fitur pembuatan kelas memungkinkan Dosen untuk membuat kelas baru dengan mengisi informasi yang diperlukan. Ketika Dosen mengklik tombol "Buat Kelas Baru", sistem menampilkan dialog form dengan beberapa field yang harus diisi. Dialog ini menyajikan tiga field utama: (1) Nama Mata Kuliah untuk memasukkan nama mata pelajaran, (2) Kelas untuk menentukan sesi atau kelompok kelas (misalnya "RA", "RB"), dan (3) Periode Akademik untuk memilih periode pembelajaran (misalnya "2025/2026 Ganjil"). Gambar \ref{fig:4.create-class-empty} menunjukkan tampilan dialog kosong sebelum pengisian data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/create-class-dialog-empty.png}
+	\caption{Dialog Pembuatan Kelas - Status Kosong}
+	\label{fig:4.create-class-empty}
+\end{figure}
+
+Setelah Dosen mengisi semua field yang diperlukan dengan data kelas, dialog menampilkan data yang telah dimasukkan. Gambar \ref{fig:4.create-class-filled} menunjukkan contoh dialog yang telah diisi dengan data sampel untuk kelas "Algoritma Pemrograman" dengan sesi "RA" pada periode "2025/2026 Ganjil".
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/create-class-dialog-filled.png}
+	\caption{Dialog Pembuatan Kelas - Data Terisi}
+	\label{fig:4.create-class-filled}
+\end{figure}
+
+\subsubsection{Dashboard Dosen - Dengan Kelas}
+
+Setelah Dosen berhasil membuat kelas, dashboard diperbarui untuk menampilkan kelas yang telah dibuat. Halaman dashboard sekarang menampilkan kartu kelas yang berisi informasi nama mata kuliah, sesi kelas, jumlah mahasiswa yang terdaftar, dan quick action buttons untuk mengelola kelas. Statistik di bagian atas juga tetap ditampilkan untuk memberikan ringkasan aktivitas. Gambar \ref{fig:4.dashboard-with-class} menunjukkan tampilan dashboard setelah kelas berhasil dibuat.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dashboard-with-class.png}
+	\caption{Tampilan Dashboard Dosen dengan Kelas yang Telah Dibuat}
+	\label{fig:4.dashboard-with-class}
+\end{figure}
+
+\subsubsection{Halaman Detail Kelas}
+
+Ketika Dosen mengklik pada kelas yang telah dibuat, sistem menampilkan halaman detail kelas yang memberikan informasi lengkap dan opsi manajemen untuk kelas tersebut. Halaman ini terbagi menjadi beberapa bagian: bagian atas menampilkan informasi kelas dan tombol aksi (Buat Tugas Baru, Bagikan Kelas), bagian tengah menampilkan daftar tugas yang telah dibuat (pada awalnya kosong), dan bagian bawah menampilkan daftar mahasiswa yang telah mendaftar di kelas (juga kosong pada awalnya). Gambar \ref{fig:4.class-details} menunjukkan tampilan halaman detail kelas dalam status kosong.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/class-details-page.png}
+	\caption{Halaman Detail Kelas - Status Kosong}
+	\label{fig:4.class-details}
+\end{figure}
+
+\subsubsection{Dialog Pembagian Kelas}
+
+Untuk memungkinkan mahasiswa mendaftar ke kelas, Dosen dapat membagikan kelas dengan mengklik tombol "Bagikan Kelas". Sistem menampilkan dialog yang berisi URL kelas dan token pembagian yang dapat dibagikan kepada mahasiswa. Mahasiswa dapat menggunakan token ini untuk mendaftar ke kelas secara otomatis. Gambar \ref{fig:4.share-class} menunjukkan dialog pembagian kelas dengan URL dan token yang telah di-generate oleh sistem.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/share-class-dialog.png}
+	\caption{Dialog Pembagian Kelas dengan Token dan URL}
+	\label{fig:4.share-class}
+\end{figure}
+
+\subsubsection{Dialog Pembuatan Tugas}
+
+Fitur pembuatan tugas memungkinkan Dosen untuk membuat assignment yang akan diberikan kepada mahasiswa. Dialog pembuatan tugas memiliki form dengan beberapa field penting: (1) Nama Tugas untuk mengisi judul tugas, (2) Deskripsi untuk penjelasan tugas secara detail, (3) Spesifikasi Keahlian untuk menentukan skills yang dibutuhkan dalam tugas (dapat dipilih multiple), dan (4) Preferensi Topik untuk menentukan topik yang relevan dengan tugas. Gambar \ref{fig:4.create-assignment-empty} menunjukkan dialog dalam status kosong sebelum pengisian data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/create-assignment-dialog-empty.png}
+	\caption{Dialog Pembuatan Tugas - Status Kosong}
+	\label{fig:4.create-assignment-empty}
+\end{figure}
+
+Setelah Dosen mengisi semua field yang diperlukan dengan data tugas, dialog menampilkan data yang telah dimasukkan. Data yang diisi kemudian akan digunakan oleh sistem untuk berbagai keperluan seperti pengumpulan respons mahasiswa dan algoritma pembentukan kelompok. Gambar \ref{fig:4.create-assignment-filled} menunjukkan contoh dialog yang telah diisi dengan data sampel untuk tugas "Implementasi Algoritma Sorting".
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/create-assignment-dialog-filled.png}
+	\caption{Dialog Pembuatan Tugas - Data Terisi}
+	\label{fig:4.create-assignment-filled}
+\end{figure}
+
+\subsubsection{Halaman Detail Kelas dengan Tugas}
+
+Setelah Dosen membuat tugas, halaman detail kelas diperbarui untuk menampilkan tugas yang telah dibuat dalam bentuk daftar. Setiap tugas menampilkan nama tugas, status pengumpulan jawaban kuesioner mahasiswa, dan aksi yang dapat dilakukan. Gambar \ref{fig:4.class-with-assignment} menunjukkan halaman detail kelas dengan satu tugas yang telah dibuat.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/class-with-assignment.png}
+	\caption{Halaman Detail Kelas dengan Tugas yang Telah Dibuat}
+	\label{fig:4.class-with-assignment}
+\end{figure}
+
+\subsubsection{Halaman Analitik Tugas}
+
+Ketika Dosen mengklik pada tugas yang telah dibuat, sistem menampilkan halaman detail tugas yang menampilkan berbagai informasi dan analitik tentang tugas tersebut. Halaman ini menampilkan beberapa visualisasi data dalam bentuk chart, termasuk: (1) Distribusi tipe kepribadian MBTI mahasiswa yang akan mengerjakan tugas dengan ilustrasi karakter MBTI yang unik, (2) Distribusi skill mahasiswa yang menunjukkan sebaran kemampuan yang relevan dengan tugas, (3) Grafik preferensi topik yang menunjukkan minat mahasiswa terhadap topik tugas (dalam status kosong karena belum ada respons), dan (4) Grafik distribusi gender mahasiswa untuk memastikan representasi yang seimbang. Gambar \ref{fig:4.assignment-analytics} menunjukkan tampilan lengkap halaman analitik tugas dengan berbagai visualisasi data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/assignment-details-analytics.png}
+	\caption{Halaman Analitik Tugas dengan Visualisasi Data Komprehensif}
+	\label{fig:4.assignment-analytics}
+\end{figure}
+
+\subsubsection*{Fitur Mahasiswa}
+
+Bagian ini mendokumentasikan fitur-fitur yang tersedia untuk mahasiswa di sistem EquiTeam. Fitur-fitur ini dirancang untuk memfasilitasi partisipasi mahasiswa dalam proses onboarding, pendaftaran kelas, pengerjaan assignment, pengisian kuesioner, dan pembentukan kelompok berbasis AI.
+
+\subsubsection{Halaman Onboarding Data Diri - Mahasiswa}
+
+Mahasiswa juga harus menyelesaikan halaman onboarding data diri sebagai bagian dari proses registrasi awal. Pada halaman ini, mahasiswa mengisi informasi pribadi yang sama dengan dosen, yaitu nama lengkap, nomor induk mahasiswa (NIM), dan jenis kelamin. Form ini memiliki tampilan dan struktur yang sama dengan form dosen namun dengan label dan placeholder yang disesuaikan untuk konteks mahasiswa. Gambar \ref{fig:4.mahasiswa-data-diri} menunjukkan tampilan halaman onboarding data diri untuk mahasiswa dalam status kosong sebelum pengisian data.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-onboarding-data-diri.png}
+	\caption{Halaman Onboarding Data Diri untuk Mahasiswa - Status Kosong}
+	\label{fig:4.mahasiswa-data-diri}
+\end{figure}
+
+Setelah mahasiswa mengisi semua field yang diperlukan dengan data pribadinya, halaman menampilkan data yang telah dimasukkan. Data ini akan digunakan untuk identifikasi mahasiswa dan proses pembentukan kelompok yang seimbang. Gambar \ref{fig:4.mahasiswa-data-diri-filled} menunjukkan contoh halaman yang telah diisi dengan data sampel.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-onboarding-data-diri-filled.png}
+	\caption{Halaman Onboarding Data Diri untuk Mahasiswa - Data Terisi}
+	\label{fig:4.mahasiswa-data-diri-filled}
+\end{figure}
+
+\subsubsection{Tes Kepribadian MBTI}
+
+Setelah menyelesaikan pengisian data pribadi, mahasiswa diwajibkan untuk menyelesaikan tes kepribadian MBTI (Myers-Briggs Type Indicator) sebagai bagian integral dari proses onboarding. Tes ini mengumpulkan data kepribadian mahasiswa yang akan digunakan untuk membentuk kelompok yang seimbang secara dinamis. Sebelum memulai tes, sistem menampilkan modal instruksi yang menjelaskan cara pengerjaan tes. Gambar \ref{fig:4.mahasiswa-mbti-instructions} menunjukkan modal instruksi yang berisi penjelasan tentang skala Likert 5-poin yang digunakan dalam tes (Sangat Tidak Setuju, Tidak Setuju, Netral, Setuju, Sangat Setuju).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-onboarding-mbti-instructions.png}
+	\caption{Modal Instruksi Tes Kepribadian MBTI}
+	\label{fig:4.mahasiswa-mbti-instructions}
+\end{figure}
+
+Tes kepribadian MBTI terdiri dari 42 pertanyaan yang dibagi menjadi 7 halaman, masing-masing dengan 6 pertanyaan. Setiap pertanyaan menampilkan pernyataan tentang preferensi, perilaku, atau cara berpikir mahasiswa, dan mahasiswa harus memilih respons pada skala 5-poin. Pertanyaan dirancang untuk mengidentifikasi empat dimensi kepribadian MBTI: (1) Ekstroversion-Introversion (EI), (2) Sensing-Intuition (SN), (3) Thinking-Feeling (TF), dan (4) Perception-Judging (PJ). Gambar \ref{fig:4.mahasiswa-mbti-page1} menunjukkan halaman pertama dari tes kepribadian MBTI dengan 6 pertanyaan dan indikator progress.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-onboarding-mbti-test-page1.png}
+	\caption{Halaman Pertama Tes Kepribadian MBTI (Halaman 1 dari 7)}
+	\label{fig:4.mahasiswa-mbti-page1}
+\end{figure}
+
+Ketika mahasiswa mengisi respons untuk pertanyaan-pertanyaan dalam tes, sistem secara real-time menampilkan pilihan yang telah dipilih. Gambar \ref{fig:4.mahasiswa-mbti-filled} menunjukkan tes kepribadian dengan beberapa respons yang telah dipilih oleh mahasiswa, menunjukkan bahwa sistem menerima input dan menyimpan respons secara dinamis.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-onboarding-mbti-test-filled.png}
+	\caption{Tes Kepribadian MBTI dengan Respons yang Telah Dipilih}
+	\label{fig:4.mahasiswa-mbti-filled}
+\end{figure}
+
+\subsubsection{Hasil Tes Kepribadian MBTI}
+
+Setelah menyelesaikan seluruh 42 pertanyaan tes kepribadian MBTI, sistem menganalisis respons mahasiswa dan menghasilkan hasil kepribadian yang akurat. Hasil tes ditampilkan dalam halaman profil mahasiswa yang menunjukkan tipe kepribadian MBTI yang diperoleh, beserta penjelasan dan karakteristik tipe tersebut. Untuk setiap dimensi MBTI (EI, SN, TF, PJ), sistem menampilkan persentase skor untuk membantu mahasiswa memahami profil kepribadian mereka dengan lebih detail. Gambar \ref{fig:4.mahasiswa-mbti-result} menunjukkan halaman hasil tes kepribadian dengan detail lengkap tipe MBTI dan visualisasi skor pada setiap dimensi.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-mbti-result.png}
+	\caption{Halaman Hasil Tes Kepribadian MBTI}
+	\label{fig:4.mahasiswa-mbti-result}
+\end{figure}
+
+Sistem juga menyediakan dialog modal yang menampilkan grid lengkap dari 16 tipe kepribadian MBTI dengan ikon karakter unik untuk setiap tipe. Dialog ini memungkinkan mahasiswa untuk menjelajahi deskripsi dan karakteristik dari tipe kepribadian lain selain tipe mereka sendiri. Gambar \ref{fig:4.mahasiswa-mbti-distribution} menunjukkan modal dialog dengan semua 16 tipe MBTI dan visualisasi yang menarik untuk masing-masing tipe.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-mbti-distribution.png}
+	\caption{Modal Dialog Distribusi 16 Tipe Kepribadian MBTI}
+	\label{fig:4.mahasiswa-mbti-distribution}
+\end{figure}
+
+\subsubsection{Dashboard Mahasiswa}
+
+Setelah menyelesaikan proses onboarding dan tes kepribadian MBTI, mahasiswa akan diarahkan ke halaman dashboard mereka. Dashboard mahasiswa merupakan halaman utama yang menampilkan daftar kelas yang telah diikuti oleh mahasiswa. Ketika mahasiswa pertama kali masuk ke dashboard dan belum mengikuti kelas apapun, halaman menampilkan pesan "Belum ada kelas yang diikuti" dengan tombol "Masuk Kelas" untuk memulai bergabung dengan kelas. Gambar \ref{fig:4.mahasiswa-dashboard} menunjukkan tampilan dashboard mahasiswa dalam status kosong.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-dashboard.png}
+	\caption{Tampilan Dashboard Mahasiswa - Status Kosong}
+	\label{fig:4.mahasiswa-dashboard}
+\end{figure}
+
+\subsubsection{Dialog Pendaftaran Kelas}
+
+Untuk bergabung dengan kelas, mahasiswa dapat menggunakan kode atau token yang dibagikan oleh dosen. Sistem menyediakan dialog untuk memasukkan kode kelas yang akan memungkinkan mahasiswa untuk langsung terdaftar di kelas tersebut. Dialog ini menampilkan field input untuk memasukkan token kelas dan tombol submit untuk proses pendaftaran. Gambar \ref{fig:4.mahasiswa-join-class} menunjukkan dialog pendaftaran kelas dalam status kosong dengan input field yang siap menerima token.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-join-class-dialog.png}
+	\caption{Dialog Pendaftaran Kelas - Status Kosong}
+	\label{fig:4.mahasiswa-join-class}
+\end{figure}
+
+Ketika mahasiswa memasukkan token kelas yang valid yang diperoleh dari dosen, tombol "Masuk" akan menjadi aktif dan memungkinkan mahasiswa untuk melanjutkan proses pendaftaran. Mahasiswa akan otomatis terdaftar di kelas tersebut dan dapat melihat daftar assignment serta informasi kelas lainnya. Gambar \ref{fig:4.mahasiswa-join-class-filled} menunjukkan dialog dengan token kelas yang telah dimasukkan dan tombol Masuk yang siap untuk diklik.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-join-class-dialog-filled.png}
+	\caption{Dialog Pendaftaran Kelas - Token Terisi}
+	\label{fig:4.mahasiswa-join-class-filled}
+\end{figure}
+
+\subsubsection{Dashboard Mahasiswa dengan Kelas}
+
+Setelah mahasiswa berhasil bergabung dengan kelas, dashboard diperbarui untuk menampilkan kelas yang telah diikuti. Kartu kelas menampilkan informasi lengkap meliputi kode kelas (misalnya "RA"), jumlah mahasiswa yang terdaftar (misalnya "2 mahasiswa"), nama mata kuliah ("Functional Programming"), nama dosen ("Dosen Galin"), dan periode akademik ("2025/2026"). Dashboard ini memungkinkan mahasiswa untuk dengan mudah mengakses kelas dan melihat informasi ringkas tentang setiap kelas yang diikuti. Gambar \ref{fig:4.mahasiswa-dashboard-with-class} menunjukkan tampilan dashboard mahasiswa setelah berhasil bergabung dengan kelas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-dashboard-with-class.png}
+	\caption{Tampilan Dashboard Mahasiswa dengan Kelas yang Telah Diikuti}
+	\label{fig:4.mahasiswa-dashboard-with-class}
+\end{figure}
+
+\subsubsection{Halaman Detail Kelas dari Perspektif Mahasiswa}
+
+Ketika mahasiswa mengklik pada kelas yang telah diikuti, sistem menampilkan halaman detail kelas dari perspektif mahasiswa. Halaman ini menampilkan daftar tugas (assignment) yang telah dibuat oleh dosen beserta status pengumpulan respons mahasiswa. Setiap tugas menampilkan informasi seperti nama tugas, jumlah mahasiswa yang telah mengisi kuesioner, dan aksi yang dapat dilakukan oleh mahasiswa. Di sebelah kanan, halaman menampilkan daftar mahasiswa yang tergabung dalam kelas dengan informasi tipe kepribadian MBTI dan nomor induk mahasiswa mereka. Gambar \ref{fig:4.mahasiswa-class-view} menunjukkan tampilan lengkap halaman detail kelas dari perspektif mahasiswa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-class-view.png}
+	\caption{Halaman Detail Kelas dan Daftar Tugas dari Perspektif Mahasiswa}
+	\label{fig:4.mahasiswa-class-view}
+\end{figure}
+
+\subsubsection{Tes Keahlian (Skills Assessment)}
+
+Untuk setiap tugas, mahasiswa harus mengisi kuesioner tentang keahlian dan preferensi topik mereka. Sistem dimulai dengan menampilkan modal instruksi yang menjelaskan skala penilaian keahlian. Skala penilaian terdiri dari 5 tingkat kemahiran: (1) Pemula (untuk pemula), (2) Pemula Lanjut (untuk tingkat intermediate), (3) Kompeten (untuk tingkat yang cukup mahir), (4) Mahir (untuk tingkat mahir), dan (5) Jago Banget (untuk tingkat expert). Setiap tingkat kemahiran ditampilkan dengan ikon emoji yang unik untuk memudahkan pemahaman. Gambar \ref{fig:4.mahasiswa-assignment-quiz} menunjukkan modal instruksi tes keahlian dengan penjelasan detail tentang skala penilaian.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-assignment-quiz.png}
+	\caption{Modal Instruksi Tes Keahlian dengan Lima Tingkat Kemahiran}
+	\label{fig:4.mahasiswa-assignment-quiz}
+\end{figure}
+
+Halaman tes keahlian menampilkan pertanyaan-pertanyaan yang menilai kemampuan mahasiswa di berbagai teknologi atau topik yang relevan dengan tugas. Setiap pertanyaan menampilkan nama teknologi atau topik (misalnya "Rust", "Linux") dan lima opsi tingkat kemahiran yang dapat dipilih mahasiswa. Mahasiswa harus jujur dalam menilai kemampuan mereka karena data ini akan digunakan untuk pembentukan kelompok yang seimbang. Gambar \ref{fig:4.mahasiswa-assignment-quiz-questions} menunjukkan halaman tes keahlian dengan beberapa pertanyaan tentang kemampuan teknologi.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-assignment-quiz-questions.png}
+	\caption{Halaman Tes Keahlian Mahasiswa untuk Berbagai Teknologi}
+	\label{fig:4.mahasiswa-assignment-quiz-questions}
+\end{figure}
+
+\subsubsection{Tes Preferensi Topik}
+
+Setelah mengisi tes keahlian, mahasiswa juga harus mengisi tes preferensi topik untuk menunjukkan minat mereka terhadap berbagai topik yang tersedia dalam tugas. Tes ini menggunakan skala Likert lima poin untuk mengukur tingkat ketertarikan mahasiswa, dari "Sangat Tidak Tertarik" hingga "Sangat Tertarik". Setiap pertanyaan menampilkan nama topik (misalnya "Compiler", "Embedded") dan lima opsi tingkat ketertarikan dengan ikon yang representatif. Data preferensi topik ini akan membantu algoritma pembentukan kelompok untuk mencocokkan mahasiswa dengan topik yang sesuai dengan minat mereka. Gambar \ref{fig:4.mahasiswa-assignment-topic-preference} menunjukkan halaman tes preferensi topik dengan pertanyaan-pertanyaan tentang minat topik.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-assignment-topic-preference.png}
+	\caption{Halaman Preferensi Topik untuk Menilai Minat Mahasiswa}
+	\label{fig:4.mahasiswa-assignment-topic-preference}
+\end{figure}
+
+\subsubsection{Status Menunggu Pembagian Kelompok}
+
+Setelah mahasiswa menyelesaikan pengisian kuesioner keahlian dan preferensi topik, sistem menampilkan halaman status yang menunjukkan bahwa mahasiswa telah mengumpulkan respons mereka dan sistem sedang menunggu dosen untuk membentuk kelompok. Halaman ini menampilkan ikon hourglass (jam pasir) dengan pesan "Menunggu pembagian kelompok!" untuk menginformasikan bahwa proses pembentukan kelompok sedang berlangsung atau belum dimulai oleh dosen. Gambar \ref{fig:4.mahasiswa-assignment-waiting-team} menunjukkan halaman status menunggu pembagian kelompok.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-assignment-waiting-team.png}
+	\caption{Halaman Status Menunggu Pembagian Kelompok oleh Dosen}
+	\label{fig:4.mahasiswa-assignment-waiting-team}
+\end{figure}
+
+\subsubsection{Halaman Profil Mahasiswa}
+
+Mahasiswa dapat melihat profil lengkap mereka yang menampilkan hasil tes kepribadian MBTI yang telah diselesaikan selama onboarding. Halaman profil menampilkan tipe kepribadian MBTI (misalnya "ENFJ - The Protagonist") beserta penjelasan detail tentang karakteristik tipe tersebut. Untuk memvisualisasikan profil kepribadian, sistem menyediakan dua jenis visualisasi: (1) Grafik batang (bar chart) yang menampilkan persentase skor untuk setiap dimensi MBTI (E/I, N/S, F/T, J/P), dan (2) Grafik radar (radar chart) yang menampilkan profil kepribadian dalam bentuk diagram bintang. Gambar \ref{fig:4.mahasiswa-profile} menunjukkan halaman profil mahasiswa dengan visualisasi bar chart yang menampilkan skor pada setiap dimensi kepribadian.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-profile.png}
+	\caption{Halaman Profil Mahasiswa dengan Visualisasi Bar Chart Tipe Kepribadian MBTI}
+	\label{fig:4.mahasiswa-profile}
+\end{figure}
+
+Sistem juga menyediakan visualisasi alternatif menggunakan grafik radar yang menampilkan profil kepribadian dalam bentuk diagram bintang dengan empat sumbu yang mewakili dimensi MBTI. Visualisasi radar ini memberikan perspektif berbeda tentang profil kepribadian dan memudahkan perbandingan antar dimensi. Gambar \ref{fig:4.mahasiswa-profile-radar} menunjukkan halaman profil yang sama dengan visualisasi radar chart.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-profile-radar.png}
+	\caption{Halaman Profil Mahasiswa dengan Visualisasi Radar Chart Tipe Kepribadian MBTI}
+	\label{fig:4.mahasiswa-profile-radar}
+\end{figure}
+
+Halaman profil juga menyediakan akses ke dialog modal yang menampilkan grid lengkap dari 16 tipe kepribadian MBTI. Dialog ini memungkinkan mahasiswa untuk mengeksplorasi deskripsi dan karakteristik dari berbagai tipe kepribadian, tidak hanya tipe mereka sendiri. Setiap tipe kepribadian ditampilkan dengan ikon karakter unik dan kategori (Analysts, Diplomats, Sentinels, Explorers). Gambar \ref{fig:4.mahasiswa-mbti-distribution} menunjukkan modal dialog dengan persebaran lengkap 16 tipe kepribadian MBTI dan tipe mahasiswa yang tersorot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-mbti-distribution.png}
+	\caption{Dialog Persebaran 16 Tipe Kepribadian MBTI dengan Tipe Mahasiswa yang Tersorot}
+	\label{fig:4.mahasiswa-mbti-distribution}
+\end{figure}
 
 Contoh implementasi kode dapat ditulis menggunakan \verb|\begin{lstlisting}|. Contoh kode dapat dilihat pada Kode \ref{code:4.contoh}. \par
 % Menulis blok kode
