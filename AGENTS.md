@@ -3,6 +3,8 @@
 ## Build Commands
 - **Compile thesis**: Use LaTeX editor (TeXstudio/Overleaf) or run: `pdflatex thesis.tex && bibtex thesis && pdflatex thesis.tex && pdflatex thesis.tex`
 - **Quick compile**: `pdflatex thesis.tex` (without bibliography updates)
+- **Silent compile**: `pdflatex -interaction=batchmode -halt-on-error thesis.tex > /dev/null 2>&1` (no warnings/errors shown)
+- **Full silent compile**: Run 3 times for references: `pdflatex -interaction=batchmode -halt-on-error thesis.tex > /dev/null 2>&1 && pdflatex -interaction=batchmode -halt-on-error thesis.tex > /dev/null 2>&1 && pdflatex -interaction=batchmode -halt-on-error thesis.tex > /dev/null 2>&1`
 - Main file: `thesis.tex` (UNESCO format 155x230mm)
 
 ## Project Structure

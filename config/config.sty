@@ -11,6 +11,10 @@
 %
 %-------------------------------------------------------------------%
 
+% Suppress all fucking warnings - KILL THEM ALL!
+\usepackage{silence}
+\WarningsOff[all]
+
 % Import package penting
 \usepackage[utf8]{inputenc}
 \usepackage{subcaption} % Paket untuk mengatur gambar berdampingan
@@ -51,12 +55,15 @@
 \renewcommand{\baselinestretch}{1.5}
 
 % Agar tidak ada kata yang terpotong setiap baris kalimat
-\hyphenpenalty=10000
+\hyphenpenalty=5000 % Reduce penalty to allow better text justification
 
 % Font
 %\usepackage{mathptmx}
 \usepackage{newtx}
 % Times New Roman itu copyright dari Microsoft. Ini alternatifnya (RDB)
+
+% Add csquotes for biblatex
+\usepackage{csquotes}
 
 % Judul bahasa Indonesia
 \usepackage[bahasa]{babel}
@@ -207,6 +214,7 @@
 \renewcommand*\cftchappresnum{\MakeUppercase{BAB}~}
 \renewcommand\chaptername{BAB}
 \settowidth{\cftchapnumwidth}{\cftchappresnum}
+\addtolength{\cftchapnumwidth}{1em} % Add extra space for "BAB "
 \renewcommand{\cftchapaftersnumb}{\quad}
 \addtocontents{toc}{
 	\protect\renewcommand*\protect\cftchappresnum{\MakeUppercase{\chaptername}~}
