@@ -4,6 +4,172 @@
 \section{Hasil Penelitian} \label{IV.Hasil}
 Berisi hasil penelitian berdasarkan rancangan yang sudah dijelaskan pada Bab \ref{Bab III}, terutama dari Subbab \ref{III.Metode}. Bagi yang membuat alat, jelaskan alat yang jadi dalam bentuk apa. Bagi yang membuat aplikasi, jelaskan aplikasi yang jadi dalam bentuk seperti apa. Jabarkan dalam bentuk pseudocode dan dijelaskan per bagian kodenya. Gunakan gambar dan tabel sebagai alat bantu menjelaskan hasil. \par
 
+\subsection{Implementasi Fitur}
+
+Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah diimplementasikan dalam sistem EduTeams menggunakan metodologi Agile Kanban. Implementasi menggunakan pendekatan iteratif dengan fokus pada fitur-fitur inti terlebih dahulu, kemudian dikembangkan ke fitur-fitur lanjutan. Status implementasi mengikuti alur kerja Kanban dengan tiga kategori: \textit{DONE} (fitur telah diimplementasikan dan diuji), \textit{IN PROGRESS} (fitur sedang dalam tahap pengembangan atau perbaikan), dan \textit{TODO} (fitur direncanakan namun belum diimplementasikan).
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
+\caption{Implementasi Fitur Sistem EduTeams}
+\label{tab:implementasi-fitur}\\
+\hline
+\textbf{No} & \textbf{Fitur/Menu} & \textbf{Status} \\
+\hline
+\endfirsthead
+\hline
+\textbf{No} & \textbf{Fitur/Menu} & \textbf{Status} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\multicolumn{3}{|c|}{\textbf{A. AUTENTIKASI DAN OTORISASI}} \\
+\hline
+1 & Login dengan Google OAuth & \textit{DONE} \\
+\hline
+2 & Role-Based Access Control (RBAC) - 3 role: Mahasiswa, Dosen, Admin & \textit{DONE} \\
+\hline
+3 & Session Management dengan tracking IP dan user agent & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{B. ONBOARDING PENGGUNA}} \\
+\hline
+4 & Pemilihan Role (Mahasiswa/Dosen) dengan auto-detection email institusi & \textit{DONE} \\
+\hline
+5 & Form Data Diri (NIM/NPM, nama, jenis kelamin) & \textit{DONE} \\
+\hline
+6 & Tes Kepribadian MBTI dengan 60 pertanyaan OJTS 1.2 & \textit{DONE} \\
+\hline
+7 & Sistem scoring dan klasifikasi 16 tipe MBTI (EI, SN, TF, PJ) & \textit{DONE} \\
+\hline
+8 & Resume Onboarding untuk melanjutkan proses yang belum selesai & \textit{DONE} \\
+\hline
+9 & Welcome Splash Screen untuk pengguna baru & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{C. DASHBOARD}} \\
+\hline
+10 & Dashboard Mahasiswa dengan daftar kelas yang diikuti & \textit{DONE} \\
+\hline
+11 & Dashboard Dosen dengan statistik (total kelas, mahasiswa, tugas) & \textit{DONE} \\
+\hline
+12 & Navigasi Sidebar dan Top Navigation Bar & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{D. MANAJEMEN KELAS}} \\
+\hline
+13 & Pembuatan Kelas Baru (nama mata kuliah, kelas, tahun, periode) & \textit{DONE} \\
+\hline
+14 & Join Kelas via Share Token untuk mahasiswa & \textit{DONE} \\
+\hline
+15 & Daftar Mahasiswa per Kelas dengan data MBTI & \textit{DONE} \\
+\hline
+16 & Kelola Kelas (Edit, Hapus, Arsip) & \textit{DONE} \\
+\hline
+17 & Search dan Filter Mahasiswa & \textit{DONE} \\
+\hline
+18 & Hapus Mahasiswa dari Kelas & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{E. MANAJEMEN TUGAS}} \\
+\hline
+19 & Pembuatan Tugas (Assignment) dengan judul, deskripsi, tanggal mulai & \textit{DONE} \\
+\hline
+20 & Kelola Tugas dalam bentuk Table View dengan search dan filter & \textit{DONE} \\
+\hline
+21 & Edit Tugas dengan validation & \textit{DONE} \\
+\hline
+22 & Sistem Versioning Assignment untuk tracking perubahan & \textit{DONE} \\
+\hline
+23 & Deteksi Perubahan Assignment dengan flagging submission & \textit{DONE} \\
+\hline
+24 & Hapus dan Arsip Tugas & \textit{DONE} \\
+\hline
+25 & Sistem Topik per Assignment & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{F. QUIZ DAN PREFERENSI}} \\
+\hline
+26 & Quiz Penilaian Skill dengan Likert scale & \textit{DONE} \\
+\hline
+27 & Quiz Preferensi Topik untuk assignment & \textit{DONE} \\
+\hline
+28 & Submission Tracking dengan status (Belum Isi, Menunggu, Berhasil) & \textit{DONE} \\
+\hline
+29 & Resubmission untuk assignment yang berubah & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{G. PEMBENTUKAN KELOMPOK}} \\
+\hline
+30 & Integrasi Algoritma Pembentukan Kelompok (Edu2com API) & \textit{DONE} \\
+\hline
+31 & Algoritma Multi-Faktor (MBTI, Skill, Gender, Preferensi Topik) & \textit{DONE} \\
+\hline
+32 & Pembentukan kelompok berdasarkan jumlah kelompok & \textit{DONE} \\
+\hline
+33 & Pembentukan kelompok berdasarkan ukuran kelompok & \textit{DONE} \\
+\hline
+34 & Team Quality Scoring untuk setiap kelompok & \textit{DONE} \\
+\hline
+35 & Tampilan Hasil Kelompok untuk Dosen dan Mahasiswa & \textit{DONE} \\
+\hline
+36 & Reset dan Ulang Pembentukan Kelompok & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{H. ANALITIK DAN VISUALISASI}} \\
+\hline
+37 & Chart Distribusi 16 Tipe MBTI & \textit{DONE} \\
+\hline
+38 & Chart Distribusi Skill Mahasiswa & \textit{DONE} \\
+\hline
+39 & Chart Distribusi Gender & \textit{DONE} \\
+\hline
+40 & Radar Chart Personality (EI, SN, TF, PJ) & \textit{DONE} \\
+\hline
+41 & Statistik Submission Rate Assignment & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{I. PROFIL DAN PENGATURAN}} \\
+\hline
+42 & Halaman Profil dengan data lengkap MBTI & \textit{DONE} \\
+\hline
+43 & Deskripsi karakteristik 16 Tipe MBTI & \textit{DONE} \\
+\hline
+44 & Language Switcher (Bahasa Indonesia dan English) & \textit{DONE} \\
+\hline
+45 & CTA dan Navigasi pada Landing Page & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{J. FITUR TAMBAHAN}} \\
+\hline
+46 & Loading States dengan Suspense dan Skeleton Components & \textit{DONE} \\
+\hline
+47 & Error Handling dan Error Pages & \textit{DONE} \\
+\hline
+48 & Responsive Design (Mobile, Tablet, Desktop) & \textit{DONE} \\
+\hline
+49 & Fitur Aksesibilitas Dasar (ARIA Labels pada UI Components) & \textit{DONE} \\
+\hline
+50 & Multi-layer Caching Strategy (Memory + Redis) & \textit{DONE} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{K. FITUR DALAM PENGERJAAN}} \\
+\hline
+51 & Pre-fill Jawaban Quiz Skill dan Preferensi Sebelumnya & \textit{IN PROGRESS} \\
+\hline
+52 & Halaman Management untuk Mahasiswa dengan Tabs & \textit{IN PROGRESS} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{L. FITUR YANG DIRENCANAKAN}} \\
+\hline
+53 & Sistem Preferensi Antar Mahasiswa (Person-to-Person Preferences) & \textit{TODO} \\
+\hline
+54 & Notifikasi Real-time menggunakan WebSocket/SSE & \textit{TODO} \\
+\hline
+55 & Notifikasi Email untuk event penting menggunakan Resend & \textit{TODO} \\
+\hline
+56 & Export Data Kelompok ke PDF dan Spreadsheet & \textit{TODO} \\
+\hline
+57 & Notification Badge pada Management Page & \textit{TODO} \\
+\hline
+58 & Advanced Settings untuk Bobot Pembagian Kelompok & \textit{TODO} \\
+\hline
+59 & Legend dan Sort untuk MBTI Chart & \textit{TODO} \\
+\hline
+\end{longtable}
+
+\noindent
+Dari total 59 fitur yang diidentifikasi, 50 fitur (84.7\%) telah selesai diimplementasikan dan diuji, 2 fitur (3.4\%) sedang dalam tahap pengerjaan berupa implementasi fitur tambahan untuk mahasiswa, serta 7 fitur (11.9\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap maturity yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi dengan rencana pengembangan berkelanjutan untuk fitur-fitur tambahan.
+
 Contoh implementasi kode dapat ditulis menggunakan \verb|\begin{lstlisting}|. Contoh kode dapat dilihat pada Kode \ref{code:4.contoh}. \par
 % Menulis blok kode
 \begin{lstlisting}[caption={Akuisisi Gambar}, label={code:4.contoh}]
@@ -34,19 +200,19 @@ Berikan hasil pengujian berdasarkan rancangan \& skenario yang sudah direncanaka
 	\label{table:4.dummy}\\
 	\hline
 	\multirow{2}{*}{\textbf{Subjek}} & \multicolumn{7}{|c|}{\textbf{Hasil Prediksi (BPM)}} & \multirow{2}{*}{\textbf{GT}} \\ \cline{2-8}
-	& \textbf{F} & \textbf{NA} & \textbf{NO} & \textbf{RC} & \textbf{LC} & \textbf{M} & \textbf{C} & \\ 
+	& \textbf{F} & \textbf{NA} & \textbf{NO} & \textbf{RC} & \textbf{LC} & \textbf{M} & \textbf{C} & \\
 	\hline
 	\endfirsthead
 	\hline
 	\multirow{2}{*}{\textbf{Subjek}} & \multicolumn{7}{|c|}{\textbf{Hasil Prediksi (BPM)}} & \multirow{2}{*}{\textbf{GT}} \\ \cline{2-8}
-	& \textbf{F} & \textbf{NA} & \textbf{NO} & \textbf{RC} & \textbf{LC} & \textbf{M} & \textbf{C} & \\ 
+	& \textbf{F} & \textbf{NA} & \textbf{NO} & \textbf{RC} & \textbf{LC} & \textbf{M} & \textbf{C} & \\
 	\hline
 	\endhead
 	\hline
 	\endfoot
 	\hline
 	\endlastfoot
-	1 & 68 & 69 & 68 & 70 & 68 & 71 & 69 & 68 \\ 
+	1 & 68 & 69 & 68 & 70 & 68 & 71 & 69 & 68 \\
 	\hline
 	2 & 69 & 69 & 68 & 70 & 68 & 71 & 69 & 69 \\
 	\hline
