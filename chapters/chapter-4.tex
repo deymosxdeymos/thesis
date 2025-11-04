@@ -8,7 +8,7 @@ Berisi hasil penelitian berdasarkan rancangan yang sudah dijelaskan pada Bab \na
 
 Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah diimplementasikan dalam sistem EduTeams menggunakan metodologi Agile Kanban. Implementasi menggunakan pendekatan iteratif dengan fokus pada fitur-fitur inti terlebih dahulu, kemudian dikembangkan ke fitur-fitur lanjutan. Status implementasi mengikuti alur kerja Kanban dengan tiga kategori: \textit{DONE} (fitur telah diimplementasikan dan diuji), \textit{IN PROGRESS} (fitur sedang dalam tahap pengembangan atau perbaikan), dan \textit{TODO} (fitur direncanakan namun belum diimplementasikan).
 
-\subsubsection*{Fitur Dosen (Dosen Features)}
+\subsubsection*{Fitur Dosen}
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
 	\caption{Implementasi Fitur Sistem EduTeams}
@@ -189,7 +189,7 @@ Bagian ini mendokumentasikan fitur-fitur yang tersedia untuk dosen di sistem Equ
 
 \subsubsection{Halaman Onboarding Data Diri}
 
-Halaman onboarding data diri merupakan bagian kedua dari alur onboarding sistem EquiTeam. Pengguna mengisi informasi pribadi sesuai dengan peran yang dipilih (Dosen atau Mahasiswa), termasuk nama lengkap, nomor identitas, dan jenis kelamin. Data ini digunakan untuk identifikasi pengguna dan pembentukan kelompok yang seimbang secara demografis.
+Halaman \textit{onboarding} data diri merupakan bagian kedua dari alur \textit{onboarding} sistem EquiTeam. Pengguna mengisi informasi pribadi sesuai dengan peran yang dipilih (Dosen atau Mahasiswa), termasuk nama lengkap, nomor identitas, dan jenis kelamin. Data ini digunakan untuk identifikasi pengguna dan pembentukan kelompok yang seimbang secara demografis.
 
 \begin{figure}[H]
 	\centering
@@ -211,7 +211,7 @@ Setelah menyelesaikan proses onboarding, pengguna dengan peran Dosen diarahkan k
 
 \subsubsection{Dialog Pembuatan Kelas}
 
-Fitur pembuatan kelas memungkinkan Dosen untuk membuat kelas baru dengan mengisi informasi yang diperlukan: Nama Mata Kuliah, Kelas (sesi/kelompok), dan Periode Akademik. Ketika Dosen mengklik tombol "Buat Kelas Baru", sistem menampilkan dialog form dengan field-field tersebut.
+Fitur pembuatan kelas memungkinkan Dosen untuk membuat kelas baru dengan mengisi informasi yang diperlukan: Nama Mata Kuliah, Kelas (sesi/kelompok), dan Periode Akademik. Ketika Dosen mengklik tombol "Buat Kelas Baru", sistem menampilkan \textit{dialog form} dengan \textit{field-field} tersebut.
 
 \begin{figure}[H]
 	\centering
@@ -220,7 +220,7 @@ Fitur pembuatan kelas memungkinkan Dosen untuk membuat kelas baru dengan mengisi
 	\label{fig:4.create-class-empty}
 \end{figure}
 
-Setelah dosen mengisi semua field dengan data kelas, dialog menampilkan data yang telah dimasukkan dan siap untuk disimpan.
+Setelah dosen mengisi semua \textit{field} dengan data kelas, dialog menampilkan data yang telah dimasukkan dan siap untuk disimpan.
 
 \begin{figure}[H]
 	\centering
@@ -238,6 +238,25 @@ Setelah Dosen berhasil membuat kelas, dashboard diperbarui untuk menampilkan kel
 	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dashboard-with-class.png}
 	\caption{Tampilan Dashboard Dosen dengan Kelas yang Telah Dibuat}
 	\label{fig:4.dashboard-with-class}
+\end{figure}
+
+\subsubsection{Statistik Dashboard Dosen}
+
+Dashboard Dosen menampilkan ringkasan statistik komprehensif yang memberikan gambaran umum tentang aktivitas dan kinerja sistem. Statistik ini ditampilkan dalam bentuk kartu metrik yang mudah dipahami di bagian atas dashboard, mencakup tiga kategori utama:
+
+\begin{enumerate}
+	\item \textbf{Total Tugas Telah Dibuat}: Menampilkan jumlah total tugas (assignment) yang telah dibuat dosen di seluruh kelas. Metrik ini membantu dosen memantau produktivitas dalam pembuatan tugas pembelajaran.
+	\item \textbf{Total Kelompok Berhasil Dibentuk}: Menunjukkan jumlah total kelompok mahasiswa yang telah berhasil dibentuk melalui algoritma pembentukan kelompok berbasis multi-faktor (MBTI, Skill, Gender, Preferensi Topik). Metrik ini mengindikasikan seberapa banyak pengelompokan telah diselesaikan.
+	\item \textbf{Kualitas Kelompok}: Merepresentasikan skor kualitas dari kelompok-kelompok yang dibentuk, ditampilkan dalam format statistik deskriptif dengan tiga nilai: nilai minimum (Min), nilai maksimum (Max), dan rata-rata (Mean) dari semua skor kualitas kelompok dalam persentase. Skor kualitas ini mencerminkan tingkat keseimbangan dan heterogenitas dalam kelompok berdasarkan berbagai dimensi kepribadian, keahlian, dan preferensi mahasiswa.
+\end{enumerate}
+
+Gambar \ref{fig:4.dashboard-statistics} menunjukkan tampilan statistik dashboard dosen dengan ketiga metrik utama yang memberikan informasi ringkas tentang aktivitas dan kinerja pembentukan kelompok dalam sistem.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-dashboard-statistics.png}
+	\caption{Statistik Dashboard Dosen dengan Ringkasan Metrik Aktivitas dan Kinerja}
+	\label{fig:4.dashboard-statistics}
 \end{figure}
 
 \subsubsection{Halaman Detail Kelas}
@@ -262,9 +281,42 @@ Untuk memungkinkan mahasiswa mendaftar ke kelas, Dosen dapat membagikan kelas de
 	\label{fig:4.share-class}
 \end{figure}
 
+\subsubsection{Halaman Manajemen Kelas}
+
+Dosen dapat mengakses halaman Manajemen Kelas untuk melihat semua kelas dalam bentuk tabel yang terorganisir. Halaman ini menampilkan informasi lengkap untuk setiap kelas, termasuk nama kelas, periode akademik, jumlah tugas, dan jumlah mahasiswa yang terdaftar. Dosen juga dapat melakukan operasi manajemen seperti melihat detail kelas, membagikan \textit{token}, mengedit informasi kelas, atau menghapus kelas melalui \textit{control buttons} di setiap baris. Gambar \ref{fig:4.dosen-manage-courses} menunjukkan tampilan halaman manajemen kelas dengan tabel daftar kelas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-manage-courses.png}
+	\caption{Halaman Manajemen Kelas dengan Tabel Daftar Kelas}
+	\label{fig:4.dosen-manage-courses}
+\end{figure}
+
+\subsubsection{Dialog Edit Kelas}
+
+Dosen dapat mengedit informasi kelas yang telah dibuat dengan mengklik tombol edit di halaman manajemen atau detail kelas. Dialog edit kelas menampilkan \textit{form} dengan \textit{field-field} yang dapat diubah: Nama Mata Kuliah, Kelas (sesi/kelompok), dan Periode Akademik. Dosen dapat memodifikasi informasi ini dan menyimpan perubahan. Gambar \ref{fig:4.dosen-edit-class-dialog} menunjukkan tampilan dialog edit kelas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-edit-class-dialog.png}
+	\caption{Dialog Edit Kelas dengan Form Terisi}
+	\label{fig:4.dosen-edit-class-dialog}
+\end{figure}
+
+\subsubsection{Dialog Hapus dan Arsip Kelas}
+
+Dosen dapat menghapus atau mengarsipkan kelas melalui tombol kontrol di halaman manajemen. Dialog hapus kelas memberikan konfirmasi sebelum penghapusan permanen. Sistem memberikan peringatan bahwa kelas yang dihapus tidak akan bisa diakses oleh mahasiswa. Gambar \ref{fig:4.dosen-delete-class-dialog} menunjukkan dialog konfirmasi penghapusan kelas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-delete-class-dialog.png}
+	\caption{Dialog Konfirmasi Penghapusan Kelas}
+	\label{fig:4.dosen-delete-class-dialog}
+\end{figure}
+
 \subsubsection{Dialog Pembuatan Tugas}
 
-Fitur pembuatan tugas memungkinkan Dosen untuk membuat assignment dengan mengisi informasi penting: Nama Tugas, Deskripsi, Spesifikasi Keahlian (skills yang dibutuhkan), dan Preferensi Topik. Data ini akan digunakan untuk pengumpulan respons mahasiswa dan algoritma pembentukan kelompok.
+Fitur pembuatan tugas memungkinkan Dosen untuk membuat tugas dengan mengisi informasi penting: Nama Tugas, Deskripsi, Spesifikasi Keahlian (\textit{skill} yang dibutuhkan), dan Preferensi Topik. Data ini akan digunakan untuk pengumpulan respons mahasiswa dan algoritma pembentukan kelompok.
 
 \begin{figure}[H]
 	\centering
@@ -273,7 +325,7 @@ Fitur pembuatan tugas memungkinkan Dosen untuk membuat assignment dengan mengisi
 	\label{fig:4.create-assignment-empty}
 \end{figure}
 
-Setelah dosen mengisi semua field dengan data tugas, dialog menampilkan data yang telah dimasukkan dan siap untuk disimpan.
+Setelah dosen mengisi semua \textit{field} dengan data tugas, dialog menampilkan data yang telah dimasukkan dan siap untuk disimpan.
 
 \begin{figure}[H]
 	\centering
@@ -293,6 +345,39 @@ Setelah Dosen membuat tugas, halaman detail kelas diperbarui untuk menampilkan t
 	\label{fig:4.class-with-assignment}
 \end{figure}
 
+\subsubsection{Halaman Manajemen Tugas}
+
+Halaman manajemen tugas menampilkan daftar semua tugas dalam suatu kelas dalam format tabel yang terorganisir. Dosen dapat melihat nama tugas, tanggal pembuatan, status tugas, dan tombol kontrol untuk setiap tugas. Pada kolom Status, sistem menampilkan status pengumpulan respons mahasiswa (Menunggu pembagian grup). Kolom Kontrol Manajemen menyediakan berbagai tombol untuk operasi manajemen tugas seperti melihat detail, mengedit, menghapus, atau mengarsipkan tugas. Gambar \ref{fig:4.dosen-manage-assignments-view} menunjukkan tampilan halaman manajemen tugas dengan tabel lengkap.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-manage-assignments-view.png}
+	\caption{Halaman Manajemen Tugas dengan Tabel Daftar Tugas}
+	\label{fig:4.dosen-manage-assignments-view}
+\end{figure}
+
+\subsubsection{Dialog Edit Tugas}
+
+Dialog edit tugas memungkinkan dosen untuk memodifikasi informasi tugas yang telah dibuat. Sistem menampilkan formulir dengan \textit{field-field} yang dapat diubah: Nama Tugas, Deskripsi, Spesifikasi Keahlian (\textit{skill} yang dibutuhkan), dan Preferensi Topik dengan \textit{tag}/lencana yang dapat ditambah atau dihapus. Dialog ini dilengkapi dengan fitur deteksi perubahan cerdas yang menganalisis dampak dari modifikasi terhadap pengumpulan respons mahasiswa. Gambar \ref{fig:4.dosen-edit-assignment-dialog} menunjukkan tampilan dialog edit tugas dengan semua \textit{field} yang tersedia.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-edit-assignment-dialog.png}
+	\caption{Dialog Edit Tugas dengan Form Data Lengkap}
+	\label{fig:4.dosen-edit-assignment-dialog}
+\end{figure}
+
+\subsubsection{Dialog Hapus Tugas}
+
+Dosen dapat menghapus atau mengarsipkan tugas melalui tombol kontrol di halaman manajemen. Dialog hapus tugas memberikan konfirmasi sebelum penghapusan. Sistem memberikan peringatan bahwa tugas yang dihapus tidak akan bisa diakses oleh mahasiswa. Gambar \ref{fig:4.dosen-delete-assignment-dialog} menunjukkan dialog konfirmasi penghapusan tugas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-delete-assignment-dialog.png}
+	\caption{Dialog Konfirmasi Penghapusan Tugas}
+	\label{fig:4.dosen-delete-assignment-dialog}
+\end{figure}
+
 \subsubsection{Halaman Analitik Tugas}
 
 Ketika Dosen mengklik pada tugas, sistem menampilkan halaman detail tugas dengan berbagai visualisasi data analitik yang komprehensif, meliputi: (1) Distribusi tipe kepribadian MBTI mahasiswa dengan karakter unik setiap tipe, (2) Distribusi skill mahasiswa, (3) Preferensi topik mahasiswa, dan (4) Distribusi gender untuk memastikan representasi seimbang.
@@ -304,13 +389,83 @@ Ketika Dosen mengklik pada tugas, sistem menampilkan halaman detail tugas dengan
 	\label{fig:4.assignment-analytics}
 \end{figure}
 
+\subsubsection{Halaman Detail Kelas - Perspektif Dosen}
+
+Halaman detail kelas dari perspektif dosen menampilkan informasi lengkap tentang kelas, termasuk daftar tugas dan daftar mahasiswa yang terdaftar. Di sisi kiri halaman ditampilkan semua assignment yang telah dibuat dengan status pengumpulan respons, sedangkan di sisi kanan ditampilkan daftar mahasiswa dengan informasi detail termasuk nomor induk dan tipe kepribadian MBTI mereka. Dosen dapat melakukan berbagai operasi seperti membuat tugas baru, melihat detail tugas, menghapus mahasiswa dari kelas, atau mencari mahasiswa spesifik. Gambar \ref{fig:4.dosen-class-details-with-students} menunjukkan tampilan halaman detail kelas dengan daftar tugas dan mahasiswa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-class-details-with-students.png}
+	\caption{Halaman Detail Kelas dengan Daftar Tugas dan Mahasiswa}
+	\label{fig:4.dosen-class-details-with-students}
+\end{figure}
+
+\subsubsection{Halaman Jawaban Mahasiswa}
+
+Setelah mahasiswa menyelesaikan pengisian kuesioner untuk suatu tugas, dosen dapat melihat semua respons mahasiswa melalui halaman Jawaban Mahasiswa. Halaman ini menampilkan data respons terstruktur dalam bentuk tabel dengan tab-tab berbeda untuk setiap jenis kuesioner. Dosen dapat menavigasi antara mahasiswa menggunakan tombol navigasi atau \textit{dropdown} untuk melihat respons individual. Halaman Jawaban mencakup tiga tab utama:
+
+\begin{enumerate}
+	\item \textbf{Tab Kepribadian}: Menampilkan respons mahasiswa terhadap pertanyaan tes kepribadian MBTI dengan skala Likert. Dosen dapat melihat jawaban detail untuk setiap pertanyaan yang diajukan.
+	\item \textbf{Tab Keterampilan}: Menampilkan penilaian diri mahasiswa terhadap tingkat keahlian (Pemula, Pemula Lanjut, Kompeten, Mahir, Jago Banget) untuk berbagai keterampilan yang relevan dengan tugas.
+	\item \textbf{Tab Preferensi}: Menampilkan preferensi topik mahasiswa dengan skala Likert dari "Sangat Tidak Tertarik" hingga "Sangat Tertarik".
+\end{enumerate}
+
+Gambar \ref{fig:4.dosen-answers-kepribadian-tab} menunjukkan tampilan halaman Jawaban Mahasiswa dengan tab Kepribadian yang menampilkan respons detail untuk setiap pertanyaan tes kepribadian MBTI. Dosen dapat melihat jawaban skala Likert dari setiap mahasiswa untuk semua pertanyaan yang diajukan.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-answers-kepribadian-tab.png}
+	\caption{Tab Kepribadian - Respons Tes Kepribadian MBTI Mahasiswa}
+	\label{fig:4.dosen-answers-kepribadian-tab}
+\end{figure}
+
+Gambar \ref{fig:4.dosen-answers-skills-tab} menunjukkan tab Keterampilan yang menampilkan penilaian diri mahasiswa terhadap tingkat keahlian berbagai keterampilan yang relevan dengan tugas. Setiap keterampilan ditampilkan dengan tingkat keahlian yang dipilih mahasiswa (Pemula, Pemula Lanjut, Kompeten, Mahir, Jago Banget).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-answers-skills-tab.png}
+	\caption{Tab Keterampilan - Penilaian Tingkat Keahlian Mahasiswa}
+	\label{fig:4.dosen-answers-skills-tab}
+\end{figure}
+
+Gambar \ref{fig:4.dosen-answers-preferences-tab} menunjukkan tab Preferensi yang menampilkan preferensi topik mahasiswa menggunakan skala Likert lima poin. Dosen dapat melihat tingkat minat setiap mahasiswa terhadap berbagai topik yang tersedia dalam tugas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-answers-preferences-tab.png}
+	\caption{Tab Preferensi - Preferensi Topik Tugas Mahasiswa}
+	\label{fig:4.dosen-answers-preferences-tab}
+\end{figure}
+
+\subsubsection{Halaman Profil Dosen}
+
+Halaman profil dosen menyediakan antarmuka sederhana untuk dosen mengelola dan melihat informasi pribadi mereka dalam sistem EquiTeam. Berbeda dengan profil mahasiswa yang menampilkan hasil tes kepribadian MBTI, profil dosen fokus pada data pribadi dasar yang digunakan untuk identifikasi dan verifikasi identitas dosen.
+
+Halaman profil dosen menampilkan dua bidang informasi yang dapat diperbarui:
+
+\begin{enumerate}
+	\item \textbf{Nama Lengkap}: Bidang teks untuk memasukkan atau memperbarui nama lengkap dosen, memastikan identifikasi dosen yang akurat dalam sistem.
+	\item \textbf{Jenis Kelamin}: Pemilihan jenis kelamin melalui antarmuka visual dengan dua opsi (Laki-laki dan Perempuan) yang dilengkapi dengan ikon representatif. Setiap opsi ditampilkan sebagai tombol pilihan yang dapat diklik atau diaktifkan melalui keyboard, memberikan pengalaman interaktif yang intuitif.
+\end{enumerate}
+
+Dosen dapat menyimpan perubahan data pribadi mereka dengan mengklik tombol ``Simpan Perubahan'' setelah memasukkan atau memperbarui informasi. Sistem akan memvalidasi data dan menampilkan pesan konfirmasi atau pesan kesalahan sesuai hasil penyimpanan.
+
+Gambar \ref{fig:4.dosen-profile} menunjukkan tampilan halaman profil dosen dengan formulir data pribadi yang lengkap.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-profile.png}
+	\caption{Halaman Profil Dosen dengan Formulir Data Pribadi}
+	\label{fig:4.dosen-profile}
+\end{figure}
+
 \subsubsection*{Fitur Mahasiswa}
 
 Bagian ini mendokumentasikan fitur-fitur yang tersedia untuk mahasiswa di sistem EquiTeam. Fitur-fitur ini dirancang untuk memfasilitasi partisipasi mahasiswa dalam proses onboarding, pendaftaran kelas, pengerjaan assignment, pengisian kuesioner, dan pembentukan kelompok berbasis AI.
 
 \subsubsection{Halaman Onboarding Data Diri - Mahasiswa}
 
-Mahasiswa harus menyelesaikan halaman onboarding data diri sebagai bagian dari proses registrasi awal, mengisi informasi pribadi: nama lengkap, nomor induk mahasiswa (NIM), dan jenis kelamin. Form ini memiliki tampilan yang sama dengan form dosen namun disesuaikan untuk konteks mahasiswa.
+Mahasiswa harus menyelesaikan halaman \textit{onboarding} data diri sebagai bagian dari proses registrasi awal, mengisi informasi pribadi: nama lengkap, nomor induk mahasiswa (NIM), dan jenis kelamin. \textit{Form} ini memiliki tampilan yang sama dengan \textit{form} dosen namun disesuaikan untuk konteks mahasiswa.
 
 \begin{figure}[H]
 	\centering
@@ -319,7 +474,7 @@ Mahasiswa harus menyelesaikan halaman onboarding data diri sebagai bagian dari p
 	\label{fig:4.mahasiswa-data-diri}
 \end{figure}
 
-Setelah mahasiswa mengisi semua field dengan data pribadinya, halaman menampilkan data yang telah dimasukkan dan data ini akan digunakan untuk identifikasi mahasiswa dan proses pembentukan kelompok.
+Setelah mahasiswa mengisi semua \textit{field} dengan data pribadinya, halaman menampilkan data yang telah dimasukkan dan data ini akan digunakan untuk identifikasi mahasiswa dan proses pembentukan kelompok.
 
 \begin{figure}[H]
 	\centering
@@ -399,7 +554,7 @@ Untuk bergabung dengan kelas, mahasiswa dapat menggunakan kode atau token yang d
 	\label{fig:4.mahasiswa-join-class}
 \end{figure}
 
-Ketika mahasiswa memasukkan token kelas yang valid, tombol "Masuk" menjadi aktif dan mahasiswa dapat melanjutkan proses pendaftaran. Mahasiswa akan otomatis terdaftar di kelas dan dapat melihat daftar assignment serta informasi kelas lainnya.
+Ketika mahasiswa memasukkan \textit{token} kelas yang valid, tombol "Masuk" menjadi aktif dan mahasiswa dapat melanjutkan proses pendaftaran. Mahasiswa akan otomatis terdaftar di kelas dan dapat melihat daftar tugas serta informasi kelas lainnya.
 
 \begin{figure}[H]
 	\centering
