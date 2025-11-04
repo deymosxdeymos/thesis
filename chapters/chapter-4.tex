@@ -8,169 +8,183 @@ Berisi hasil penelitian berdasarkan rancangan yang sudah dijelaskan pada Bab \na
 
 Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah diimplementasikan dalam sistem EduTeams menggunakan metodologi Agile Kanban. Implementasi menggunakan pendekatan iteratif dengan fokus pada fitur-fitur inti terlebih dahulu, kemudian dikembangkan ke fitur-fitur lanjutan. Status implementasi mengikuti alur kerja Kanban dengan tiga kategori: \textit{DONE} (fitur telah diimplementasikan dan diuji), \textit{IN PROGRESS} (fitur sedang dalam tahap pengembangan atau perbaikan), dan \textit{TODO} (fitur direncanakan namun belum diimplementasikan).
 
-\subsubsection*{Fitur Dosen}
-
 \begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
-	\caption{Implementasi Fitur Sistem EduTeams}
-	\label{tab:implementasi-fitur}                                                                              \\
+	\caption{Implementasi Fitur Sistem EduTeams (Consolidated)}
+	\label{tab:implementasi-fitur}                                                                                    \\
 	\hline
-	\textbf{No} & \textbf{Fitur/Menu}                                                    & \textbf{Status}      \\
+	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status}      \\
 	\hline
 	\endfirsthead
 	\hline
-	\textbf{No} & \textbf{Fitur/Menu}                                                    & \textbf{Status}      \\
+	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status}      \\
 	\hline
 	\endhead
 	\hline
 	\endfoot
 	\hline
 	\endlastfoot
-	\multicolumn{3}{|c|}{\textbf{A. AUTENTIKASI DAN OTORISASI}}                                                 \\
+	\multicolumn{3}{|c|}{\textbf{A. AUTENTIKASI DAN OTORISASI}}                                                       \\
 	\hline
-	1           & Login dengan Google OAuth                                              & \textit{DONE}        \\
+	1           & Login dengan Google OAuth                                                    & \textit{DONE}        \\
 	\hline
-	2           & Role-Based Access Control (RBAC) - 3 role: Mahasiswa, Dosen, Admin     & \textit{DONE}        \\
+	2           & Role: Mahasiswa dan Dosen                                                    & \textit{DONE}        \\
 	\hline
-	3           & Session Management dengan tracking IP dan user agent                   & \textit{DONE}        \\
+	3           & Session Management dengan cookie-based authentication                        & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{B. ONBOARDING PENGGUNA}}                                                       \\
+	\multicolumn{3}{|c|}{\textbf{B. ONBOARDING PENGGUNA}}                                                             \\
 	\hline
-	4           & Pemilihan Role (Mahasiswa/Dosen) dengan auto-detection email institusi & \textit{DONE}        \\
+	4           & Pemilihan Role (Mahasiswa/Dosen) dengan auto-detection email institusi       & \textit{DONE}        \\
 	\hline
-	5           & Form Data Diri (NIM/NPM, nama, jenis kelamin)                          & \textit{DONE}        \\
+	5           & Form Data Diri (NIM/NPM, nama, jenis kelamin)                                & \textit{DONE}        \\
 	\hline
-	6           & Tes Kepribadian MBTI dengan 60 pertanyaan OJTS 1.2                     & \textit{DONE}        \\
+	6           & Tes Kepribadian MBTI dengan 42 pertanyaan OJTS 2.1                           & \textit{DONE}        \\
 	\hline
-	7           & Sistem scoring dan klasifikasi 16 tipe MBTI (EI, SN, TF, PJ)           & \textit{DONE}        \\
+	7           & Sistem scoring dan klasifikasi 16 tipe MBTI (EI, SN, TF, PJ)                 & \textit{DONE}        \\
 	\hline
-	8           & Resume Onboarding untuk melanjutkan proses yang belum selesai          & \textit{DONE}        \\
+	8           & Resume Onboarding untuk melanjutkan proses yang belum selesai                & \textit{DONE}        \\
 	\hline
-	9           & Welcome Splash Screen untuk pengguna baru                              & \textit{DONE}        \\
+	9           & Welcome Splash Screen untuk pengguna baru                                    & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{C. DASHBOARD}}                                                                 \\
+	\multicolumn{3}{|c|}{\textbf{C. DASHBOARD}}                                                                       \\
 	\hline
-	10          & Dashboard Mahasiswa dengan daftar kelas yang diikuti                   & \textit{DONE}        \\
+	10          & Dashboard Mahasiswa dengan daftar kelas yang diikuti                         & \textit{DONE}        \\
 	\hline
-	11          & Dashboard Dosen dengan statistik (total kelas, mahasiswa, tugas)       & \textit{DONE}        \\
+	11          & Dashboard Dosen dengan statistik (total kelas, mahasiswa, tugas)             & \textit{DONE}        \\
 	\hline
-	12          & Navigasi Sidebar dan Top Navigation Bar                                & \textit{DONE}        \\
+	12          & Navigasi Sidebar dan Top Navigation Bar                                      & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{D. MANAJEMEN KELAS}}                                                           \\
+	\multicolumn{3}{|c|}{\textbf{D. MANAJEMEN KELAS}}                                                                 \\
 	\hline
-	13          & Pembuatan Kelas Baru (nama mata kuliah, kelas, tahun, periode)         & \textit{DONE}        \\
+	13          & Pembuatan Kelas Baru (nama mata kuliah, kelas, tahun, periode)               & \textit{DONE}        \\
 	\hline
-	14          & Join Kelas via Share Token untuk mahasiswa                             & \textit{DONE}        \\
+	14          & Join Kelas via Share Token untuk mahasiswa                                   & \textit{DONE}        \\
 	\hline
-	15          & Daftar Mahasiswa per Kelas dengan data MBTI                            & \textit{DONE}        \\
+	15          & Dialog Pembagian Kelas dengan Token dan URL                                  & \textit{DONE}        \\
 	\hline
-	16          & Kelola Kelas (Edit, Hapus, Arsip)                                      & \textit{DONE}        \\
+	16          & Daftar Mahasiswa per Kelas dengan data MBTI                                  & \textit{DONE}        \\
 	\hline
-	17          & Search dan Filter Mahasiswa                                            & \textit{DONE}        \\
+	17          & Kelola Kelas (Edit, Hapus, Arsip)                                            & \textit{DONE}        \\
 	\hline
-	18          & Hapus Mahasiswa dari Kelas                                             & \textit{DONE}        \\
+	18          & Search dan Filter Mahasiswa                                                  & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{E. MANAJEMEN TUGAS}}                                                           \\
+	19          & Hapus Mahasiswa dari Kelas                                                   & \textit{DONE}        \\
 	\hline
-	19          & Pembuatan Tugas (Assignment) dengan judul, deskripsi, tanggal mulai    & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{E. MANAJEMEN TUGAS}}                                                                 \\
 	\hline
-	20          & Kelola Tugas dalam bentuk Table View dengan search dan filter          & \textit{DONE}        \\
+	20          & Pembuatan Tugas (Assignment) dengan judul, deskripsi, tanggal mulai          & \textit{DONE}        \\
 	\hline
-	21          & Edit Tugas dengan validation                                           & \textit{DONE}        \\
+	21          & Kelola Tugas dalam bentuk Table View dengan search dan filter                & \textit{DONE}        \\
 	\hline
-	22          & Sistem Versioning Assignment untuk tracking perubahan                  & \textit{DONE}        \\
+	22          & Edit Tugas dengan validation                                                 & \textit{DONE}        \\
 	\hline
-	23          & Deteksi Perubahan Assignment dengan flagging submission                & \textit{DONE}        \\
+	23          & Sistem Versioning Assignment untuk tracking perubahan                        & \textit{DONE}        \\
 	\hline
-	24          & Hapus dan Arsip Tugas                                                  & \textit{DONE}        \\
+	24          & Deteksi Perubahan Assignment dengan flagging submission                      & \textit{DONE}        \\
 	\hline
-	25          & Sistem Topik per Assignment                                            & \textit{DONE}        \\
+	25          & Hapus dan Arsip Tugas                                                        & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{F. QUIZ DAN PREFERENSI}}                                                       \\
+	26          & Sistem Topik per Assignment                                                  & \textit{DONE}        \\
 	\hline
-	26          & Quiz Penilaian Skill dengan Likert scale                               & \textit{DONE}        \\
+	27          & Halaman Management untuk Mahasiswa dengan Tabs                               & \textit{DONE}        \\
 	\hline
-	27          & Quiz Preferensi Topik untuk assignment                                 & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{F. QUIZ DAN PREFERENSI}}                                                             \\
 	\hline
-	28          & Submission Tracking dengan status (Belum Isi, Menunggu, Berhasil)      & \textit{DONE}        \\
+	28          & Quiz Penilaian Skill dengan Likert scale dan modal instruksi                 & \textit{DONE}        \\
 	\hline
-	29          & Resubmission untuk assignment yang berubah                             & \textit{DONE}        \\
+	29          & Quiz Preferensi Topik dengan skala Likert 5 poin                             & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{G. PEMBENTUKAN KELOMPOK}}                                                      \\
+	30          & Submission Tracking dengan status (Belum Isi, Menunggu, Berhasil)            & \textit{DONE}        \\
 	\hline
-	30          & Integrasi Algoritma Pembentukan Kelompok (Edu2com API)                 & \textit{DONE}        \\
+	31          & Status Menunggu Pembagian Kelompok dengan hourglass                          & \textit{DONE}        \\
 	\hline
-	31          & Algoritma Multi-Faktor (MBTI, Skill, Gender, Preferensi Topik)         & \textit{DONE}        \\
+	32          & Resubmission untuk assignment yang berubah                                   & \textit{DONE}        \\
 	\hline
-	32          & Pembentukan kelompok berdasarkan jumlah kelompok                       & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{G. PEMBENTUKAN KELOMPOK}}                                                            \\
 	\hline
-	33          & Pembentukan kelompok berdasarkan ukuran kelompok                       & \textit{DONE}        \\
+	33          & Integrasi Algoritma Pembentukan Kelompok (Edu2com API)                       & \textit{DONE}        \\
 	\hline
-	34          & Team Quality Scoring untuk setiap kelompok                             & \textit{DONE}        \\
+	34          & Algoritma Multi-Faktor (MBTI, Skill, Gender, Preferensi Topik)               & \textit{DONE}        \\
 	\hline
-	35          & Tampilan Hasil Kelompok untuk Dosen dan Mahasiswa                      & \textit{DONE}        \\
+	35          & Pembentukan kelompok berdasarkan jumlah kelompok                             & \textit{DONE}        \\
 	\hline
-	36          & Reset dan Ulang Pembentukan Kelompok                                   & \textit{DONE}        \\
+	36          & Pembentukan kelompok berdasarkan ukuran kelompok                             & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{H. ANALITIK DAN VISUALISASI}}                                                  \\
+	37          & Team Quality Scoring untuk setiap kelompok                                   & \textit{DONE}        \\
 	\hline
-	37          & Chart Distribusi 16 Tipe MBTI                                          & \textit{DONE}        \\
+	38          & Tampilan Hasil Kelompok untuk Dosen dan Mahasiswa                            & \textit{DONE}        \\
 	\hline
-	38          & Chart Distribusi Skill Mahasiswa                                       & \textit{DONE}        \\
+	39          & Reset dan Ulang Pembentukan Kelompok                                         & \textit{DONE}        \\
 	\hline
-	39          & Chart Distribusi Gender                                                & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{H. ANALITIK DAN VISUALISASI}}                                                        \\
 	\hline
-	40          & Radar Chart Personality (EI, SN, TF, PJ)                               & \textit{DONE}        \\
+	40          & Chart Distribusi 16 Tipe MBTI                                                & \textit{DONE}        \\
 	\hline
-	41          & Statistik Submission Rate Assignment                                   & \textit{DONE}        \\
+	41          & Chart Distribusi Skill Mahasiswa                                             & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{I. PROFIL DAN PENGATURAN}}                                                     \\
+	42          & Chart Distribusi Gender                                                      & \textit{DONE}        \\
 	\hline
-	42          & Halaman Profil dengan data lengkap MBTI                                & \textit{DONE}        \\
+	43          & Radar Chart Personality (EI, SN, TF, PJ)                                     & \textit{DONE}        \\
 	\hline
-	43          & Deskripsi karakteristik 16 Tipe MBTI                                   & \textit{DONE}        \\
+	44          & Statistik Submission Rate Assignment                                         & \textit{DONE}        \\
 	\hline
-	44          & Language Switcher (Bahasa Indonesia dan English)                       & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{I. PROFIL DAN PENGATURAN}}                                                           \\
 	\hline
-	45          & CTA dan Navigasi pada Landing Page                                     & \textit{DONE}        \\
+	45          & Halaman Profil Mahasiswa dengan visualisasi MBTI (Bar Chart dan Radar Chart) & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{J. FITUR TAMBAHAN}}                                                            \\
+	46          & Dialog Persebaran 16 Tipe Kepribadian MBTI                                   & \textit{DONE}        \\
 	\hline
-	46          & Loading States dengan Suspense dan Skeleton Components                 & \textit{DONE}        \\
+	47          & Halaman Profil Dosen dengan formulir data pribadi                            & \textit{DONE}        \\
 	\hline
-	47          & Error Handling dan Error Pages                                         & \textit{DONE}        \\
+	48          & Deskripsi karakteristik 16 Tipe MBTI                                         & \textit{DONE}        \\
 	\hline
-	48          & Responsive Design (Mobile, Tablet, Desktop)                            & \textit{DONE}        \\
+	49          & Language Switcher (Bahasa Indonesia dan English)                             & \textit{DONE}        \\
 	\hline
-	49          & Fitur Aksesibilitas Dasar (ARIA Labels pada UI Components)             & \textit{DONE}        \\
+	50          & CTA dan Navigasi pada Landing Page                                           & \textit{DONE}        \\
 	\hline
-	50          & Multi-layer Caching Strategy (Memory + Redis)                          & \textit{DONE}        \\
+	\multicolumn{3}{|c|}{\textbf{J. FITUR TAMBAHAN}}                                                                  \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{K. FITUR DALAM PENGERJAAN}}                                                    \\
+	51          & Loading States dengan Suspense dan Skeleton Components                       & \textit{DONE}        \\
 	\hline
-	51          & Pre-fill Jawaban Quiz Skill dan Preferensi Sebelumnya                  & \textit{IN PROGRESS} \\
+	52          & Error Handling dan Error Pages                                               & \textit{DONE}        \\
 	\hline
-	52          & Halaman Management untuk Mahasiswa dengan Tabs                         & \textit{IN PROGRESS} \\
+	53          & Responsive Design (Mobile, Tablet, Desktop)                                  & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{L. FITUR YANG DIRENCANAKAN}}                                                   \\
+	54          & Fitur Aksesibilitas Dasar (ARIA Labels pada UI Components)                   & \textit{DONE}        \\
 	\hline
-	53          & Sistem Preferensi Antar Mahasiswa (Person-to-Person Preferences)       & \textit{TODO}        \\
+	55          & Server-side Caching dengan Next.js                                           & \textit{DONE}        \\
 	\hline
-	54          & Notifikasi Real-time menggunakan WebSocket/SSE                         & \textit{TODO}        \\
+	56          & Halaman Jawaban Mahasiswa dengan Tabs (Kepribadian, Skill, Preferensi)       & \textit{DONE}        \\
 	\hline
-	55          & Notifikasi Email untuk event penting menggunakan Resend                & \textit{TODO}        \\
+	\multicolumn{3}{|c|}{\textbf{K. FITUR DALAM PENGERJAAN}}                                                          \\
 	\hline
-	56          & Export Data Kelompok ke PDF dan Spreadsheet                            & \textit{TODO}        \\
+	57          & Pre-fill Jawaban Quiz Skill dan Preferensi Sebelumnya                        & \textit{IN PROGRESS} \\
 	\hline
-	57          & Notification Badge pada Management Page                                & \textit{TODO}        \\
+	\multicolumn{3}{|c|}{\textbf{L. FITUR YANG DIRENCANAKAN}}                                                         \\
 	\hline
-	58          & Advanced Settings untuk Bobot Pembagian Kelompok                       & \textit{TODO}        \\
+	58          & Notifikasi Email untuk event penting menggunakan Resend                      & \textit{TODO}        \\
 	\hline
-	59          & Legend dan Sort untuk MBTI Chart                                       & \textit{TODO}        \\
+	59          & Export Data Kelompok ke PDF dan Spreadsheet                                  & \textit{TODO}        \\
+	\hline
+	60          & Advanced Settings untuk Bobot Pembagian Kelompok                             & \textit{TODO}        \\
+	\hline
+	61          & Legend dan Sort untuk MBTI Chart                                             & \textit{TODO}        \\
+	\hline
+	62          & Panduan Penggunaan untuk Semua Role                                          & \textit{TODO}        \\
+	\hline
+	63          & Halaman Grafik per Kelompok                                                  & \textit{TODO}        \\
+	\hline
+	64          & Ubah Kata "Periode" menjadi "Akademik"                                       & \textit{TODO}        \\
+	\hline
+	65          & Gradasi Warna pada Grafik Skill                                              & \textit{TODO}        \\
+	\hline
+	66          & Form Pengisian Mata Kuliah seperti Input Skill dan Preference                & \textit{TODO}        \\
+	\hline
+	67          & Gabung Form Tahun Periode dan Semester                                       & \textit{TODO}        \\
 	\hline
 \end{longtable}
 
 \noindent
-Dari total 59 fitur yang diidentifikasi, 50 fitur (84.7\%) telah selesai diimplementasikan dan diuji, 2 fitur (3.4\%) sedang dalam tahap pengerjaan berupa implementasi fitur tambahan untuk mahasiswa, serta 7 fitur (11.9\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap maturity yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi dengan rencana pengembangan berkelanjutan untuk fitur-fitur tambahan.
+Dari total 67 fitur yang diidentifikasi, 56 fitur (83.6\%) telah selesai diimplementasikan dan diuji, 1 fitur (1.5\%) sedang dalam tahap pengerjaan berupa implementasi fitur tambahan untuk mahasiswa, serta 10 fitur (14.9\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap maturity yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi dengan rencana pengembangan berkelanjutan untuk fitur-fitur tambahan.
 
 \subsubsection{Halaman Landing Page}
 
@@ -178,7 +192,7 @@ Halaman landing page merupakan tampilan awal yang dilihat pengunjung saat mengak
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/landing-page-equiteam.png}
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/landing-page.png}
 	\caption{Tampilan Halaman Landing Page Sistem EquiTeam}
 	\label{fig:4.landing-page}
 \end{figure}
@@ -437,6 +451,50 @@ Gambar \ref{fig:4.dosen-answers-preferences-tab} menunjukkan tab Preferensi yang
 	\label{fig:4.dosen-answers-preferences-tab}
 \end{figure}
 
+\subsubsection{Dialog Buat Kelompok}
+
+Untuk memulai pembentukan kelompok, dosen mengklik tombol \textbf{Buat Kelompok} yang membuka dialog dengan dua pilihan metode pembagian kelompok: (1) \textbf{Jumlah Kelompok} - menentukan berapa banyak kelompok yang akan dibentuk, atau (2) \textbf{Jumlah Mahasiswa per Kelompok} - menentukan ukuran setiap kelompok. Setelah memilih metode, dosen memasukkan nilai numerik yang sesuai. Sistem akan otomatis menjalankan algoritma pembentukan kelompok multi-faktor menggunakan data MBTI, keahlian, preferensi topik, dan gender mahasiswa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/buat-kelompok-dialog.png}
+	\caption{Dialog Buat Kelompok dengan Pilihan Metode Pembagian}
+	\label{fig:4.buat-kelompok-dialog}
+\end{figure}
+
+\subsubsection{Halaman Hasil Pembentukan Kelompok}
+
+Setelah algoritma selesai dijalankan, halaman menampilkan hasil pembentukan kelompok dengan analitik data mahasiswa dan kartu-kartu kelompok yang telah dibentuk. Di bagian atas tersedia tombol kembali dan akses ke halaman jawaban mahasiswa. Halaman ini menyediakan toggle untuk menampilkan atau menyembunyikan analitik data. Gambar \ref{fig:4.dosen-group-formation-results} menunjukkan tampilan halaman hasil pembentukan kelompok.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-group-formation-results.png}
+	\caption{Halaman Hasil Pembentukan Kelompok dengan Kontrol dan Kelompok yang Terbentuk}
+	\label{fig:4.dosen-group-formation-results}
+\end{figure}
+
+\paragraph{Analitik Pembentukan Kelompok}
+
+Fitur toggle menampilkan empat visualisasi data: (1) Distribusi MBTI dengan 16 tipe kepribadian dan ikon unik, (2) Distribusi keahlian mahasiswa dalam berbagai keterampilan relevan, (3) Preferensi topik menggunakan pie chart, dan (4) Distribusi gender untuk memastikan keseimbangan. Gambar \ref{fig:4.dosen-group-formation-analytics} menunjukkan keempat grafik analitik tersebut.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-group-formation-analytics.png}
+	\caption{Tampilan Lengkap Analitik Pembentukan Kelompok dengan Empat Visualisasi Data}
+	\label{fig:4.dosen-group-formation-analytics}
+\end{figure}
+
+\paragraph{Hasil Kelompok yang Terbentuk}
+
+Sistem menampilkan kartu-kartu kelompok dalam grid responsive. Setiap kartu menunjukkan: nama kelompok, \textbf{Kualitas Skor} (persentase keseimbangan kelompok berdasarkan MBTI, keahlian, dan preferensi), \textbf{Topik Tugas} (topik yang ditugaskan atau "-"), dan daftar anggota dengan ikon kepribadian MBTI unik untuk setiap mahasiswa. Gambar \ref{fig:4.dosen-group-formation-groups} menunjukkan tampilan kelompok-kelompok yang terbentuk.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/dosen-group-formation-groups.png}
+	\caption{Tampilan Kelompok-Kelompok yang Telah Dibentuk dengan Anggota dan Skor Kualitas}
+	\label{fig:4.dosen-group-formation-groups}
+\end{figure}
+
 \subsubsection{Halaman Profil Dosen}
 
 Halaman profil dosen menyediakan antarmuka sederhana untuk dosen mengelola dan melihat informasi pribadi mereka dalam sistem EquiTeam. Berbeda dengan profil mahasiswa yang menampilkan hasil tes kepribadian MBTI, profil dosen fokus pada data pribadi dasar yang digunakan untuk identifikasi dan verifikasi identitas dosen.
@@ -656,3 +714,355 @@ Halaman profil juga menyediakan akses ke dialog modal yang menampilkan grid leng
 	\label{fig:4.mahasiswa-mbti-distribution-hover}
 \end{figure}
 
+\subsubsection{Halaman Kelola untuk Mahasiswa}
+
+Halaman Kelola menyediakan tampilan terpadu untuk mahasiswa mengelola semua tugas dan kelompok di berbagai kelas yang diikuti. Halaman ini menggunakan sistem tab untuk mengkategorikan tugas berdasarkan status: \textit{Kelompok Saya} (tugas dengan kelompok yang sudah terbentuk), \textit{Menunggu Pembagian} (tugas yang sudah dikerjakan namun menunggu pembentukan kelompok), dan \textit{Belum Dikerjakan} (tugas yang belum diselesaikan). Setiap kartu tugas menampilkan informasi mata kuliah, nama dosen, informasi kelompok atau status, dan tombol aksi yang relevan. Tab \textit{Belum Dikerjakan} dilengkapi dengan \textit{badge} angka untuk menunjukkan jumlah tugas yang harus segera dikerjakan.
+
+Gambar \ref{fig:4.mahasiswa-manage-tab-kelompok} menunjukkan tab ``Kelompok Saya'' dengan informasi kelompok, topik yang ditugaskan, dan daftar anggota kelompok beserta tipe kepribadian MBTI mereka.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-manage-page-tab1.png}
+	\caption{Halaman Kelola Mahasiswa - Tab Kelompok Saya}
+	\label{fig:4.mahasiswa-manage-tab-kelompok}
+\end{figure}
+
+Gambar \ref{fig:4.mahasiswa-manage-tab-menunggu} menampilkan tab ``Menunggu Pembagian'' yang berisi tugas-tugas di mana mahasiswa telah menyelesaikan kuesioner namun belum dibentuk kelompoknya oleh dosen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-manage-page-tab-menunggu.png}
+	\caption{Halaman Kelola Mahasiswa - Tab Menunggu Pembagian}
+	\label{fig:4.mahasiswa-manage-tab-menunggu}
+\end{figure}
+
+Gambar \ref{fig:4.mahasiswa-manage-tab-belum} menampilkan tab ``Belum Dikerjakan'' dengan \textit{badge} angka yang menunjukkan jumlah tugas yang belum dikerjakan oleh mahasiswa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/mahasiswa-manage-page-tab-belum-dikerjakan.png}
+	\caption{Halaman Kelola Mahasiswa - Tab Belum Dikerjakan}
+	\label{fig:4.mahasiswa-manage-tab-belum}
+\end{figure}
+
+\subsection{Hasil Pengujian Sistem} \label{IV.Testing}
+
+Pengujian sistem EduTeams dilakukan menggunakan metodologi \textit{grey-box testing} dengan pendekatan pengujian otomatis yang komprehensif. Pengujian diimplementasikan menggunakan \textit{framework} Bun Test dengan total 347 \textit{test cases} yang mencapai cakupan kode (\textit{code coverage}) sebesar 88.50\% untuk \textit{line coverage} dan 85.96\% untuk \textit{function coverage}. Pengujian difokuskan pada validasi fungsionalitas API, otorisasi akses, validasi input, dan integrasi dengan layanan eksternal (Edu2Com API). Hasil pengujian menunjukkan tingkat keberhasilan 100\% dengan waktu eksekusi rata-rata 10 detik untuk seluruh \textit{test suite}.
+
+\subsubsection{Distribusi Pengujian Berdasarkan Area Fungsional}
+
+Pengujian sistem dibagi berdasarkan area fungsional utama untuk memastikan cakupan yang menyeluruh terhadap semua komponen sistem. Tabel \ref{tab:testing-functional-coverage} menampilkan distribusi pengujian berdasarkan kategori fungsional dengan jumlah tes yang diimplementasikan untuk setiap area.
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.25\textwidth}|p{0.42\textwidth}|p{0.13\textwidth}|}
+	\caption{Distribusi Pengujian Berdasarkan Area Fungsional}
+	\label{tab:testing-functional-coverage}                                                                                                                                                                                                               \\
+	\hline
+	\textbf{No}                                      & \textbf{Area Fungsional}               & \textbf{Cakupan Pengujian}                                                                                                         & \textbf{Jumlah Test} \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{No}                                      & \textbf{Area Fungsional}               & \textbf{Cakupan Pengujian}                                                                                                         & \textbf{Jumlah Test} \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	1                                                & Manajemen Kelas                        & Pembuatan, pengeditan, penghapusan kelas; pembagian \textit{token}; manajemen mahasiswa                                            & 47 tests             \\
+	\hline
+	2                                                & Manajemen Tugas                        & CRUD tugas; pengumpulan respons; statistik tugas; validasi data tugas                                                              & 24 tests             \\
+	\hline
+	3                                                & Pembentukan Kelompok                   & Algoritma pembentukan tim; integrasi Edu2Com API; validasi parameter; \textit{reset teams}                                         & 20 tests             \\
+	\hline
+	4                                                & Onboarding Pengguna                    & Pemilihan \textit{role}; pengisian data diri; tes kepribadian MBTI; progres \textit{onboarding}                                    & 50 tests             \\
+	\hline
+	5                                                & Manajemen Mahasiswa                    & Pendaftaran kelas; keluar dari kelas; daftar kelas mahasiswa                                                                       & 7 tests              \\
+	\hline
+	6                                                & Otorisasi dan Keamanan                 & \textit{Role-based access control} (RBAC); validasi \textit{permissions}; \textit{authorization middleware}                        & 76 tests             \\
+	\hline
+	7                                                & Validasi Input                         & Validasi skema kuesioner; validasi data kelas; validasi data kepribadian                                                           & 4 tests              \\
+	\hline
+	8                                                & Utilitas dan \textit{Helper Functions} & \textit{Helper} umum (manipulasi kelas CSS); \textit{error handling}; utilitas periode akademik; manajemen \textit{snapshot} tugas & 44 tests             \\
+	\hline
+	9                                                & Komponen UI                            & Pengujian komponen \textit{form}; modal; \textit{input fields}; komponen dashboard                                                 & 42 tests             \\
+	\hline
+	10                                               & Statistik dan Dashboard                & Agregasi statistik; kalkulasi metrik; \textit{caching}                                                                             & 11 tests             \\
+	\hline
+	11                                               & Autentikasi                            & Integrasi Google OAuth; validasi sesi pengguna                                                                                     & 5 tests              \\
+	\hline
+	12                                               & \textit{Logging} dan Utilitas Sistem   & \textit{Logger}; utilitas email; \textit{cache clearing}                                                                           & 12 tests             \\
+	\hline
+	\multicolumn{3}{|r|}{\textbf{Total Test Cases:}} & \textbf{347 tests}                                                                                                                                                                                 \\
+	\hline
+\end{longtable}
+
+\noindent
+\textit{Catatan}: Total 347 tes mencakup pengujian aplikasi utama (API, komponen, utilitas), \textit{helper functions}, dan komponen infrastruktur sistem. Terdapat 16 tes integrasi Edu2Com API tambahan (8 tes validasi kontrak dan 8 tes integrasi langsung) yang di-\textit{skip} secara default dan hanya dijalankan saat variabel lingkungan \texttt{EDU2COM\_INTEGRATION=1} diatur.
+
+\subsubsection{Ringkasan Hasil Pengujian}
+
+Dari total 347 \textit{test cases} yang diimplementasikan, seluruh tes berhasil dijalankan dengan status \textbf{PASS}, menghasilkan tingkat keberhasilan 100\%. Pengujian mencakup berbagai aspek fungsionalitas sistem, keamanan, validasi input, otorisasi akses, dan ketahanan terhadap \textit{error}. Tabel \ref{tab:testing-summary} menampilkan ringkasan statistik pengujian sistem secara keseluruhan.
+
+\begin{table}[H]
+	\centering
+	\caption{Ringkasan Statistik Pengujian Sistem EduTeams}
+	\label{tab:testing-summary}
+	\begin{tabular}{|l|r|}
+		\hline
+		\textbf{Metrik}                   & \textbf{Nilai} \\
+		\hline
+		Total Test Cases                  & 347            \\
+		\hline
+		Test Cases Berhasil               & 347            \\
+		\hline
+		Test Cases Gagal                  & 0              \\
+		\hline
+		Test Integrasi Edu2Com API        & 16             \\
+		\hline
+		Tingkat Keberhasilan              & 100\%          \\
+		\hline
+		\textit{Line Coverage}            & 89.42\%        \\
+		\hline
+		\textit{Function Coverage}        & 86.96\%        \\
+		\hline
+		Jumlah File Tes                   & 55 files       \\
+		\hline
+		Jumlah \textit{Expect Assertions} & 805            \\
+		\hline
+		Waktu Eksekusi Total              & 10.33 detik    \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\noindent
+Terdapat 16 tes integrasi Edu2Com API tambahan yang di-\textit{skip} secara default dalam eksekusi tes reguler. Tes integrasi ini dibagi menjadi dua kategori:
+
+\begin{enumerate}
+	\item \textbf{Tes Validasi Kontrak (8 tes)}: Memvalidasi bahwa \textit{payload} yang dikirim ke Edu2Com API sesuai dengan spesifikasi kontrak. Tes ini memverifikasi berbagai skenario seperti pembentukan tim seimbang, distribusi jumlah mahasiswa ganjil, konfigurasi bobot algoritma, preferensi mahasiswa, dan \textit{skill similarity}. Tes validasi kontrak selalu dijalankan bersama tes unit utama.
+
+	\item \textbf{Tes Integrasi Langsung (8 tes)}: Melakukan \textit{HTTP request} nyata ke layanan Edu2Com API eksternal untuk memverifikasi bahwa sistem dapat berinteraksi dengan layanan eksternal dengan benar. Edu2Com adalah layanan cerdas yang membantu dosen membentuk kelompok mahasiswa secara otomatis dengan mempertimbangkan berbagai faktor seperti:
+
+	      \begin{itemize}
+		      \item \textbf{Kecocokan Keterampilan}: Setiap mahasiswa memiliki keahlian berbeda dan setiap tugas membutuhkan kombinasi keahlian tertentu. Edu2Com memastikan setiap kelompok memiliki kombinasi keahlian yang seimbang.
+
+		      \item \textbf{Kepribadian MBTI}: Sistem mempertimbangkan tipe kepribadian mahasiswa (ekstrovert/introvert, rasional/perasaan) untuk pembentukan kelompok.
+
+		      \item \textbf{Preferensi Mahasiswa}: Mahasiswa dapat menyatakan siapa yang ingin mereka ajak bekerja sama, dan Edu2Com akan memenuhi preferensi ini.
+
+		      \item \textbf{Keseimbangan Gender}: Algoritma memastikan setiap kelompok memiliki campuran gender yang seimbang.
+	      \end{itemize}
+
+	      \noindent
+	      Tes integrasi langsung memvalidasi berbagai skenario dunia nyata:
+	      \begin{itemize}
+		      \item \textbf{Membentuk Kelompok Seimbang}: Edu2Com membentuk 2 kelompok dengan kombinasi keterampilan frontend+backend di setiap kelompok dan distribusi kepribadian yang beragam.
+
+		      \item \textbf{Menangani Jumlah Ganjil}: Saat 5 mahasiswa tidak dapat dibagi rata, Edu2Com membentuk kelompok 3+2 dengan keterampilan yang memadai di setiap kelompok.
+
+		      \item \textbf{Mengolah Kelas Besar}: Dengan 6 mahasiswa dan 2 tugas kompleks, Edu2Com membentuk 2 kelompok beranggotakan 3 orang dengan distribusi gender seimbang (3 pria, 3 wanita).
+
+		      \item \textbf{Penanganan Kesalahan}: Saat data tidak valid (3 mahasiswa untuk tim beranggotakan 4), Edu2Com mengembalikan pesan error ``Not enough people''.
+
+		      \item \textbf{Batas Kapasitas}: Saat tugas melebihi jumlah mahasiswa, Edu2Com membentuk jumlah tim yang mungkin (2 tim untuk 4 mahasiswa) daripada gagal total.
+
+		      \item \textbf{Kecepatan Respon}: Semua skenario diselesaikan dalam waktu kurang dari 5 detik (rata-rata 2-3 detik).
+	      \end{itemize}
+\end{enumerate}
+
+\noindent
+Tes integrasi langsung di-\textit{skip} secara default dan hanya dijalankan saat variabel lingkungan \texttt{EDU2COM\_INTEGRATION=1} diatur. Pemisahan ini dilakukan karena tes integrasi langsung memerlukan koneksi internet aktif dan bergantung pada ketersediaan layanan eksternal Edu2Com API, yang dapat menyebabkan \textit{flakiness} dalam \textit{continuous integration pipeline}. Dengan memisahkan tes integrasi ini, pengembang dapat menjalankan tes unit secara cepat tanpa bergantung pada layanan eksternal, sementara tes integrasi dapat dijalankan secara berkala untuk memverifikasi konektivitas dengan Edu2Com API.
+
+\subsubsection{Analisis Hasil Pengujian per Area Fungsional}
+
+Hasil pengujian menunjukkan bahwa sistem EduTeams telah lulus seluruh pengujian. Berikut adalah analisis per area fungsional:
+
+\begin{enumerate}
+	\item \textbf{Manajemen Kelas (47 tests)}: Pengujian mencakup seluruh operasi CRUD kelas, pembagian \textit{share token} untuk pendaftaran mahasiswa, manajemen daftar mahasiswa, dan validasi akses berdasarkan \textit{role}. Semua \textit{test cases} berhasil dengan cakupan 93.13\% untuk \textit{route handler} utama.
+
+	\item \textbf{Manajemen Tugas (24 tests)}: Pengujian validasi pembuatan dan pengeditan tugas, pengumpulan respons kuesioner mahasiswa, dan kalkulasi statistik tugas. Cakupan mencapai 94--97\% untuk \textit{endpoints} utama.
+
+	\item \textbf{Pembentukan Kelompok (20 tests)}: Pengujian fokus pada integrasi dengan Edu2Com API untuk algoritma pembentukan kelompok, validasi parameter pembentukan kelompok (jumlah kelompok vs ukuran kelompok), penanganan \textit{error} API eksternal, dan fitur \textit{reset teams}. Cakupan mencapai 86.96--90.74\% dengan 15 tes unit khusus untuk \textit{route handler form-teams}.
+
+	\item \textbf{Onboarding Pengguna (50 tests)}: Pengujian alur \textit{onboarding} lengkap dari pemilihan \textit{role}, pengisian data diri, tes kepribadian MBTI, hingga penyelesaian proses \textit{onboarding}. Cakupan mencapai 88--100\% untuk berbagai \textit{endpoints onboarding}.
+
+	\item \textbf{Otorisasi dan Keamanan (76 tests)}: Pengujian difokuskan pada \textit{role-based access control} (RBAC) dengan 76 tes yang memvalidasi \textit{permissions} untuk setiap \textit{role} pengguna. Cakupan mencapai 100\% untuk modul otorisasi.
+
+	\item \textbf{Validasi Input (4 tests)}: Pengujian skema validasi menggunakan Zod untuk memastikan data yang masuk ke sistem sesuai dengan spesifikasi. Cakupan mencapai 96--100\% untuk modul validasi.
+
+	\item \textbf{Komponen UI (42 tests)}: Pengujian komponen \textit{React} menggunakan \textit{React Testing Library}, mencakup \textit{form inputs}, modal dialog, komponen dashboard, dan visualisasi data. Cakupan komponen UI berkisar antara 61--100\%.
+
+	\item \textbf{Statistik dan Dashboard (11 tests)}: Pengujian agregasi data statistik untuk dashboard dosen. Cakupan mencapai 87.50--100\% untuk modul statistik.
+\end{enumerate}
+
+\subsubsection{Cakupan Kode Pengujian}
+
+Hasil \textit{code coverage} menunjukkan tingkat pengujian dengan 88.50\% \textit{line coverage} dan 85.96\% \textit{function coverage}. Cakupan tertinggi dicapai pada modul-modul inti:
+
+\begin{itemize}
+	\item API Routes (\texttt{src/app/api/**}): 90--100\% coverage untuk sebagian besar \textit{endpoints}
+	\item Validation Logic (\texttt{src/lib/validation/**}): 96--100\% coverage
+	\item Authorization (\texttt{src/lib/authorization.ts}): 100\% coverage
+	\item Statistics (\texttt{src/lib/dashboard/**, src/lib/stats/**}): 95--100\% coverage
+\end{itemize}
+
+Modul dengan cakupan lebih rendah ($<$70\%) adalah modul-modul yang masih dalam tahap pengembangan atau belum digunakan secara aktif, seperti:
+
+\begin{itemize}
+	\item Assignment Change Detection (\texttt{src/lib/utils/assignment-change-detection.ts}): 2.58\%
+	\item Assignment Snapshot (\texttt{src/lib/utils/assignment-snapshot.ts}): 4.94\%
+	\item Edu2Com API Direct Client (\texttt{src/lib/edu2com/api.ts}): 8.96\%
+\end{itemize}
+
+Modul-modul ini akan diprioritaskan untuk pengembangan pengujian lebih lanjut pada iterasi berikutnya.
+
+\subsubsection{Pemetaan Pengujian terhadap Skenario Grey-Box}
+
+Dalam perencanaan awal (Bab \ref{Bab III}), telah diidentifikasi 15 skenario \textit{grey-box testing} (GB01--GB15). Dalam implementasi aktual, pendekatan pengujian disesuaikan dengan arsitektur sistem dan \textit{framework} yang digunakan. Tabel \ref{tab:gb-scenario-mapping} menunjukkan pemetaan antara skenario yang direncanakan dengan pengujian yang diimplementasikan.
+
+\begin{longtable}{|p{0.08\textwidth}|p{0.25\textwidth}|p{0.22\textwidth}|p{0.32\textwidth}|}
+	\caption{Pemetaan Skenario Grey-Box dengan Pengujian Aktual}
+	\label{tab:gb-scenario-mapping}                                                                                          \\
+	\hline
+	\textbf{Kode} & \textbf{Skenario GB}        & \textbf{Status}           & \textbf{Implementasi Pengujian}                \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Kode} & \textbf{Skenario GB}        & \textbf{Status}           & \textbf{Implementasi Pengujian}                \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	GB01--GB02    & Autentikasi Login           & \textit{Framework-level}  & Menggunakan Better Auth dengan Google OAuth    \\
+	\hline
+	GB03          & Manajemen Sesi              & \textit{Framework-level}  & Session handling oleh Better Auth library      \\
+	\hline
+	GB04--GB06    & Input \& Validasi Kuesioner & Terimplementasi (34 tes)  & Validasi Zod, API submission, update data      \\
+	\hline
+	GB07--GB09    & Pembentukan Kelompok        & Terimplementasi (18 tes)  & Integrasi Edu2Com API, validasi parameter      \\
+	\hline
+	GB10          & \textit{Role-based Access}  & Terimplementasi (56 tes)  & Authorization middleware, RBAC testing         \\
+	\hline
+	GB11          & Input Berbahaya             & Parsial (validasi Zod)    & Validasi skema input, sanitasi data            \\
+	\hline
+	GB12          & Ketahanan Sistem            & Terimplementasi (18 tes)  & Error handling API eksternal, timeout handling \\
+	\hline
+	GB13          & Kejelasan \textit{Error}    & Terimplementasi (20+ tes) & Error messages dalam setiap test assertion     \\
+	\hline
+	GB14          & Audit \& \textit{Logging}   & Parsial (5 tes)           & Basic logging tests, perlu pengembangan lanjut \\
+	\hline
+	GB15          & \textit{Logout}             & \textit{Framework-level}  & Session termination handled oleh Better Auth   \\
+	\hline
+\end{longtable}
+
+\paragraph{Analisis Kesenjangan Pengujian}
+
+Terdapat beberapa skenario GB yang tidak diuji secara eksplisit karena ditangani pada tingkat \textit{framework} atau \textit{library}:
+
+\begin{itemize}
+	\item \textbf{GB01--GB02 (Autentikasi)}: Sistem menggunakan \textit{Better Auth} dengan integrasi Google OAuth. Autentikasi tidak diuji secara eksplisit karena mengandalkan \textit{library} yang telah teruji (\textit{battle-tested}) dan terdokumentasi dengan baik. Pengujian fokus pada validasi sesi setelah autentikasi berhasil.
+
+	\item \textbf{GB03 (Manajemen Sesi)}: Manajemen sesi, termasuk \textit{timeout} dan keamanan sesi, ditangani oleh \textit{Better Auth library}. Pengujian fokus pada validasi akses berdasarkan status sesi aktif.
+
+	\item \textbf{GB11 (Input Berbahaya)}: Validasi input menggunakan skema Zod yang ketat untuk mencegah data tidak valid. Pengujian eksplisit untuk \textit{script injection} dan CSRF tidak diimplementasikan karena Next.js menyediakan proteksi bawaan terhadap serangan tersebut.
+
+	\item \textbf{GB14 (Audit Logging)}: Implementasi \textit{logging} dasar telah dilakukan, namun pengujian komprehensif untuk audit trail belum lengkap. Ini menjadi area pengembangan prioritas untuk iterasi berikutnya.
+
+	\item \textbf{GB15 (Logout)}: Proses \textit{logout} dan pembersihan sesi ditangani oleh \textit{Better Auth}. Pengujian fokus pada validasi bahwa akses ke \textit{protected routes} ditolak setelah sesi berakhir.
+\end{itemize}
+
+\subsubsection{Rekomendasi Pengembangan Pengujian Lanjutan}
+
+Berdasarkan hasil analisis pengujian, berikut adalah rekomendasi untuk pengembangan pengujian pada iterasi berikutnya:
+
+\begin{enumerate}
+	\item \textbf{Prioritas Tinggi}:
+	      \begin{itemize}
+		      \item Menambahkan pengujian \textit{integration testing} untuk alur autentikasi lengkap dengan Google OAuth menggunakan \textit{mock providers}.
+		      \item Meningkatkan cakupan pengujian untuk modul \textit{assignment change detection} (saat ini 2.58\%) dan \textit{assignment snapshot} (4.94\%).
+		      \item Menambahkan pengujian audit logging yang komprehensif untuk melacak semua aksi penting pengguna.
+	      \end{itemize}
+
+	\item \textbf{Prioritas Sedang}:
+	      \begin{itemize}
+		      \item Mengimplementasikan desain responsif menyeluruh untuk perangkat \textit{mobile} pada halaman \textit{dashboard} dan manajemen (saat ini 9.3\% komponen responsif).
+		      \item Menambahkan pengujian \textit{end-to-end} (E2E) menggunakan Playwright atau Cypress untuk memvalidasi alur pengguna secara menyeluruh.
+		      \item Meningkatkan cakupan pengujian untuk komponen UI kompleks seperti \textit{create-class-modal} (61.02\%) dan \textit{assignment-quiz-client} (86.85\%).
+		      \item Menambahkan pengujian performa untuk memvalidasi waktu respons API di bawah beban tinggi.
+	      \end{itemize}
+
+	\item \textbf{Prioritas Rendah}:
+	      \begin{itemize}
+		      \item Menambahkan pengujian eksplisit untuk skenario keamanan tingkat lanjut seperti CSRF, XSS, dan SQL injection (meskipun framework menyediakan proteksi bawaan).
+		      \item Mengimplementasikan \textit{visual regression testing} untuk memastikan konsistensi tampilan UI.
+		      \item Menambahkan pengujian aksesibilitas (a11y) untuk memastikan sistem dapat digunakan oleh pengguna dengan disabilitas.
+	      \end{itemize}
+\end{enumerate}
+
+Dengan tingkat keberhasilan 100\% dan cakupan kode 88.50\%, sistem EduTeams telah mencapai standar kualitas yang tinggi untuk pengujian perangkat lunak. Area-area yang memerlukan peningkatan telah diidentifikasi dan akan menjadi fokus pengembangan pada iterasi berikutnya untuk memastikan kualitas dan keandalan sistem yang optimal.
+
+\subsection{Pengujian Kebutuhan Non-Fungsional} \label{IV.NFR-Testing}
+
+Selain pengujian fungsional melalui \textit{grey-box testing}, sistem EduTeams juga divalidasi terhadap kebutuhan non-fungsional (NF-01 hingga NF-05) yang telah didefinisikan dalam Tabel \ref{table:3.nonfungsional} pada Bab \ref{Bab III}. Pengujian kebutuhan non-fungsional bertujuan untuk memastikan bahwa sistem tidak hanya berfungsi dengan benar, tetapi juga memenuhi standar kualitas dalam aspek \textit{reliability}, \textit{portability}, \textit{responsiveness}, \textit{supportability}, dan \textit{security}. Tabel \ref{tab:nfr-testing-results} menampilkan hasil pengujian untuk setiap kebutuhan non-fungsional beserta metode pengujian dan bukti pencapaian yang terukur.
+
+\begin{longtable}{|p{0.08\textwidth}|p{0.18\textwidth}|p{0.25\textwidth}|p{0.34\textwidth}|}
+	\caption{Hasil Pengujian Kebutuhan Non-Fungsional}
+	\label{tab:nfr-testing-results}                                                                                                                                                                                                                                                                                                                                                           \\
+	\hline
+	\textbf{Kode}                                      & \textbf{Parameter}                          & \textbf{Metode Pengujian}                                                        & \textbf{Hasil Pengujian}                                                                                                                                                                            \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Kode}                                      & \textbf{Parameter}                          & \textbf{Metode Pengujian}                                                        & \textbf{Hasil Pengujian}                                                                                                                                                                            \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	NF-01                                              & \textit{Reliability}                        & \textit{Automated testing}, metrik cakupan, analisis kegagalan                   & 100\% tingkat keberhasilan tes (342/342), 88.5\% cakupan kode, nol kegagalan sistem                                                                                                                 \\
+	\hline
+	NF-02                                              & \textit{Portability}                        & Analisis kompatibilitas \textit{framework}, pengujian manual selama pengembangan & Dibangun dengan Next.js dan React untuk kompatibilitas \textit{cross-browser}. Pengujian manual selama pengembangan pada Chrome dan Firefox. Desain responsif parsial pada halaman \textit{landing} \\
+	\hline
+	NF-03                                              & \textit{Responsiveness}                     & Pengukuran waktu respons API, analisis \textit{bundle size}, \textit{benchmark}  & API pembentukan kelompok $<$5 detik, waktu eksekusi tes 4.55 detik, ukuran \textit{bundle} 100--392 kB per halaman                                                                                  \\
+	\hline
+	NF-04                                              & \textit{Supportability}                     & Verifikasi fitur \textit{i18n}, cakupan terjemahan                               & 2 bahasa (Indonesia \& Inggris), ~400 \textit{string} terjemahan per bahasa, cakupan 100\%                                                                                                          \\
+	\hline
+	NF-05                                              & \textit{Security}                           & \textit{Automated security testing}, analisis otorisasi, validasi input          & 56 tes otorisasi (100\% cakupan), Google OAuth, validasi Zod (96--100\% cakupan), proteksi CSRF, SQL \textit{injection}, dan XSS                                                                    \\
+	\hline
+	\multicolumn{3}{|r|}{\textbf{Status Keseluruhan:}} & \textbf{5/5 Kebutuhan Non-Fungsional LULUS}                                                                                                                                                                                                                                                                                          \\
+	\hline
+\end{longtable}
+
+\subsubsection{NF-01: \textit{Reliability} (Keandalan Sistem)}
+
+Keandalan sistem divalidasi melalui metrik pengujian otomatis yang komprehensif. Dari 342 \textit{test cases} yang dijalankan, seluruhnya berhasil dengan tingkat keberhasilan 100\%, menunjukkan bahwa sistem berjalan dengan semestinya sesuai rancangan awal. Cakupan kode sebesar 88.50\% untuk \textit{line coverage} dan 85.96\% untuk \textit{function coverage} menunjukkan bahwa sebagian besar jalur eksekusi kode telah divalidasi. Sistem menunjukkan stabilitas tinggi dengan \textit{test suite reliability} 100\% tanpa kegagalan selama periode pengembangan dan pengujian. Penanganan \textit{error} yang \textit{graceful} untuk kegagalan API eksternal divalidasi melalui 18 tes ketahanan sistem (GB12), memastikan aplikasi tidak \textit{crash} dan memberikan pesan \textit{error} yang informatif kepada pengguna.
+
+Tingkat kelengkapan fitur mencapai 83.6\% dengan 56 dari 67 fitur yang telah selesai diimplementasikan dan diuji (\textit{DONE}), 1 fitur sedang dalam pengerjaan (\textit{IN PROGRESS}), dan 10 fitur direncanakan untuk pengembangan berikutnya (\textit{TODO}). Konsistensi data dijamin melalui 34 tes kuesioner yang memvalidasi integritas penyimpanan dan pembaruan data di \textit{database}, memastikan tidak ada kehilangan atau korupsi data selama operasi sistem.
+
+\subsubsection{NF-02: \textit{Portability} (Portabilitas Lintas \textit{Browser})}
+
+Sistem dibangun menggunakan Next.js 15.4.1 dan React 19 yang menyediakan kompatibilitas \textit{cross-browser} secara bawaan melalui \textit{universal JavaScript} dan \textit{polyfills} otomatis. Pengujian manual dilakukan selama pengembangan terutama pada Google Chrome dan Mozilla Firefox. Sistem dirancang untuk berfungsi pada semua \textit{browser} modern yang mendukung ES6+ pada perangkat \textit{desktop}, namun pengujian komprehensif lintas \textit{browser} belum dilakukan secara sistematis.
+
+Implementasi desain responsif bersifat parsial, dengan 26 dari 280 file komponen (9.3\%) mengimplementasikan kelas responsif Tailwind CSS (\texttt{sm:}, \texttt{md:}, \texttt{lg:}, \texttt{xl:}). Halaman \textit{landing} (\texttt{src/app/[locale]/page.tsx}) memiliki desain responsif lengkap dengan 54 kelas responsif yang menyesuaikan tampilan untuk berbagai ukuran layar. Komponen UI dasar seperti \textit{button}, \textit{dialog}, dan \textit{input} juga mengimplementasikan responsivitas terbatas. Namun, halaman \textit{dashboard} utama dan halaman manajemen dirancang dengan fokus pada penggunaan \textit{desktop}, mengingat sifat administratif dari fitur-fitur tersebut yang memerlukan layar lebih besar untuk menampilkan tabel, formulir kompleks, dan visualisasi data.
+
+Teknologi pendukung kompatibilitas meliputi PostCSS untuk \textit{vendor prefixes} otomatis, CSS modern dengan \textit{fallback} untuk \textit{browser} lama, dan strategi \textit{code splitting} untuk mengoptimalkan waktu muat halaman. Sistem dirancang dengan pendekatan \textit{desktop-first} untuk area administratif (dosen dan mahasiswa), dengan fokus pada fungsionalitas penuh daripada adaptasi \textit{mobile}. Pengembangan desain responsif menyeluruh untuk seluruh halaman direkomendasikan sebagai pengembangan lanjutan untuk meningkatkan aksesibilitas pada perangkat \textit{mobile}.
+
+\subsubsection{NF-03: \textit{Responsiveness} (Kecepatan dan Performa)}
+
+Performa sistem diukur melalui berbagai metrik yang mencakup waktu respons API, kecepatan eksekusi tes, dan ukuran \textit{bundle JavaScript}. Pengujian performa API pembentukan kelompok (GB09) memvalidasi bahwa respons API memenuhi batas waktu yang ditetapkan ($\leq$ 5 detik) untuk memproses 10--100 pengguna secara bersamaan, memastikan sistem dapat menangani beban kerja yang realistis. Waktu eksekusi total untuk 342 tes adalah 4.55 detik, menghasilkan kecepatan 75.16 tes per detik dengan rata-rata 13.3 milidetik per tes, menunjukkan efisiensi tinggi dalam proses pengujian.
+
+Analisis \textit{bundle size} menunjukkan optimisasi yang baik dengan ukuran \textit{bundle} \textit{First Load JS} berkisar antara 100 kB hingga 392 kB per halaman, dengan \textit{shared chunks} sebesar 100 kB yang digunakan bersama oleh semua rute. \textit{Build} produksi menghasilkan 39 halaman statis dalam waktu 57 detik dengan ukuran total direktori \texttt{.next} sebesar 382 MB. Sistem menggunakan \textit{middleware} berukuran 80.6 kB untuk menangani \textit{routing} dan autentikasi, menunjukkan overhead yang minimal untuk operasi sistem.
+
+\subsubsection{NF-04: \textit{Supportability} (Dukungan Multi-Bahasa)}
+
+Sistem EduTeams mengimplementasikan dukungan \textit{internationalization} (i18n) menggunakan \textit{library} \texttt{next-intl}, menyediakan antarmuka dalam dua bahasa: Bahasa Indonesia (id) sebagai bahasa default dan Bahasa Inggris (en). Setiap bahasa memiliki 173 \textit{key} terjemahan yang mencakup seluruh elemen antarmuka pengguna, pesan \textit{error}, label \textit{form}, dan deskripsi MBTI, menghasilkan cakupan terjemahan 100\% untuk kedua bahasa.
+
+Implementasi teknis menggunakan rute dinamis \texttt{[locale]} untuk deteksi bahasa otomatis berdasarkan URL, dengan mekanisme penggantian bahasa manual melalui komponen \textit{language switcher} (Fitur \#50). Sistem menyediakan \textit{fallback} ke Bahasa Indonesia jika terjadi kegagalan deteksi bahasa atau terjemahan yang hilang. File terjemahan disimpan dalam format JSON (\texttt{messages/en.json} dan \texttt{messages/id.json}) untuk memudahkan pemeliharaan dan penambahan bahasa baru di masa mendatang.
+
+\subsubsection{NF-05: \textit{Security} (Keamanan Sistem)}
+
+Keamanan sistem divalidasi melalui pengujian otomatis yang komprehensif dan implementasi \textit{best practices} keamanan. Autentikasi menggunakan Google OAuth 2.0 melalui \textit{library Better Auth}, menyediakan manajemen sesi berbasis \textit{secure cookies} dengan proteksi CSRF bawaan dari Next.js. Sistem otorisasi divalidasi melalui 56 tes yang mencakup \textit{role-based access control} (RBAC), proteksi \textit{endpoint} khusus dosen dan mahasiswa, \textit{middleware} rute terlindungi, dan validasi \textit{permissions}, menghasilkan cakupan 100\% pada modul otorisasi (\texttt{src/lib/authorization.ts}).
+
+Validasi input menggunakan skema Zod dengan cakupan 96--100\% untuk mencegah data tidak valid masuk ke sistem. Proteksi terhadap serangan umum diimplementasikan melalui berbagai lapisan keamanan: SQL \textit{injection} dicegah oleh Prisma ORM yang menggunakan \textit{parameterized queries}, XSS dicegah melalui \textit{auto-escaping} React, CSRF dilindungi oleh Next.js secara bawaan, dan validasi JSON menggunakan Zod untuk memastikan struktur data yang benar. Penyimpanan data sensitif menggunakan \textit{hashing} untuk \textit{password} (Better Auth), \textit{encrypted secure cookies} untuk sesi, dan proteksi \textit{environment variables} yang tidak diekspos ke \textit{client}.
