@@ -2,7 +2,16 @@
 \chapter{KESIMPULAN DAN SARAN} \label{Bab V}
 
 \section{Kesimpulan} \label{V.Kesimpulan}
-Berisi kesimpulan dari hasil dan pembahasan terkait penelitian yang dilakukan, dapat juga berupa temuan yang Anda dapatkan setelah melakukan penelitian atau analisis terhadap tugas akhir Anda. Memberikan jawaban dari poin pada subbab \nameref{I.Rumusan Masalah} dan \nameref{I.Tujuan}. \par
+Berdasarkan hasil penelitian dan pengujian sistem yang telah dilakukan untuk sistem EduTeams, maka dapat disimpulkan sebagai berikut:
+\begin{enumerate}
+    \item Pengembangan sistem informasi EduTeams berhasil dilakukan dengan menggunakan metodologi \textit{Agile Kanban}. Dari total 67 fitur yang diidentifikasi, 56 fitur (83.6\%) telah selesai diimplementasikan dan diuji, 1 fitur (1.5\%) sedang dalam tahap pengerjaan, serta 10 fitur (14.9\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap \textit{maturity} yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi.
+    \item Sistem informasi EduTeams telah melalui proses pengujian komprehensif menggunakan metode \textit{grey-box testing} dengan \textit{framework} Bun Test dan pengujian \textit{end-to-end} menggunakan Playwright. Dari 347 \textit{test cases} yang diimplementasikan, seluruh tes berhasil (100\%) dengan cakupan kode 89.42\% (\textit{line coverage}) dan 86.96\% (\textit{function coverage}). Pengujian kebutuhan non-fungsional pada tiga \textit{browser} (Chromium, Firefox, Mobile Chrome) menunjukkan hasil 210/210 tes lulus (100\%), dengan skor \textit{Lighthouse Performance} 98/100 dan \textit{Accessibility} 100/100. Hasil ini menandakan bahwa seluruh fungsi sistem dapat berjalan sesuai harapan dan memenuhi standar kualitas perangkat lunak modern.
+    \item Integrasi algoritma pembentukan kelompok berbasis Edu2Com API yang mempertimbangkan kepribadian MBTI, keahlian, preferensi topik, dan keseimbangan gender berhasil diimplementasikan dengan tingkat keberhasilan 100\% pada 20 \textit{test cases} pembentukan kelompok, membuktikan bahwa sistem mampu menghasilkan kelompok mahasiswa yang seimbang dan heterogen secara otomatis.
+\end{enumerate}
 
 \section{Saran} \label{V.Saran}
-Berisi saran mengenai aspek tugas akhir atau temuan yang dapat dikembangkan dan diperkaya di tugas akhir selanjutnya. Saran dapat berkaitan erat pada subbab \nameref{IV.Hasil}. \par
+Berdasarkan hasil penelitian yang telah dilakukan, terdapat beberapa saran yang dapat dijadikan acuan untuk pengembangan selanjutnya, antara lain sebagai berikut:
+\begin{enumerate}
+    \item Pengembangan fitur notifikasi email menggunakan layanan Resend untuk membantu pengguna mengetahui status dan tahapan penting seperti pembuatan tugas baru, pengumpulan kuesioner, dan hasil pembentukan kelompok.
+    \item Peningkatan dukungan tampilan untuk perangkat mobile, terutama pada fitur-fitur administratif dosen, mengingat terdapat beberapa keterbatasan pada pengujian perangkat mobile.
+\end{enumerate}
