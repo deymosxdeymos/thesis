@@ -85,8 +85,8 @@
 
 % Remove DOI and URL fields if not needed (optional)
 \AtEveryBibitem{
-  \clearfield{doi}
-  \clearfield{url}
+	\clearfield{doi}
+	\clearfield{url}
 }
 
 \DeclareLanguageMapping{bahasa}{english}
@@ -97,6 +97,8 @@
 \usepackage{ragged2e}		% Alignment
 \usepackage{multirow}		% Untuk bisa merge cell di tabel
 \usepackage{tikz}			% Untuk menggambar kotak pas foto
+\usepackage{pgfplots}		% Untuk membuat grafik dan chart
+\pgfplotsset{compat=1.18}	% Kompatibilitas pgfplots
 \usepackage{setspace}		% Spacing paragraph
 \usepackage{fancyhdr}		% Agar nomor halaman di pojok kanan atas
 \usepackage{caption} 		% Caption gambar & tabel
@@ -120,34 +122,34 @@
 
 % Fancy header selang-seling kiri-kanan atas (Ardoni)
 \fancypagestyle{alternatingstyle}{
-  \fancyhf{} % Clear all headers and footers
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyhead[RO]{\thepage} % Right Odd
-  \fancyhead[LE]{\thepage} % Left Even
+	\fancyhf{} % Clear all headers and footers
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhead[RO]{\thepage} % Right Odd
+	\fancyhead[LE]{\thepage} % Left Even
 }
 
 \newcommand{\forceoddpage}{
-  \ifodd\value{page}
-  \else
-    \hbox{}
-    \newpage
-  \fi
+	\ifodd\value{page}
+	\else
+		\hbox{}
+		\newpage
+	\fi
 }
 
 % Setting judul
 \chapterfont{\centering \large}
 \titleformat{\chapter}[display]%
-  	{\large\centering\bfseries}%
-  	{\chaptertitlename\ \thechapter}{0pt}%
-  	{\large\bfseries\uppercase}
+{\large\centering\bfseries}%
+{\chaptertitlename\ \thechapter}{0pt}%
+{\large\bfseries\uppercase}
 \titleformat{\section}%
-	{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
+{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}%
-	{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}%
-	{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 \titleformat{\paragraph}[block]%
-	{\normalfont\normalsize\bfseries}{}{0pt}{\hspace{2em}}
+{\normalfont\normalsize\bfseries}{\alph{paragraph}.}{1em}{}
 
 %\makeatletter
 %\def\@makechapterhead#1{%
@@ -175,8 +177,11 @@
 \usepackage{geometry}
 
 
-% Setting nomor pada subbsubsubbab
-\setcounter{secnumdepth}{3}
+% Setting nomor pada subbsubsubbab dan paragraph
+\setcounter{secnumdepth}{4}
+
+% Format paragraph numbering as alphabetical
+\renewcommand{\theparagraph}{\alph{paragraph}}
 
 % Counter untuk figure dan table, agar bertambah walaupun lintas subbab
 \counterwithout{figure}{section}
@@ -201,11 +206,11 @@
 
 \usepackage{etoolbox}
 \makeatletter
-  % before starting any list: make addvspace do nothing
-  \pretocmd{\listoffigures}{\begingroup\renewcommand*{\addvspace}[1]{}}{}{}
-  \apptocmd {\listoffigures}{\endgroup}{}{}
-  \pretocmd{\listoftables} { \begingroup\renewcommand*{\addvspace}[1]{}}{}{}
-  \apptocmd {\listoftables} { \endgroup}{}{}
+% before starting any list: make addvspace do nothing
+\pretocmd{\listoffigures}{\begingroup\renewcommand*{\addvspace}[1]{}}{}{}
+\apptocmd {\listoffigures}{\endgroup}{}{}
+\pretocmd{\listoftables} { \begingroup\renewcommand*{\addvspace}[1]{}}{}{}
+\apptocmd {\listoftables} { \endgroup}{}{}
 \makeatother
 
 \setcounter{tocdepth}{3}
@@ -251,24 +256,24 @@
 
 % Setting penulisan rumus yang baru (Ardoni)
 \newenvironment{equationcaptioned}[3][]{%
-  \refstepcounter{equation}
-  \myequations{#3}
-  \begin{center} % TODO: Rumus harusnya rata kiri
-    \vspace{1em}
-    % Removed the fcolorbox and kept only the minipage
-    \begin{minipage}{0.9\linewidth}
-		\begin{spacing}{0.7} % ⬅️ Spasi 1.0 hanya di rumus
-			\begin{equation*}
-				#2
-				\ifstrempty{#1}{}{\label{#1}}
-			\end{equation*}
-		\end{spacing}
-		\begin{flushright}
-			(\footnotesize\theequation)
-		\end{flushright}
-    \end{minipage}
-  \end{center}
-  \vspace{0.5em}
+	\refstepcounter{equation}
+	\myequations{#3}
+	\begin{center} % TODO: Rumus harusnya rata kiri
+		\vspace{1em}
+		% Removed the fcolorbox and kept only the minipage
+		\begin{minipage}{0.9\linewidth}
+			\begin{spacing}{0.7} % ⬅️ Spasi 1.0 hanya di rumus
+				\begin{equation*}
+					#2
+					\ifstrempty{#1}{}{\label{#1}}
+				\end{equation*}
+			\end{spacing}
+			\begin{flushright}
+				(\footnotesize\theequation)
+			\end{flushright}
+		\end{minipage}
+	\end{center}
+	\vspace{0.5em}
 }{}
 
 % Setting daftar gambar dan daftar tabel
@@ -290,27 +295,27 @@
 
 % Pengaturan untuk penulisan blok kode (listings) (Ardoni)
 \lstset{
-    language=Python,                  	% Bahasa pemrograman
-    basicstyle=\ttfamily\scriptsize,	% Gaya font kode (diperkecil)
-    numbers=left,                      	% Menampilkan nomor baris di sisi kiri
-    numberstyle=\tiny\color{black},		% Warna nomor baris
-    showstringspaces=false,            	% Tidak menampilkan icon spasi dalam string
-    frame=single,                      	% Membuat frame di sekitar kode
-    rulecolor=\color{black},           	% Warna garis bingkai
-    breaklines=true,                   	% Membungkus kode jika lebih panjang dari satu baris
-    breakatwhitespace=true,           	% Membungkus di spasi
-    backgroundcolor=\color{white},    	% Warna latar belakang
-    commentstyle=\color{green}, 		% Warna untuk teks comment
-    keywordstyle=\color{blue}, 			% Warna untuk teks fungsi
-    stringstyle=\color{red},			% Warna untuk teks string
-    keepspaces=true,                   	% Menjaga spasi di dalam kode
-    xleftmargin=10pt,                 	% Margin kiri
-    xrightmargin=10pt,                 	% Margin kanan
-    aboveskip=0pt,                    	% Jarak di atas kode
-    belowskip=0pt,                    	% Jarak di bawah kode
-    lineskip=-1pt,
-    extendedchars=true                 	% Mengizinkan karakter non-ASCII
-    escapeinside={\%*}{*)}            	% Escape karakter LaTeX dalam listings
+language=Python,                  	% Bahasa pemrograman
+basicstyle=\ttfamily\scriptsize,	% Gaya font kode (diperkecil)
+numbers=left,                      	% Menampilkan nomor baris di sisi kiri
+numberstyle=\tiny\color{black},		% Warna nomor baris
+showstringspaces=false,            	% Tidak menampilkan icon spasi dalam string
+frame=single,                      	% Membuat frame di sekitar kode
+rulecolor=\color{black},           	% Warna garis bingkai
+breaklines=true,                   	% Membungkus kode jika lebih panjang dari satu baris
+breakatwhitespace=true,           	% Membungkus di spasi
+backgroundcolor=\color{white},    	% Warna latar belakang
+commentstyle=\color{green}, 		% Warna untuk teks comment
+keywordstyle=\color{blue}, 			% Warna untuk teks fungsi
+stringstyle=\color{red},			% Warna untuk teks string
+keepspaces=true,                   	% Menjaga spasi di dalam kode
+xleftmargin=10pt,                 	% Margin kiri
+xrightmargin=10pt,                 	% Margin kanan
+aboveskip=0pt,                    	% Jarak di atas kode
+belowskip=0pt,                    	% Jarak di bawah kode
+lineskip=-1pt,
+extendedchars=true                 	% Mengizinkan karakter non-ASCII
+escapeinside={\%*}{*)}            	% Escape karakter LaTeX dalam listings
 }
 
 % Daftar Kode
@@ -333,22 +338,22 @@
 
 % Mengatur prefix "Kode" di daftar kode dengan nomor Arab
 \renewcommand{\lstlistoflistings}{%
-  \begingroup
-  \let\oldnumberline\numberline
-  \renewcommand{\numberline}[1]{Kode~##1~}
-  \listof{lstlisting}{\listoflistingscaption}
-  \endgroup
+	\begingroup
+	\let\oldnumberline\numberline
+	\renewcommand{\numberline}[1]{Kode~##1~}
+	\listof{lstlisting}{\listoflistingscaption}
+	\endgroup
 }
 % Mengatur titik-titik pada daftar kode agar sama persis dengan daftar rumus
 \makeatletter
 % Definisikan kembali cara menampilkan daftar kode
 \renewcommand*\l@lstlisting[2]{%
-  \vskip \cftbeforelstlistingskip
-  \@dottedtocline{1}{1.5em}{6em}{#1}{%
-    \leaders\hbox{%
-      $\m@th \mkern \@dotsep mu \hbox{.}\mkern \@dotsep mu$%
-    }\hfill\nobreak#2%
-  }%
+	\vskip \cftbeforelstlistingskip
+	\@dottedtocline{1}{1.5em}{6em}{#1}{%
+		\leaders\hbox{%
+			$\m@th \mkern \@dotsep mu \hbox{.}\mkern \@dotsep mu$%
+		}\hfill\nobreak#2%
+	}%
 }
 
 % Pastikan nilai @dotsep sama dengan yang digunakan di daftar rumus
@@ -357,10 +362,10 @@
 
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=black,   % warna untuk \ref, \autoref, dll
-    urlcolor=blue,     % warna untuk \href (tautan web)
-    citecolor=black    % warna untuk \cite
+	colorlinks=true,
+	linkcolor=black,   % warna untuk \ref, \autoref, dll
+	urlcolor=blue,     % warna untuk \href (tautan web)
+	citecolor=black    % warna untuk \cite
 }
 
 \usepackage{cleveref}

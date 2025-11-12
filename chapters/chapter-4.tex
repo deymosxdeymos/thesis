@@ -10,191 +10,274 @@ Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah 
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
 	\caption{Implementasi Fitur Sistem EduTeams (Consolidated)}
-	\label{tab:implementasi-fitur}                                                                               \\
+	\label{tab:implementasi-fitur}                                                                                    \\
 	\hline
-	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status} \\
+	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status}      \\
 	\hline
 	\endfirsthead
 	\hline
-	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status} \\
+	\textbf{No} & \textbf{Fitur/Menu}                                                          & \textbf{Status}      \\
 	\hline
 	\endhead
 	\hline
 	\endfoot
 	\hline
 	\endlastfoot
-	\multicolumn{3}{|c|}{\textbf{A. AUTENTIKASI DAN OTORISASI}}                                                  \\
+	1           & Login dengan Google OAuth                                                    & \textit{DONE}        \\
 	\hline
-	1           & Login dengan Google OAuth                                                    & \textit{DONE}   \\
+	2           & Role: Mahasiswa dan Dosen                                                    & \textit{DONE}        \\
 	\hline
-	2           & Role: Mahasiswa dan Dosen                                                    & \textit{DONE}   \\
+	3           & Session Management dengan cookie-based authentication                        & \textit{DONE}        \\
 	\hline
-	3           & Session Management dengan cookie-based authentication                        & \textit{DONE}   \\
+	4           & Pemilihan Role (Mahasiswa/Dosen) dengan auto-detection email institusi       & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{B. ONBOARDING PENGGUNA}}                                                        \\
+	5           & Form Data Diri (NIM/NPM, nama, jenis kelamin)                                & \textit{DONE}        \\
 	\hline
-	4           & Pemilihan Role (Mahasiswa/Dosen) dengan auto-detection email institusi       & \textit{DONE}   \\
+	6           & Tes Kepribadian MBTI dengan 42 pertanyaan OJTS 2.1                           & \textit{DONE}        \\
 	\hline
-	5           & Form Data Diri (NIM/NPM, nama, jenis kelamin)                                & \textit{DONE}   \\
+	7           & Sistem scoring dan klasifikasi 16 tipe MBTI (EI, SN, TF, PJ)                 & \textit{DONE}        \\
 	\hline
-	6           & Tes Kepribadian MBTI dengan 42 pertanyaan OJTS 2.1                           & \textit{DONE}   \\
+	8           & Resume Onboarding untuk melanjutkan proses yang belum selesai                & \textit{DONE}        \\
 	\hline
-	7           & Sistem scoring dan klasifikasi 16 tipe MBTI (EI, SN, TF, PJ)                 & \textit{DONE}   \\
+	9           & Welcome Splash Screen untuk pengguna baru                                    & \textit{DONE}        \\
 	\hline
-	8           & Resume Onboarding untuk melanjutkan proses yang belum selesai                & \textit{DONE}   \\
+	10          & Dashboard Mahasiswa dengan daftar kelas yang diikuti                         & \textit{DONE}        \\
 	\hline
-	9           & Welcome Splash Screen untuk pengguna baru                                    & \textit{DONE}   \\
+	11          & Dashboard Dosen dengan statistik (total kelas, mahasiswa, tugas)             & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{C. DASHBOARD}}                                                                  \\
+	12          & Navigasi Sidebar dan Top Navigation Bar                                      & \textit{DONE}        \\
 	\hline
-	10          & Dashboard Mahasiswa dengan daftar kelas yang diikuti                         & \textit{DONE}   \\
+	13          & Pembuatan Kelas Baru (nama mata kuliah, kelas, tahun, periode)               & \textit{DONE}        \\
 	\hline
-	11          & Dashboard Dosen dengan statistik (total kelas, mahasiswa, tugas)             & \textit{DONE}   \\
+	14          & Join Kelas via Share Token untuk mahasiswa                                   & \textit{DONE}        \\
 	\hline
-	12          & Navigasi Sidebar dan Top Navigation Bar                                      & \textit{DONE}   \\
+	15          & Dialog Pembagian Kelas dengan Token dan URL                                  & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{D. MANAJEMEN KELAS}}                                                            \\
+	16          & Daftar Mahasiswa per Kelas dengan data MBTI                                  & \textit{DONE}        \\
 	\hline
-	13          & Pembuatan Kelas Baru (nama mata kuliah, kelas, tahun, periode)               & \textit{DONE}   \\
+	17          & Kelola Kelas (Edit, Hapus, Arsip)                                            & \textit{DONE}        \\
 	\hline
-	14          & Join Kelas via Share Token untuk mahasiswa                                   & \textit{DONE}   \\
+	18          & Search dan Filter Mahasiswa                                                  & \textit{DONE}        \\
 	\hline
-	15          & Dialog Pembagian Kelas dengan Token dan URL                                  & \textit{DONE}   \\
+	19          & Hapus Mahasiswa dari Kelas                                                   & \textit{DONE}        \\
 	\hline
-	16          & Daftar Mahasiswa per Kelas dengan data MBTI                                  & \textit{DONE}   \\
+	20          & Pembuatan Tugas (Assignment) dengan judul, deskripsi, tanggal mulai          & \textit{DONE}        \\
 	\hline
-	17          & Kelola Kelas (Edit, Hapus, Arsip)                                            & \textit{DONE}   \\
+	21          & Kelola Tugas dalam bentuk Table View dengan search dan filter                & \textit{DONE}        \\
 	\hline
-	18          & Search dan Filter Mahasiswa                                                  & \textit{DONE}   \\
+	22          & Edit Tugas dengan validation                                                 & \textit{DONE}        \\
 	\hline
-	19          & Hapus Mahasiswa dari Kelas                                                   & \textit{DONE}   \\
+	23          & Sistem Versioning Assignment untuk tracking perubahan                        & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{E. MANAJEMEN TUGAS}}                                                            \\
+	24          & Deteksi Perubahan Assignment dengan flagging submission                      & \textit{DONE}        \\
 	\hline
-	20          & Pembuatan Tugas (Assignment) dengan judul, deskripsi, tanggal mulai          & \textit{DONE}   \\
+	25          & Hapus dan Arsip Tugas                                                        & \textit{DONE}        \\
 	\hline
-	21          & Kelola Tugas dalam bentuk Table View dengan search dan filter                & \textit{DONE}   \\
+	26          & Sistem Topik per Assignment                                                  & \textit{DONE}        \\
 	\hline
-	22          & Edit Tugas dengan validation                                                 & \textit{DONE}   \\
+	27          & Halaman Management untuk Mahasiswa dengan Tabs                               & \textit{DONE}        \\
 	\hline
-	23          & Sistem Versioning Assignment untuk tracking perubahan                        & \textit{DONE}   \\
+	28          & Quiz Penilaian Skill dengan Likert scale dan modal instruksi                 & \textit{DONE}        \\
 	\hline
-	24          & Deteksi Perubahan Assignment dengan flagging submission                      & \textit{DONE}   \\
+	29          & Quiz Preferensi Topik dengan skala Likert 5 poin                             & \textit{DONE}        \\
 	\hline
-	25          & Hapus dan Arsip Tugas                                                        & \textit{DONE}   \\
+	30          & Submission Tracking dengan status (Belum Isi, Menunggu, Berhasil)            & \textit{DONE}        \\
 	\hline
-	26          & Sistem Topik per Assignment                                                  & \textit{DONE}   \\
+	31          & Status Menunggu Pembagian Kelompok dengan hourglass                          & \textit{DONE}        \\
 	\hline
-	27          & Halaman Management untuk Mahasiswa dengan Tabs                               & \textit{DONE}   \\
+	32          & Resubmission untuk assignment yang berubah                                   & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{F. QUIZ DAN PREFERENSI}}                                                        \\
+	33          & Integrasi Algoritma Pembentukan Kelompok (Edu2com API)                       & \textit{DONE}        \\
 	\hline
-	28          & Quiz Penilaian Skill dengan Likert scale dan modal instruksi                 & \textit{DONE}   \\
+	34          & Algoritma Multi-Faktor (MBTI, Skill, Gender, Preferensi Topik)               & \textit{DONE}        \\
 	\hline
-	29          & Quiz Preferensi Topik dengan skala Likert 5 poin                             & \textit{DONE}   \\
+	35          & Pembentukan kelompok berdasarkan jumlah kelompok                             & \textit{DONE}        \\
 	\hline
-	30          & Submission Tracking dengan status (Belum Isi, Menunggu, Berhasil)            & \textit{DONE}   \\
+	36          & Pembentukan kelompok berdasarkan ukuran kelompok                             & \textit{DONE}        \\
 	\hline
-	31          & Status Menunggu Pembagian Kelompok dengan hourglass                          & \textit{DONE}   \\
+	37          & Team Quality Scoring untuk setiap kelompok                                   & \textit{DONE}        \\
 	\hline
-	32          & Resubmission untuk assignment yang berubah                                   & \textit{DONE}   \\
+	38          & Tampilan Hasil Kelompok untuk Dosen dan Mahasiswa                            & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{G. PEMBENTUKAN KELOMPOK}}                                                       \\
+	39          & Reset dan Ulang Pembentukan Kelompok                                         & \textit{DONE}        \\
 	\hline
-	33          & Integrasi Algoritma Pembentukan Kelompok (Edu2com API)                       & \textit{DONE}   \\
+	40          & Chart Distribusi 16 Tipe MBTI                                                & \textit{DONE}        \\
 	\hline
-	34          & Algoritma Multi-Faktor (MBTI, Skill, Gender, Preferensi Topik)               & \textit{DONE}   \\
+	41          & Chart Distribusi Skill Mahasiswa                                             & \textit{DONE}        \\
 	\hline
-	35          & Pembentukan kelompok berdasarkan jumlah kelompok                             & \textit{DONE}   \\
+	42          & Chart Distribusi Gender                                                      & \textit{DONE}        \\
 	\hline
-	36          & Pembentukan kelompok berdasarkan ukuran kelompok                             & \textit{DONE}   \\
+	43          & Radar Chart Personality (EI, SN, TF, PJ)                                     & \textit{DONE}        \\
 	\hline
-	37          & Team Quality Scoring untuk setiap kelompok                                   & \textit{DONE}   \\
+	44          & Statistik Submission Rate Assignment                                         & \textit{DONE}        \\
 	\hline
-	38          & Tampilan Hasil Kelompok untuk Dosen dan Mahasiswa                            & \textit{DONE}   \\
+	45          & Halaman Profil Mahasiswa dengan visualisasi MBTI (Bar Chart dan Radar Chart) & \textit{DONE}        \\
 	\hline
-	39          & Reset dan Ulang Pembentukan Kelompok                                         & \textit{DONE}   \\
+	46          & Dialog Persebaran 16 Tipe Kepribadian MBTI                                   & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{H. ANALITIK DAN VISUALISASI}}                                                   \\
+	47          & Halaman Profil Dosen dengan formulir data pribadi                            & \textit{DONE}        \\
 	\hline
-	40          & Chart Distribusi 16 Tipe MBTI                                                & \textit{DONE}   \\
+	48          & Deskripsi karakteristik 16 Tipe MBTI                                         & \textit{DONE}        \\
 	\hline
-	41          & Chart Distribusi Skill Mahasiswa                                             & \textit{DONE}   \\
+	49          & Language Switcher (Bahasa Indonesia dan English)                             & \textit{DONE}        \\
 	\hline
-	42          & Chart Distribusi Gender                                                      & \textit{DONE}   \\
+	50          & CTA dan Navigasi pada Landing Page                                           & \textit{DONE}        \\
 	\hline
-	43          & Radar Chart Personality (EI, SN, TF, PJ)                                     & \textit{DONE}   \\
+	51          & Loading States dengan Suspense dan Skeleton Components                       & \textit{DONE}        \\
 	\hline
-	44          & Statistik Submission Rate Assignment                                         & \textit{DONE}   \\
+	52          & Error Handling dan Error Pages                                               & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{I. PROFIL DAN PENGATURAN}}                                                      \\
+	53          & Responsive Design (Mobile, Tablet, Desktop)                                  & \textit{DONE}        \\
 	\hline
-	45          & Halaman Profil Mahasiswa dengan visualisasi MBTI (Bar Chart dan Radar Chart) & \textit{DONE}   \\
+	54          & Fitur Aksesibilitas Dasar (ARIA Labels pada UI Components)                   & \textit{DONE}        \\
 	\hline
-	46          & Dialog Persebaran 16 Tipe Kepribadian MBTI                                   & \textit{DONE}   \\
+	55          & Server-side Caching dengan Next.js                                           & \textit{DONE}        \\
 	\hline
-	47          & Halaman Profil Dosen dengan formulir data pribadi                            & \textit{DONE}   \\
+	56          & Halaman Jawaban Mahasiswa dengan Tabs (Kepribadian, Skill, Preferensi)       & \textit{DONE}        \\
 	\hline
-	48          & Deskripsi karakteristik 16 Tipe MBTI                                         & \textit{DONE}   \\
+	57          & Pre-fill Jawaban Quiz Skill dan Preferensi Sebelumnya                        & \textit{DONE}        \\
 	\hline
-	49          & Language Switcher (Bahasa Indonesia dan English)                             & \textit{DONE}   \\
+	58          & Legend dan Sort untuk MBTI Chart                                             & \textit{DONE}        \\
 	\hline
-	50          & CTA dan Navigasi pada Landing Page                                           & \textit{DONE}   \\
+	59          & Gabung Form Tahun Periode dan Semester                                       & \textit{DONE}        \\
 	\hline
-	\multicolumn{3}{|c|}{\textbf{J. FITUR TAMBAHAN}}                                                             \\
+	60          & Export Data Kelompok ke PDF dan Spreadsheet                                  & \textit{DONE}        \\
 	\hline
-	51          & Loading States dengan Suspense dan Skeleton Components                       & \textit{DONE}   \\
+	61          & Halaman Grafik per Kelompok                                                  & \textit{DONE}        \\
 	\hline
-	52          & Error Handling dan Error Pages                                               & \textit{DONE}   \\
+	62          & Form Pengisian Mata Kuliah seperti Input Skill dan Preference                & \textit{DONE}        \\
 	\hline
-	53          & Responsive Design (Mobile, Tablet, Desktop)                                  & \textit{DONE}   \\
+	63          & Advanced Settings untuk Bobot Pembagian Kelompok                             & \textit{IN PROGRESS} \\
 	\hline
-	54          & Fitur Aksesibilitas Dasar (ARIA Labels pada UI Components)                   & \textit{DONE}   \\
+	64          & Panduan Penggunaan untuk Semua Role                                          & \textit{IN PROGRESS} \\
 	\hline
-	55          & Server-side Caching dengan Next.js                                           & \textit{DONE}   \\
+	65          & Notifikasi Email untuk event penting menggunakan Resend                      & \textit{TODO}        \\
 	\hline
-	56          & Halaman Jawaban Mahasiswa dengan Tabs (Kepribadian, Skill, Preferensi)       & \textit{DONE}   \\
+	66          & Ubah Kata "Periode" menjadi "Akademik"                                       & \textit{TODO}        \\
 	\hline
-	57          & Pre-fill Jawaban Quiz Skill dan Preferensi Sebelumnya                        & \textit{DONE}   \\
-	\hline
-	\multicolumn{3}{|c|}{\textbf{K. FITUR DALAM PENGERJAAN}}                                                     \\
-	\hline
-	\multicolumn{3}{|c|}{\textbf{L. FITUR YANG DIRENCANAKAN}}                                                    \\
-	\hline
-	58          & Notifikasi Email untuk event penting menggunakan Resend                      & \textit{TODO}   \\
-	\hline
-	59          & Export Data Kelompok ke PDF dan Spreadsheet                                  & \textit{TODO}   \\
-	\hline
-	60          & Advanced Settings untuk Bobot Pembagian Kelompok                             & \textit{TODO}   \\
-	\hline
-	61          & Legend dan Sort untuk MBTI Chart                                             & \textit{DONE}   \\
-	\hline
-	62          & Panduan Penggunaan untuk Semua Role                                          & \textit{TODO}   \\
-	\hline
-	63          & Halaman Grafik per Kelompok                                                  & \textit{TODO}   \\
-	\hline
-	64          & Ubah Kata "Periode" menjadi "Akademik"                                       & \textit{TODO}   \\
-	\hline
-	65          & Gradasi Warna pada Grafik Skill                                              & \textit{TODO}   \\
-	\hline
-	66          & Form Pengisian Mata Kuliah seperti Input Skill dan Preference                & \textit{TODO}   \\
-	\hline
-	67          & Gabung Form Tahun Periode dan Semester                                       & \textit{DONE}   \\
+	67          & Gradasi Warna pada Grafik Skill                                              & \textit{TODO}        \\
 	\hline
 \end{longtable}
 
 \noindent
-Dari total 67 fitur yang diidentifikasi, 61 fitur (91.0\%) telah selesai diimplementasikan dan diuji, 1 fitur (1.5\%) sedang dalam tahap pengerjaan berupa implementasi fitur tambahan untuk mahasiswa, serta 5 fitur (7.5\%) direncanakan untuk pengembangan selanjutnya. Tingkat kelengkapan implementasi yang tinggi ini menunjukkan bahwa sistem EduTeams telah mencapai tahap maturity yang baik untuk fitur-fitur inti dan siap untuk digunakan dalam lingkungan produksi dengan rencana pengembangan berkelanjutan untuk fitur-fitur tambahan.
+Dari total 67 fitur yang diidentifikasi, 62 fitur (92.5\%) telah selesai diimplementasikan dan diuji, 2 fitur (3.0\%) sedang dalam tahap pengerjaan, serta 3 fitur (4.5\%) direncanakan untuk pengembangan selanjutnya. Gambar \ref{fig:impl-fitur-status} menunjukkan ringkasan status implementasi fitur.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				xbar stacked,
+				width=0.9\textwidth,
+				height=3cm,
+				xmin=0,
+				xmax=100,
+				ytick=\empty,
+				xlabel={Persentase (\%)},
+				enlarge y limits=0.5,
+				bar width=25pt,
+				nodes near coords,
+				nodes near coords style={font=\normalsize, text=black},
+				legend style={at={(0.5,-0.4)}, anchor=north, legend columns=3, font=\normalsize},
+				every node near coord/.append style={
+						/pgf/number format/fixed,
+						/pgf/number format/precision=1,
+					},
+			]
+			\addplot[fill=green!40!white, draw=green!60!black] coordinates {(92.5,0)};
+			\addplot[fill=orange!50!white, draw=orange!70!black] coordinates {(3.0,0)};
+			\addplot[fill=red!40!white, draw=red!60!black] coordinates {(4.5,0)};
+			\legend{\textit{DONE} (92.5\%), \textit{IN PROGRESS} (3.0\%), \textit{TODO} (4.5\%)}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Ringkasan status implementasi fitur sistem (N=67)}
+	\label{fig:impl-fitur-status}
+\end{figure}
 
 \subsubsection{Halaman Landing Page}
 
-Halaman landing page menampilkan informasi sistem EquiTeam dan menyediakan autentikasi Google OAuth dengan tata letak responsif (Gambar \ref{fig:4.landing-page}).
+Halaman landing page EquiTeam dirancang sebagai halaman publik yang komprehensif untuk memperkenalkan sistem pembentukan kelompok berbasis AI. Halaman ini menampilkan informasi lengkap tentang fitur, masalah yang diselesaikan, solusi yang ditawarkan, serta manfaat bagi pengguna (mahasiswa dan dosen). Pada bagian atas halaman terdapat tombol login dengan autentikasi Google OAuth yang memungkinkan pengguna masuk ke sistem (Gambar \ref{fig:4.landing-page}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/landing-page.png}
 	\caption{Tampilan Halaman Landing Page Sistem EquiTeam}
 	\label{fig:4.landing-page}
+\end{figure}
+
+Halaman landing page memiliki struktur navigasi yang intuitif dengan komponen-komponen berikut:
+
+\paragraph{Navigasi Atas}
+Area navigasi fixed pada bagian atas halaman (Gambar \ref{fig:4.nav-landing-page}) menyediakan:
+\begin{itemize}
+	\item Menu navigasi cepat: Tentang, Masalah, Solusi, dan Manfaat
+	\item Tombol pengganti bahasa (Language Switcher) untuk beralih antara Bahasa Indonesia dan English
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/nav-landing-page.png}
+	\caption{Tampilan Navigasi Atas Halaman Landing Page}
+	\label{fig:4.nav-landing-page}
+\end{figure}
+
+\paragraph{Hero Section}
+Bagian hero (Gambar \ref{fig:4.hero-landing-page})  menampilkan judul utama dengan highlight teks, deskripsi singkat tentang sistem, tombol login utama, dan ilustrasi visual yang menarik untuk menarik perhatian pengguna.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/hero-landing-page.png}
+	\caption{Tampilan Hero Halaman Landing Page}
+	\label{fig:4.hero-landing-page}
+\end{figure}
+
+\paragraph{Section Tentang}
+Menjelaskan tentang EquiTeam sebagai solusi pembentukan kelompok dengan pendekatan multi-faktor, dilengkapi dengan visualisasi tipe kepribadian MBTI (Gambar \ref{fig:4.tentang-landing-page}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/tentang-landing-page.png}
+	\caption{Tampilan Section Tentang}
+	\label{fig:4.tentang-landing-page}
+\end{figure}
+
+\paragraph{Section Masalah}
+Menampilkan tiga masalah utama ada (Gambar \ref{fig:4.masalah-landing-page}) dalam pembentukan kelompok tradisional untuk mengilustrasikan tantangan yang ingin diatasi oleh EquiTeam.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/masalah-landing-page.png}
+	\caption{Tampilan Section Masalah}
+	\label{fig:4.masalah-landing-page}
+\end{figure}
+
+\paragraph{Section Solusi}
+Memperkenalkan cara kerja sistem EquiTeam dalam tiga langkah: (1) Dosen membuat tugas, (2) Mahasiswa mengisi kuesioner, (3) Sistem membentuk kelompok otomatis. Section ini juga menampilkan empat aspek pembentukan kelompok: kepribadian, keahlian, gender, dan preferensi topik (Gambar \ref{fig:4.solusi-landing-page}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/solusi-landing-page.png}
+	\caption{Tampilan Section Solusi}
+	\label{fig:4.solusi-landing-page}
+\end{figure}
+
+\paragraph{Section Manfaat}
+Menjelaskan manfaat spesifik untuk mahasiswa (pembelajaran kolaboratif yang efektif, pengembangan soft skills) dan dosen (efisiensi manajemen kelompok, analitik komprehensif) (Gambar \ref{fig:4.manfaat-landing-page}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/manfaat-landing-page.png}
+	\caption{Tampilan Section Manfaat}
+	\label{fig:4.manfaat-landing-page}
+\end{figure}
+
+\paragraph{Footer}
+Berisi informasi kontak, alamat, dan link media sosial untuk mendukung keterlibatan pengguna (Gambar \ref{fig:4.footer-landing-page}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/chapter-4/page/footer-landing-page.png}
+	\caption{Tampilan Section Footer}
+	\label{fig:4.footer-landing-page}
 \end{figure}
 
 \subsubsection*{Fitur Dosen}
@@ -549,6 +632,139 @@ Halaman profil dosen menampilkan dua bidang informasi yang dapat diperbarui:
 Dosen dapat menyimpan perubahan data pribadi mereka dengan mengklik tombol ``Simpan Perubahan'' setelah memasukkan atau memperbarui informasi. Sistem akan memvalidasi data dan menampilkan pesan konfirmasi atau pesan kesalahan sesuai hasil penyimpanan.
 
 Gambar \ref{fig:4.dosen-profile} menunjukkan tampilan halaman profil dosen dengan formulir data pribadi yang lengkap.
+
+\subsubsection{Komponen Navigasi dan Sidebar}
+
+Sistem EquiTeam menggunakan komponen navigasi yang konsisten di seluruh halaman untuk memastikan pengalaman pengguna yang kohesif. Komponen navigasi terdiri dari:
+
+\begin{enumerate}
+	\item \textbf{Top Navigation Bar}: Menampilkan logo sistem, tombol pengganti bahasa (Bahasa Indonesia/English), dan informasi pengguna yang sedang login. Navigasi atas ini selalu terlihat dan memberikan akses cepat ke fitur-fitur utama.
+
+	\item \textbf{Sidebar Navigation}: Menu navigasi vertikal di sisi kiri yang berbeda untuk setiap peran pengguna:
+	      \begin{itemize}
+		      \item \textbf{Untuk Dosen}: Beranda, Halaman Manajemen, Profil, dan Logout
+		      \item \textbf{Untuk Mahasiswa}: Beranda, Halaman Manajemen, Profil, dan Logout
+	      \end{itemize}
+	      Setiap menu dilengkapi dengan ikon yang representatif untuk memudahkan identifikasi fungsi.
+\end{enumerate}
+
+Komponen navigasi ini dirancang dengan prinsip konsistensi visual menggunakan warna tema biru untuk elemen aktif dan abu-abu untuk elemen non-aktif, memberikan umpan balik visual yang jelas kepada pengguna tentang status navigasi mereka.
+
+\subsubsection{Komponen Kartu (Card Components)}
+
+Sistem extensively menggunakan komponen kartu untuk menampilkan informasi secara terstruktur dan visual. Jenis kartu yang digunakan meliputi:
+
+\begin{enumerate}
+	\item \textbf{Class Card}: Menampilkan informasi kelas dengan nama mata kuliah, periode akademik, jumlah mahasiswa, dan status kelas. Setiap kartu memiliki tombol aksi untuk melihat detail, mengedit, atau menghapus kelas.
+
+	\item \textbf{Task Card}: Menampilkan informasi tugas dengan nama tugas, deskripsi singkat, status pengumpulan, dan tanggal pembuatan. Kartu ini memberikan gambaran cepat tentang progres tugas.
+
+	\item \textbf{Group Card}: Menampilkan hasil pembentukan kelompok dengan nama kelompok, daftar anggota dengan ikon MBTI, dan skor kualitas kelompok. Kartu ini menggunakan warna berbeda untuk menunjukkan tingkat kualitas (hijau untuk tinggi, kuning untuk sedang, merah untuk rendah).
+
+	\item \textbf{Student Card}: Menampilkan informasi mahasiswa dengan nama, NIM, jenis kelamin, dan ikon kepribadian MBTI. Kartu ini digunakan dalam daftar mahasiswa dan detail anggota kelompok.
+\end{enumerate}
+
+Setiap komponen kartu dirancang dengan efek bayangan (shadow) untuk memberikan kedalaman visual dan memisahkan kartu dari latar belakang, meningkatkan keterbacaan dan hierarki visual.
+
+\subsubsection{Komponen Form dan Input}
+
+Sistem EquiTeam menggunakan berbagai komponen form untuk interaksi pengguna:
+
+\begin{enumerate}
+	\item \textbf{Text Input Fields}: Bidang input teks dengan validasi real-time, placeholder yang informatif, dan indikator status (default, focus, error, success). Bidang input memiliki ukuran yang konsisten (Large untuk form utama, Medium untuk form sekunder).
+
+	\item \textbf{Dropdown Components}: Komponen dropdown untuk pemilihan opsi seperti periode akademik, semester, atau kategori. Dropdown memiliki animasi smooth dan pencarian otomatis untuk opsi yang banyak.
+
+	\item \textbf{Radio Buttons}: Untuk pemilihan tunggal seperti jenis kelamin atau metode pembentukan kelompok. Radio buttons memiliki desain yang konsisten dengan indikator visual yang jelas.
+
+	\item \textbf{Checkboxes}: Untuk pemilihan ganda seperti pemilihan mahasiswa untuk operasi bulk. Checkboxes memiliki ukuran yang cukup untuk interaksi mudah dan status visual yang jelas.
+
+	\item \textbf{Sliders}: Untuk input numerik seperti bobot parameter pembentukan kelompok. Sliders memiliki nilai minimum dan maksimum yang jelas serta indikator nilai real-time.
+\end{enumerate}
+
+Semua komponen form dirancang dengan prinsip aksesibilitas, memiliki label yang jelas, dan memberikan umpan balik visual yang memadai untuk berbagai status interaksi.
+
+\subsubsection{Komponen Modal dan Dialog}
+
+Modal dan dialog digunakan untuk interaksi yang memerlukan fokus penuh tanpa meninggalkan halaman saat ini:
+
+\begin{enumerate}
+	\item \textbf{Create Class Dialog}: Modal untuk membuat kelas baru dengan form lengkap dan validasi input.
+
+	\item \textbf{Create Task Dialog}: Modal untuk membuat tugas baru dengan form untuk nama, deskripsi, spesifikasi skill, dan preferensi topik.
+
+	\item \textbf{Share Class Dialog}: Modal untuk membagikan kelas dengan URL dan token yang dapat disalin.
+
+	\item \textbf{Create Group Dialog}: Modal untuk pembentukan kelompok dengan pilihan metode dan parameter.
+
+	\item \textbf{Confirmation Dialogs}: Modal konfirmasi untuk operasi kritis seperti hapus data atau keluar dari sistem.
+\end{enumerate}
+
+Setiap modal memiliki overlay gelap di belakangnya untuk memfokuskan perhatian pengguna, tombol close yang jelas, dan dapat ditutup dengan menekan tombol Escape atau mengklik area di luar modal.
+
+\subsubsection{Komponen Tabel dan Data Display}
+
+Untuk menampilkan data dalam jumlah besar, sistem menggunakan komponen tabel yang responsif:
+
+\begin{enumerate}
+	\item \textbf{Management Tables}: Tabel untuk manajemen kelas dan tugas dengan kolom untuk nama, status, tanggal, dan aksi kontrol. Tabel memiliki fitur pencarian dan filter untuk memudahkan navigasi data.
+
+	\item \textbf{Student Lists}: Tabel daftar mahasiswa dengan informasi lengkap termasuk NIM, nama, jenis kelamin, dan tipe MBTI.
+
+	\item \textbf{Answer Tables}: Tabel untuk menampilkan jawaban kuesioner mahasiswa dengan tab untuk kategori berbeda (Kepribadian, Skill, Preferensi).
+\end{enumerate}
+
+Semua tabel memiliki desain yang konsisten dengan header yang jelas, baris zebra untuk memudahkan pembacaan, dan kontrol pagination untuk data yang banyak. Tabel juga responsif dan dapat di-scroll secara horizontal pada layar kecil.
+
+\subsubsection{Komponen Visualisasi Data dan Grafik}
+
+Sistem EquiTeam menyediakan berbagai komponen visualisasi data untuk analisis kepribadian dan distribusi mahasiswa:
+
+\begin{enumerate}
+	\item \textbf{MBTI Bar Chart}: Grafik batang yang menampilkan distribusi 16 tipe kepribadian MBTI dengan warna berbeda untuk setiap tipe. Setiap batang menunjukkan jumlah mahasiswa dengan tipe kepribadian tertentu dan dilengkapi dengan tooltip yang menampilkan detail saat hover.
+
+	\item \textbf{Skill Distribution Chart}: Grafik batang horizontal yang menampilkan distribusi keahlian mahasiswa dalam berbagai teknologi atau topik. Grafik ini menggunakan gradien warna (merah untuk tingkat rendah, kuning untuk sedang, hijau untuk tinggi) untuk memudahkan interpretasi tingkat keahlian.
+
+	\item \textbf{Preference Pie Chart}: Grafik lingkaran yang menampilkan preferensi topik mahasiswa. Setiap segmen mewakili topik berbeda dengan warna yang kontras untuk memudahkan pembedaan.
+
+	\item \textbf{Gender Distribution Chart}: Grafik donat yang menampilkan distribusi gender mahasiswa dalam kelas untuk memastikan keseimbangan demografis.
+
+	\item \textbf{MBTI Radar Chart}: Grafik radar yang menampilkan profil kepribadian individu dengan empat sumbu (E/I, S/N, T/F, J/P). Grafik ini memberikan visualisasi komprehensif tentang dimensi kepribadian seseorang.
+
+	\item \textbf{Quality Score Visualization}: Menampilkan skor kualitas kelompok dengan indikator visual (warna dan persentase) yang menunjukkan seberapa seimbang komposisi kelompok berdasarkan berbagai parameter.
+\end{enumerate}
+
+Semua komponen grafik dirancang interaktif dengan fitur hover untuk detail informasi, legenda yang jelas, dan warna yang konsisten dengan tema desain sistem. Grafik juga responsif dan dapat menyesuaikan ukurannya berdasarkan layar perangkat.
+
+\subsubsection{Komponen Loading dan Status}
+
+Sistem menggunakan berbagai komponen loading dan status untuk memberikan umpan balik visual kepada pengguna:
+
+\begin{enumerate}
+	\item \textbf{Loading Skeleton}: Komponen skeleton yang menampilkan struktur konten saat data sedang dimuat. Skeleton ini memberikan indikasi visual bahwa konten sedang dimuat tanpa membuat pengguna menunggu di layar kosong.
+
+	\item \textbf{Progress Indicators}: Indikator progres untuk operasi yang memakan waktu seperti pembentukan kelompok atau pengolahan data besar.
+
+	\item \textbf{Status Badges}: Lencana status untuk menunjukkan kondisi tugas atau kelompok (Belum Dimulai, Sedang Berjalan, Selesai, Menunggu Pembagian).
+
+	\item \textbf{Toast Notifications}: Notifikasi singkat yang muncul untuk memberikan umpan balik tentang operasi yang berhasil atau gagal.
+\end{enumerate}
+
+Komponen-komponen ini dirancang untuk memberikan pengalaman pengguna yang smooth dan informatif, mengurangi ketidakpastian tentang status operasi sistem.
+
+\subsubsection{Komponen MBTI dan Kepribadian}
+
+Sistem memiliki komponen khusus untuk menampilkan informasi MBTI:
+
+\begin{enumerate}
+	\item \textbf{MBTI Character Icons}: 16 ikon karakter unik yang mewakili setiap tipe kepribadian MBTI. Setiap ikon memiliki warna dan desain yang khas untuk memudahkan identifikasi visual.
+
+	\item \textbf{MBTI Type Cards}: Kartu yang menampilkan detail informasi tentang setiap tipe MBTI termasuk deskripsi karakteristik dan kekuatan.
+
+	\item \textbf{Personality Distribution Grid}: Grid 4x4 yang menampilkan semua 16 tipe MBTI dengan jumlah mahasiswa untuk setiap tipe.
+\end{enumerate}
+
+Komponen-komponen ini tidak hanya berfungsi sebagai elemen visual, tetapi juga sebagai alat edukasi untuk membantu pengguna memahami berbagai tipe kepribadian dan karakteristiknya dalam konteks pembentukan kelompok yang efektif.
 
 \begin{figure}[H]
 	\centering
