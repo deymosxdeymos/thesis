@@ -14,19 +14,19 @@ Adapun alur penelitian pengembangan sistem pembagian kelompok yang dapat dilihat
 Bagian ini akan menjelaskan secara detail tentang diagram alur penelitian yang telah dibuat.
 
 \subsection{Identifikasi Masalah} \label{III.Langkah 1}
-Tahap ini mengidentifikasi permasalahan dalam proses pembagian kelompok mahasiswa yang dilakukan secara manual. Metode tradisional, seperti pembagian berdasarkan nomor urut, daftar absen, atau pertemanan, sering kali menghasilkan kelompok yang tidak seimbang. Masalah ini dapat menyebabkan ketidakseimbangan keterampilan antaranggota, konflik pribadi, dan motivasi belajar yang menurun. Sebagai solusi, sistem berbasis \textit{Edu2Com API}, yang dikembangkan oleh \textit{CSIC}, memungkinkan pembagian kelompok secara otomatis berdasarkan 4 parameter utama: kesesuaian keterampilan (\textit{skill match}), kompatibilitas kepribadian, preferensi tugas, dan kohesi tim. Berdasarkan hasil observasi, sistem ini memerlukan \textit{dashboard} yang dapat digunakan oleh dosen dan mahasiswa. Penelitian ini fokus pada pengembangan sistem berbasis metodologi \textit{Agile Kanban}. \par
+Tahap ini mengidentifikasi permasalahan dalam proses pembagian kelompok mahasiswa yang dilakukan secara manual (lihat Bab~\ref{Bab I}, Bagian~\ref{I.Latar Belakang}). Metode tradisional, seperti pembagian berdasarkan nomor urut, daftar absen, atau pertemanan, sering kali menghasilkan kelompok yang tidak seimbang. Masalah ini dapat menyebabkan ketidakseimbangan keterampilan antaranggota, konflik pribadi, dan motivasi belajar yang menurun. Sebagai solusi, sistem berbasis \textit{Edu2Com API}, yang dikembangkan oleh \textit{CSIC}, memungkinkan pembagian kelompok secara otomatis berdasarkan 4 parameter utama: kesesuaian keterampilan (\textit{skill match}), kompatibilitas kepribadian, preferensi tugas, dan kohesi tim. Berdasarkan hasil observasi, sistem ini memerlukan \textit{dashboard} yang dapat digunakan oleh dosen dan mahasiswa. Penelitian ini fokus pada pengembangan sistem berbasis metodologi \textit{Agile Kanban}. \par
 
 \subsection{Studi Literatur} \label{III.Langkah 2}
-Pada tahap ini, dilakukan kajian pustaka dengan menganalisis metode dan pendekatan yang mencakup studi-studi terdahulu yang berkaitan dengan pembentukan kelompok berbasis \textit{AI} dan metode pengembangan perangkat lunak. Materi literatur ini dirangkum dalam tabel kajian pustaka pada bab 2 untuk memberikan gambaran terkait kontribusi penelitian sebelumnya serta relevansinya dengan penelitian yang dilakukan. \par
+Pada tahap ini, dilakukan kajian pustaka dengan menganalisis metode dan pendekatan yang mencakup studi-studi terdahulu yang berkaitan dengan pembentukan kelompok berbasis \textit{AI} dan metode pengembangan perangkat lunak (lihat Bab~\ref{Bab II}). Materi literatur ini dirangkum dalam tabel kajian pustaka pada Bab~\ref{Bab II} untuk memberikan gambaran terkait kontribusi penelitian sebelumnya serta relevansinya dengan penelitian yang dilakukan. \par
 
 \subsection{Implementasi Metode Agile Kanban} \label{III.Langkah 3}
-Melakukan penelitian dan pengembangan dengan menggunakan metode \textit{Agile Kanban} yang akan dijelaskan pada sub-bab 3.4. Dalam pengembangan menggunakan metode \textit{Agile Kanban}, tahapan yang dilakukan meliputi 4 tahapan mulai dari perencanaan, pengembangan, dan pengujian/evaluasi sistem. \par
+Melakukan penelitian dan pengembangan dengan menggunakan metode \textit{Agile Kanban} yang akan dijelaskan pada Bagian~\ref{III.Metode}. Dalam pengembangan menggunakan metode \textit{Agile Kanban}, tahapan yang dilakukan meliputi 4 tahapan mulai dari perencanaan (Bagian~\ref{III.Perencanaan}, Tabel~\ref{table:3.fungsional} dan~\ref{table:3.nonfungsional}), pengembangan, dan pengujian/evaluasi sistem. \par
 
 \subsection{Pembahasan} \label{III.Langkah 4}
-Hasil penelitian akan dibahas secara mendetail, mencakup analisis kinerja sistem, tingkat efektivitas pembagian kelompok, dan kemudahan penggunaan \textit{dashboard}. Evaluasi dilakukan secara kuantitatif berdasarkan \textit{Grey Box Testing}. Jika terdapat masalah atau kekurangan pada bagian pengujian, iterasi pengembangan dilakukan sebanyak 2 kali untuk memastikan semua komponen bekerja optimal. \par
+Hasil penelitian akan dibahas secara mendetail, mencakup analisis kinerja sistem, tingkat efektivitas pembagian kelompok, dan kemudahan penggunaan \textit{dashboard} (lihat Bab~\ref{Bab IV}). Evaluasi dilakukan secara kuantitatif berdasarkan \textit{Grey Box Testing}. Jika terdapat masalah atau kekurangan pada bagian pengujian, iterasi pengembangan dilakukan sebanyak 2 kali untuk memastikan semua komponen bekerja optimal. \par
 
 \subsection{Kesimpulan} \label{III.Langkah 5}
-Tahap akhir penelitian ini menyimpulkan hasil pengembangan sistem pembagian kelompok. Hasil kesimpulan ini menekankan pencapaian utama dari penelitian serta membuka peluang untuk pengembangan lebih lanjut. \par
+Tahap akhir penelitian ini menyimpulkan hasil pengembangan sistem pembagian kelompok (lihat Bab~\ref{Bab V}). Hasil kesimpulan ini menekankan pencapaian utama dari penelitian serta membuka peluang untuk pengembangan lebih lanjut. \par
 
 \section{Alat dan Bahan Tugas Akhir} \label{III.Alat dan Bahan}
 Berisi alat-alat dan bahan-bahan yang digunakan dalam penelitian. \par
@@ -57,6 +57,10 @@ Bahan yang digunakan/diperlukan untuk melakukan penelitian, dapat berupa: \par
 \end{enumerate}
 
 \section{Metode Pengembangan} \label{III.Metode}
+
+Penelitian ini menggunakan metode \textit{Agile Kanban} untuk pengembangan sistem. Pemilihan \textit{Kanban} didasarkan pada beberapa pertimbangan: (1) Konteks pengembangan \textit{solo developer} yang tidak memerlukan \textit{overhead} pertemuan \textit{sprint} seperti pada \textit{Scrum}, (2) Fleksibilitas dalam mengelola prioritas fitur secara dinamis melalui visualisasi papan \textit{Kanban}, (3) Pembatasan \textit{Work in Progress} (WIP) yang membantu menjaga fokus dan menghindari \textit{multitasking} berlebihan, dan (4) \textit{Continuous flow} yang memungkinkan pengembangan, pengujian, dan perbaikan dilakukan secara iteratif tanpa terikat pada durasi \textit{sprint} tetap. Metode ini telah terbukti efektif dalam konteks pengembangan perangkat lunak dengan tim kecil atau individu. \par
+
+Siklus pengembangan dalam penelitian ini mengikuti alur: identifikasi kebutuhan → perencanaan \textit{backlog} → pengembangan fitur → pengujian → evaluasi → iterasi. Contoh konkret dari siklus \textit{feedback loop} ini adalah ketika ditemukan \textit{bug} pada pengujian (misalnya, \textit{timeout} API pada skenario GB09), maka \textit{bug} tersebut diprioritaskan kembali ke \textit{backlog}, diperbaiki dalam iterasi berikutnya, dan diuji ulang hingga lulus. Pendekatan ini memberikan visibilitas penuh terhadap progres pengembangan dan memastikan kualitas sistem terjaga melalui siklus pengujian berulang. \par
 
 \subsection{Tahap Perencanaan} \label{III.Perencanaan}
 Tahap perencanaan meliputi identifikasi kebutuhan pengguna, pembuatan daftar fitur, dan perumusan \textit{backlog} awal. Diskusi dilakukan bersama calon pengguna (dosen), rekan proyek, serta \textit{brainstorming} mandiri untuk menentukan fitur prioritas yang akan dikembangkan. \textit{Backlog} disusun berdasarkan kebutuhan pengguna yang dikumpulkan dari proses wawancara \textit{stakeholder} (Dosen dan Mahasiswa Informatika Institut Teknologi Sumatera) dan ditampilkan dalam papan \textit{Kanban} dengan kolom-kolom: \textit{To Do}, \textit{In Progress}, \textit{Testing}, dan \textit{Done}. Pembatasan \textit{WIP} diberlakukan untuk menjaga fokus pengembang dan menghindari \textit{multitasking} berlebih, untuk penelitian ini \textit{WIP} dibatasi menjadi 2 progres per tugas pengembangan.
@@ -103,13 +107,13 @@ Menganalisis kebutuhan fungsional sistem berdasarkan proses-proses yang akan dij
 	\hline
 	F-14          & Dosen                   & Melihat kualitas kelompok                                     \\
 	\hline
-	F-16          & Dosen                   & \textit{Export} hasil pembagian kelompok                      \\
+	F-15          & Dosen                   & \textit{Export} hasil pembagian kelompok                      \\
 	\hline
-	F-17          & Mahasiswa               & Mengerjakan kuesioner                                         \\
+	F-16          & Mahasiswa               & Mengerjakan kuesioner                                         \\
 	\hline
-	F-18          & Mahasiswa               & Melihat hasil kuesioner sendiri                               \\
+	F-17          & Mahasiswa               & Melihat hasil kuesioner sendiri                               \\
 	\hline
-	F-19          & Mahasiswa               & Melihat riwayat pembagian kelompok                            \\
+	F-18          & Mahasiswa               & Melihat riwayat pembagian kelompok                            \\
 	\hline
 \end{longtable}
 
@@ -434,65 +438,63 @@ Gambar \ref{fig:3.activity-riwayat-kelompok} menjelaskan alur kerja seorang maha
 \subsubsection{\textit{Entity Relationship Diagram} (ERD)}
 Gambar ERD di bawah ini memiliki beberapa entitas yang digunakan untuk mengelola anggota tim. Hubungan antar entitas dijelaskan melalui proses seperti pembagian tugas, pengumpulan data mahasiswa, dan pembentukan tim menggunakan Edu2Com API.
 
-\paragraph{1. Entitas \textit{User}}
+\paragraph{Entitas \textit{User}}
 Entitas ini menyimpan data pengguna, baik dosen maupun mahasiswa. Atribut yang dimiliki adalah:
 \begin{itemize}
 	\item \texttt{id}: \textit{Primary Key} untuk mengidentifikasi pengguna.
-	\item \texttt{email}: Alamat \textit{email} pengguna.
-	\item \texttt{password}: \textit{Hash password} untuk otentikasi.
+	\item \texttt{email}: Alamat \textit{email} pengguna (digunakan untuk autentikasi Google OAuth).
+	\item \texttt{name}: Nama lengkap pengguna.
 	\item \texttt{gender}: \textit{Gender} pengguna (Pria/Wanita).
-	\item \texttt{role\_id}: \textit{foreign key} untuk entitas \textit{Role}.
+	\item \texttt{role}: Peran pengguna (LECTURER/STUDENT).
+	\item \texttt{isOnboarded}: Status penyelesaian proses \textit{onboarding}.
 \end{itemize}
 
-\paragraph{2. Entitas \textit{Role}}
-Mendefinisikan peran: LECTURER atau STUDENT
 
-\paragraph{3. \textit{LecturerProfile} dan \textit{StudentProfile}}
-Sistem menggunakan dua entitas profil terpisah:
+
+\paragraph{Entitas \textit{Course}}
+Entitas ini merepresentasikan mata kuliah yang dikelola oleh dosen. Atribut yang dimiliki adalah:
 \begin{itemize}
-	\item \textit{LecturerProfile}: profil khusus untuk dosen
-	\item \textit{StudentProfile}: profil khusus untuk mahasiswa yang menyimpan data MBTI (ei, sn, tf, pj) dan status penyelesaian tes kepribadian
+	\item \texttt{id}: \textit{primary key} untuk mengidentifikasi mata kuliah
+	\item \texttt{namaMataKuliah}: nama mata kuliah
+	\item \texttt{kelas}: kelas (misal: A, B, C)
+	\item \texttt{shareToken}: kode unik untuk mahasiswa bergabung ke mata kuliah
+	\item \texttt{dosenId}: \textit{foreign key} yang menghubungkan ke dosen pemilik
+	\item \texttt{archivedAt}: status apakah mata kuliah sudah diarsipkan
 \end{itemize}
 
-\paragraph{4. Entitas \textit{Classroom}}
-Entitas ini merepresentasikan kelas virtual yang dikelola oleh dosen. Atribut yang dimiliki adalah:
-\begin{itemize}
-	\item \texttt{id}: \textit{primary key} untuk mengidentifikasi kelas
-	\item \texttt{name}: nama kelas
-	\item \texttt{code}: kode unik untuk mahasiswa bergabung
-	\item \texttt{lecturer\_id}: \textit{foreign key} yang menghubungkan ke dosen pemilik
-	\item \texttt{is\_closed}: status apakah kelas masih aktif
-\end{itemize}
-
-\paragraph{5. Entitas \textit{ClassroomTask}}
+\paragraph{Entitas \textit{Assignment}}
 Entitas ini menyimpan tugas-tugas yang dibuat dosen untuk pembentukan tim. Atribut yang dimiliki adalah:
 \begin{itemize}
 	\item \texttt{id}: \textit{primary key} untuk mengidentifikasi tugas
 	\item \texttt{title}: judul tugas
-	\item \texttt{classroom\_id}: \textit{foreign key} yang menghubungkan ke kelas tertentu
-	\item \texttt{team\_size}: jumlah anggota dalam satu tim (diperlukan oleh API Edu2Com)
+	\item \texttt{description}: deskripsi tugas
+	\item \texttt{courseId}: \textit{foreign key} yang menghubungkan ke mata kuliah tertentu
+	\item \texttt{status}: status pengisian tugas (BELUM\_ISI, MENUNGGU, BERHASIL\_PEMBAGIAN\_GRUP)
 \end{itemize}
 
-\paragraph{6. Entitas MBTI}
-Kuisioner MBTI untuk pengguna dengan \textit{role} \textit{Student}:
+\paragraph{Entitas MBTI (Personality Testing)}
+Sistem tes kepribadian MBTI untuk pengguna dengan \textit{role} \textit{Student} menggunakan beberapa entitas:
 \begin{itemize}
-	\item \texttt{question}: pertanyaan individual dalam kuesioner
-	\item \texttt{options}: jawaban mahasiswa terhadap pertanyaan
+	\item \texttt{PersonalityQuestion}: pertanyaan individual dalam kuesioner dengan dimensi MBTI (EI, SN, TF, PJ)
+	\item \texttt{PersonalitySession}: sesi tes kepribadian yang diikuti mahasiswa
+	\item \texttt{PersonalityResponse}: jawaban mahasiswa terhadap setiap pertanyaan
+	\item \texttt{PersonalityScore}: skor MBTI hasil akhir (ei, sn, tf, pj)
 \end{itemize}
 
-\paragraph{7. Entitas \textit{TaskPreference}}
-Entitas ini menyimpan preferensi mahasiswa terhadap tugas tertentu dengan skala 0-1.
+\paragraph{Entitas \textit{AssignmentTopicPreference}}
+Entitas ini menyimpan preferensi mahasiswa terhadap topik tugas tertentu dengan skala 0-1. Setiap \textit{Assignment} memiliki beberapa \textit{AssignmentTopic}, dan mahasiswa memberikan preferensi untuk setiap topik.
 
-\paragraph{8. Entitas \textit{TeamFormationRequest}}
+\paragraph{Entitas \textit{TeamFormationRequest}}
 Entitas ini mencatat setiap permintaan pembentukan tim ke API Edu2Com. Atribut yang dimiliki adalah:
 \begin{itemize}
-	\item \texttt{task\_id}: tugas yang akan dibentuk timnya
+	\item \texttt{ownerId}: dosen yang membuat permintaan pembentukan tim
+	\item \texttt{assignmentId}: tugas yang akan dibentuk timnya
 	\item \texttt{status}: status pembentukan (PENDING, PROCESSING, COMPLETED, FAILED)
 	\item \texttt{alpha}, \texttt{beta}, \texttt{gamma}, \texttt{delta}: parameter pembentukan tim
-	\item \texttt{request\_payload} \& \texttt{response\_payload}: data JSON yang dikirim dan diterima dari API
+	\item \texttt{requestData} \& \texttt{responseData}: data JSON yang dikirim dan diterima dari API
 \end{itemize}
 
-\paragraph{9. Entitas \textit{Team} \& \textit{TeamMember}}
+\paragraph{Entitas \textit{Team} \& \textit{TeamMember}}
 Entitas ini menyimpan hasil pembentukan tim:
 \begin{itemize}
 	\item \texttt{team}: tim yang terbentuk dengan skor kualitas dari Edu2Com
@@ -539,9 +541,9 @@ Elemen dari \textit{grey box testing} seperti \textit{matrix test}, \textit{regr
 			\endfoot
 			\hline
 			\endlastfoot
-			1           & \textit{Login}             & GB01          & Login berhasil menggunakan \textit{username}/\textit{password} valid melalui Edu2Com API                                              & \textit{Matrix}                                & Pengguna login sukses, sesi aktif, \textit{dashboard} muncul                                                \\
+			1           & \textit{Login}             & GB01          & Login berhasil menggunakan Google OAuth melalui Better Auth                                                                           & \textit{Matrix}                                & Pengguna login sukses, sesi aktif, \textit{dashboard} muncul                                                \\
 			\cline{3-6}
-			            &                            & GB02          & Menguji login dengan \textit{username} valid tetapi \textit{password} salah                                                           & \textit{Pattern}                               & Login ditolak -- sistem menampilkan pesan kesalahan ``kredensial tidak valid''; akses tidak diberikan       \\
+			            &                            & GB02          & Menguji akses tanpa autentikasi (akses langsung ke halaman proteksi tanpa login)                                                      & \textit{Pattern}                               & Akses ditolak -- sistem \textit{redirect} ke halaman login, halaman dilindungi tidak dapat diakses          \\
 			\hline
 			2           & Sesi Pengguna              & GB03          & Uji keamanan sesi, sesi aktif selama pengguna aktif, otomatis \textit{expired} setelah \textit{timeout}                               & \textit{Regression}                            & Sesi dikelola aman, login ulang diperlukan setelah sesi berakhir                                            \\
 			\hline
