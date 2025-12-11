@@ -56,6 +56,60 @@ Bahan yang digunakan/diperlukan untuk melakukan penelitian, dapat berupa: \par
 	\item Spesifikasi \textit{API Edu2Com} untuk layanan pembentukan kelompok otomatis.
 \end{enumerate}
 
+\subsection{Lingkungan Pengembangan} \label{III.Lingkungan}
+Bagian ini menjelaskan \textit{technology stack} yang digunakan dalam pengembangan sistem EduTeams. Tabel \ref{tab:3.tech-stack} menunjukkan daftar teknologi beserta versinya.
+
+\begin{longtable}{|p{0.22\textwidth}|p{0.22\textwidth}|p{0.12\textwidth}|p{0.28\textwidth}|}
+	\caption{\textit{Technology Stack} Sistem EduTeams}
+	\label{tab:3.tech-stack}                                                                                                     \\
+	\hline
+	\textbf{Kategori}         & \textbf{Teknologi}   & \textbf{Versi} & \textbf{Kegunaan}                                        \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Kategori}         & \textbf{Teknologi}   & \textbf{Versi} & \textbf{Kegunaan}                                        \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	\textit{Runtime}          & Bun                  & 1.2.21         & \textit{JavaScript runtime} dan \textit{package manager} \\
+	\hline
+	\textit{Framework}        & Next.js              & 15.4.1         & \textit{Full-stack React framework}                      \\
+	\hline
+	\textit{Frontend}         & React                & 19.1.0         & \textit{UI library}                                      \\
+	\hline
+	\textit{Styling}          & Tailwind CSS         & 4.1.17         & \textit{Utility-first CSS framework}                     \\
+	\hline
+	\textit{UI Components}    & shadcn/ui + Radix UI & --             & Komponen \textit{accessible}                             \\
+	\hline
+	\textit{Database}         & PostgreSQL           & 15             & DBMS relasional                                          \\
+	\hline
+	\textit{ORM}              & Prisma               & 6.19.0         & \textit{Database toolkit}                                \\
+	\hline
+	Autentikasi               & Better Auth          & 1.4.5          & \textit{Authentication library}                          \\
+	\hline
+	Validasi                  & Zod                  & 4.1.13         & \textit{Schema validation}                               \\
+	\hline
+	\textit{State Management} & SWR                  & 2.3.7          & \textit{Data fetching}                                   \\
+	\hline
+	\textit{Forms}            & React Hook Form      & 7.67.0         & \textit{Form handling}                                   \\
+	\hline
+	\textit{i18n}             & next-intl            & 4.5.8          & \textit{Internationalization}                            \\
+	\hline
+	\textit{Testing}          & Playwright           & 1.57.0         & \textit{E2E testing}                                     \\
+	\hline
+	\textit{Linting}          & Biome                & 2.3.8          & \textit{Linter} dan \textit{formatter}                   \\
+	\hline
+	\textit{Deployment}       & Vercel               & --             & \textit{Hosting platform} (region: Singapore)            \\
+	\hline
+	\textit{CI/CD}            & GitHub Actions       & --             & \textit{Continuous integration}                          \\
+	\hline
+\end{longtable}
+
+Kode sumber sistem EduTeams tersedia secara publik di repositori GitHub \cite{EduTeamsRepo2025}.
+
 \section{Metode Pengembangan} \label{III.Metode}
 
 Penelitian ini menggunakan metode \textit{Agile Kanban} untuk pengembangan sistem. Pemilihan \textit{Kanban} didasarkan pada beberapa pertimbangan: (1) Konteks pengembangan \textit{solo developer} yang tidak memerlukan \textit{overhead} pertemuan \textit{sprint} seperti pada \textit{Scrum}, (2) Fleksibilitas dalam mengelola prioritas fitur secara dinamis melalui visualisasi papan \textit{Kanban}, (3) Pembatasan \textit{Work in Progress} (WIP) yang membantu menjaga fokus dan menghindari \textit{multitasking} berlebihan, dan (4) \textit{Continuous flow} yang memungkinkan pengembangan, pengujian, dan perbaikan dilakukan secara iteratif tanpa terikat pada durasi \textit{sprint} tetap. Metode ini telah terbukti efektif dalam konteks pengembangan perangkat lunak dengan tim kecil atau individu. \par
@@ -500,6 +554,58 @@ Entitas ini menyimpan hasil pembentukan tim:
 	\item \texttt{team}: tim yang terbentuk dengan skor kualitas dari Edu2Com
 	\item \texttt{team\_member}: anggota-anggota dalam sebuah tim
 \end{itemize}
+
+\paragraph{Ringkasan Jenis Relasi \textit{Database}}
+Tabel \ref{tab:3.relasi-database} menunjukkan ringkasan jenis relasi antar entitas dalam skema \textit{database} sistem EduTeams.
+
+\begin{longtable}{|p{0.32\textwidth}|p{0.18\textwidth}|p{0.38\textwidth}|}
+	\caption{Jenis Relasi Antar Entitas \textit{Database}}
+	\label{tab:3.relasi-database}                                                                                                                                           \\
+	\hline
+	\textbf{Relasi}                                          & \textbf{Tipe}                         & \textbf{Penjelasan}                                                  \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Relasi}                                          & \textbf{Tipe}                         & \textbf{Penjelasan}                                                  \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	User $\leftrightarrow$ Session                           & \textit{One-to-Many}                  & Satu \textit{user} memiliki banyak \textit{session login}            \\
+	\hline
+	User $\leftrightarrow$ Account                           & \textit{One-to-Many}                  & Satu \textit{user} bisa punya banyak OAuth \textit{account}          \\
+	\hline
+	User $\leftrightarrow$ Course (dosen)                    & \textit{One-to-Many}                  & Satu dosen mengajar banyak \textit{course}                           \\
+	\hline
+	User $\leftrightarrow$ CourseEnrollment                  & \textit{One-to-Many}                  & Satu mahasiswa bisa \textit{enroll} di banyak \textit{course}        \\
+	\hline
+	Course $\leftrightarrow$ CourseEnrollment                & \textit{One-to-Many}                  & Satu \textit{course} punya banyak \textit{enrollment}                \\
+	\hline
+	Course $\leftrightarrow$ Assignment                      & \textit{One-to-Many}                  & Satu \textit{course} punya banyak \textit{assignment}                \\
+	\hline
+	Assignment $\leftrightarrow$ AssignmentTopic             & \textit{One-to-Many}                  & Satu \textit{assignment} punya banyak topik                          \\
+	\hline
+	User $\leftrightarrow$ PersonSkill                       & \textit{One-to-Many}                  & Satu \textit{user} punya banyak \textit{skill}                       \\
+	\hline
+	Skill $\leftrightarrow$ PersonSkill                      & \textit{One-to-Many}                  & Satu \textit{skill} dimiliki banyak orang                            \\
+	\hline
+	Skill $\leftrightarrow$ SkillSimilarity                  & \textit{Many-to-Many} (\textit{Self}) & Kemiripan antar \textit{skill}                                       \\
+	\hline
+	User $\leftrightarrow$ PersonPreference                  & \textit{Many-to-Many} (\textit{Self}) & Preferensi antar \textit{user} (\textit{teammate})                   \\
+	\hline
+	TeamFormationRequest $\leftrightarrow$ Team              & \textit{One-to-Many}                  & Satu \textit{request} menghasilkan banyak \textit{team}              \\
+	\hline
+	Team $\leftrightarrow$ TeamMember                        & \textit{One-to-Many}                  & Satu \textit{team} punya banyak \textit{member}                      \\
+	\hline
+	User $\leftrightarrow$ TeamMember                        & \textit{One-to-Many}                  & Satu \textit{user} bisa jadi \textit{member} di banyak \textit{team} \\
+	\hline
+	PersonalitySession $\leftrightarrow$ PersonalityResponse & \textit{One-to-Many}                  & Satu \textit{session} punya banyak \textit{response}                 \\
+	\hline
+	PersonalitySession $\leftrightarrow$ PersonalityScore    & \textit{One-to-One}                   & Satu \textit{session} punya satu skor akhir                          \\
+	\hline
+\end{longtable}
 
 \begin{landscape}
 	\begin{figure}[H]

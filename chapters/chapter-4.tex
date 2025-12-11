@@ -69,6 +69,8 @@ Tabel \ref{tab:traceability-matrix} menunjukkan keterlacakan antara kebutuhan si
 
 \subsection{Implementasi Fitur}
 
+Bagian ini menjelaskan implementasi fitur-fitur sistem EduTeams. Kode sumber lengkap tersedia di repositori GitHub \cite{EduTeamsRepo2025}. Teknologi yang digunakan dalam implementasi telah dijelaskan pada Tabel \ref{tab:3.tech-stack} di Bab \ref{Bab III}.
+
 Tabel \ref{tab:implementasi-fitur} menunjukkan daftar fitur dan menu yang telah diimplementasikan dalam sistem EduTeams menggunakan metodologi Agile Kanban. Implementasi menggunakan pendekatan iteratif dengan fokus pada fitur-fitur inti terlebih dahulu, kemudian dikembangkan ke fitur-fitur lanjutan. Status implementasi mengikuti alur kerja Kanban dengan tiga kategori: \textit{DONE} (fitur telah diimplementasikan dan diuji), \textit{IN PROGRESS} (fitur sedang dalam tahap pengembangan atau perbaikan), dan \textit{TODO} (fitur direncanakan namun belum diimplementasikan).
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.62\textwidth}|p{0.18\textwidth}|}
@@ -1175,17 +1177,17 @@ Sistem mendukung dua bahasa (Bahasa Indonesia dan English) dengan hasil pengujia
 Keamanan sistem diuji melalui 20 tes dengan hasil 100\% berhasil. Aspek keamanan yang diuji:
 
 \begin{enumerate}
-\item \textbf{Proteksi Halaman}: Halaman yang memerlukan login tidak dapat diakses tanpa autentikasi. Pengguna otomatis diarahkan ke halaman login.
+	\item \textbf{Proteksi Halaman}: Halaman yang memerlukan login tidak dapat diakses tanpa autentikasi. Pengguna otomatis diarahkan ke halaman login.
 
-\item \textbf{Autentikasi}: Sistem menggunakan Google OAuth 2.0 tanpa menyimpan password. Sesi pengguna dikelola dengan aman menggunakan \textit{encrypted cookies}.
+	\item \textbf{Autentikasi}: Sistem menggunakan Google OAuth 2.0 tanpa menyimpan password. Sesi pengguna dikelola dengan aman menggunakan \textit{encrypted cookies}.
 
-\item \textbf{Kontrol Akses}: Dosen dan Mahasiswa memiliki akses berbeda. Setiap peran hanya dapat mengakses data dan fitur sesuai kewenangannya.
+	\item \textbf{Kontrol Akses}: Dosen dan Mahasiswa memiliki akses berbeda. Setiap peran hanya dapat mengakses data dan fitur sesuai kewenangannya.
 
-\item \textbf{Validasi Input}: Semua input pengguna divalidasi untuk mencegah serangan injeksi.
+	\item \textbf{Validasi Input}: Semua input pengguna divalidasi untuk mencegah serangan injeksi.
 
-\item \textbf{Proteksi CSRF}: API memvalidasi asal \textit{request} untuk mencegah serangan dari domain lain.
+	\item \textbf{Proteksi CSRF}: API memvalidasi asal \textit{request} untuk mencegah serangan dari domain lain.
 
-\item \textbf{Keamanan Data}: Data sensitif tidak dapat diakses dari \textit{browser}, melindungi informasi pengguna.
-\end{enumerate>
+	\item \textbf{Keamanan Data}: Data sensitif tidak dapat diakses dari \textit{browser}, melindungi informasi pengguna.
+\end{enumerate}
 
 Sistem menerapkan standar keamanan modern untuk melindungi data pengguna dari ancaman seperti akses tidak sah, pencurian data, dan serangan \textit{injection}.
