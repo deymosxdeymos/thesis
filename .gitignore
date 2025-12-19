@@ -11,6 +11,8 @@ thesis.lot
 thesis.out
 thesis.run.xml
 thesis.toc
+thesis.app
+*.bak*
 .DS_Store
 chapters/.DS_Store
 thesis.bcf

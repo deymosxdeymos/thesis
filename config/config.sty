@@ -211,6 +211,8 @@
 \apptocmd {\listoffigures}{\endgroup}{}{}
 \pretocmd{\listoftables} { \begingroup\renewcommand*{\addvspace}[1]{}}{}{}
 \apptocmd {\listoftables} { \endgroup}{}{}
+\pretocmd{\listofmyappendices}{\begingroup\renewcommand*{\addvspace}[1]{}}{}{}
+\apptocmd {\listofmyappendices}{\endgroup}{}{}
 \makeatother
 
 \setcounter{tocdepth}{3}
@@ -246,6 +248,18 @@
 	\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}
 }
 
+% Setting daftar lampiran
+\newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
+\newlistof{myappendices}{app}{\listappendicesname}
+
+\newcounter{lampiran}
+\renewcommand{\thelampiran}{\arabic{lampiran}}
+\newcommand{\lampiran}[1]{%
+	\refstepcounter{lampiran}%
+	\addcontentsline{app}{myappendices}{\protect\numberline{\thelampiran}#1}%
+	\caption*{Lampiran~\thelampiran~#1}%
+}
+
 % Mengatur format daftar rumus
 \renewcommand{\cftmyequationspresnum}{}
 \newlength{\mylenf}
@@ -253,6 +267,14 @@
 \setlength{\cftmyequationsnumwidth}{\dimexpr\mylenf+5em} % Menyesuaikan nomor
 \setlength{\cftmyequationsindent}{1.5em} % Menambahkan indentasi daftar rumus
 \renewcommand{\cftmyequationsleader}{\dotfill}
+
+% Mengatur format daftar lampiran
+\renewcommand{\cftmyappendicespresnum}{Lampiran~}
+\settowidth{\mylenf}{\cftmyappendicespresnum}
+\setlength{\cftmyappendicesnumwidth}{\dimexpr\mylenf+1.5em}
+\setlength{\cftmyappendicesindent}{1.5em}
+\setlength{\cftbeforemyappendicesskip}{0pt}
+\renewcommand{\cftmyappendicesleader}{\dotfill}
 
 % Setting penulisan rumus yang baru (Ardoni)
 \newenvironment{equationcaptioned}[3][]{%

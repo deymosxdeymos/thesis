@@ -72,7 +72,7 @@
 %----------------------------------------------------------------%
 % Konten Laporan
 %----------------------------------------------------------------%
-\input{chapters/cover-hard} 	% Hardcover
+% \input{chapters/cover-hard} 	% Hardcover (DIKOMENTARI UNTUK TURNITIN)
 % \input{chapters/approval} 		% Lembar Pengesahan (DIKOMENTARI)
 %----------------------------------------------------------------%
 % Aktivasi twoside (agar ada margin gutter 0.5 cm) & nomor halaman selang-seling
@@ -97,33 +97,37 @@
 \input{chapters/abstract-id} 	% Abstrak (Indonesia)
 \input{chapters/abstract-en} 	% Abstrak (Inggris)
 %----------------------------------------------------------------%
-% Halaman Daftar
+% Halaman Daftar (DIKOMENTARI UNTUK TURNITIN)
 %----------------------------------------------------------------%
-% Daftar Isi
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR ISI}
-\tableofcontents
-% Daftar tabel
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR TABEL}
-\listoftables
-% Daftar gambar
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR GAMBAR} % TODO: No halaman ga selang-seling di Daftar? (RDB)
-\listoffigures
-% Daftar rumus
-% \pagestyle{daftarrumusstyle}
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR RUMUS}
-\listofmyequations
-% \thispagestyle{daftarrumusstyle}
+% % Daftar Isi
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR ISI}
+% \tableofcontents
+% % Daftar tabel
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR TABEL}
+% \listoftables
+% % Daftar gambar
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR GAMBAR} % TODO: No halaman ga selang-seling di Daftar? (RDB)
+% \listoffigures
+% % Daftar lampiran
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR LAMPIRAN}
+% \listofmyappendices
+% % Daftar rumus
+% % \pagestyle{daftarrumusstyle}
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR RUMUS}
+% \listofmyequations
+% % \thispagestyle{daftarrumusstyle}
+% % \pagebreak
+% %    \input{chapters/symbols}
+% % Daftar kode
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR KODE}
+% \lstlistoflistings
 % \pagebreak
-%    \input{chapters/symbols}
-% Daftar kode
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR KODE}
-\lstlistoflistings
-\pagebreak
 
 %----------------------------------------------------------------%
 % Konfigurasi Bab
@@ -159,17 +163,18 @@
 \input{chapters/chapter-4}
 \input{chapters/chapter-5}
 %----------------------------------------------------------------%
-% Daftar Pustaka
-\newpage
-\phantomsection%
-\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
-\printbibliography[title={Daftar Pustaka}]
+% Daftar Pustaka (DIKOMENTARI UNTUK TURNITIN)
+% \newpage
+% \phantomsection%
+% \addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+% \printbibliography[title={Daftar Pustaka}]
 %----------------------------------------------------------------%
 % Lampiran
 %----------------------------------------------------------------%
 % TODO: Tabel Lampiran
 \newpage
 \appendix
+\setcounter{lampiran}{0}
 \addcontentsline{toc}{chapter}{LAMPIRAN}
 \chapter*{Lampiran}
 \renewcommand\thesection{\Alph{section}}
