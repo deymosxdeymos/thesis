@@ -17,3 +17,5 @@ thesis.app
 chapters/.DS_Store
 thesis.bcf
 *.minted
+thesis_barcode_print.pdf
+thesis_normal_print.pdf

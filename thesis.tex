@@ -18,7 +18,7 @@
 %--------------------------------------------------------------------%
 
 % Set jenis dokumen Tugas Akhir
-\documentclass{report} % Untuk versi perpustakaan
+\documentclass[twoside]{report} % Untuk versi perpustakaan
 \usepackage[paperwidth=155mm, % Setting layout kertas UNESCO (155 x 230 mm)
 			paperheight=230mm,
 			top=2cm,
@@ -53,17 +53,17 @@
 \dosbingA%
 {Hafiz Budi Firmansyah}%			% Nama Dosen Pembimbing 1
 {NIP. 19910824 201903 1 014}	% NIP Dosen Pembimbing 1
-\dosbingB%
-{Dosen Pembimbing II}%			% Nama Dosen Pembimbing 2
-{NIP. 19900000 2000 00 0 000}	% NIP Dosen Pembimbing 2
+% \dosbingB%
+% {Dosen Pembimbing II}%			% Nama Dosen Pembimbing 2
+% {NIP. 19900000 2000 00 0 000}	% NIP Dosen Pembimbing 2
 
 %Informasi Dosen Penguji
 \pengujiA%
-{Dosen Penguji I}%				% Nama Dosen Penguji 1
-{NIP. 19900000 2000 00 0 000}	% NIP Dosen Penguji 1
+{Arief Ichwani, S.Kom., M.Cs.}%				% Nama Dosen Penguji 1
+{NIP. 19900811 201903 1 011}	% NIP Dosen Penguji 1
 \pengujiB%
-{Dosen Penguji II}%				% Nama Dosen Penguji 2
-{NIP. 19900000 2000 00 0 000}	% NIP Dosen Penguji 2
+{I Wayan Wiprayoga Wisesa, S.Kom., M.Kom.}%				% Nama Dosen Penguji 2
+{NIP. 19890322 201903 1 009}	% NIP Dosen Penguji 2
 
 \sloppy % mencegah text overflow. (Jose)
 \pagenumbering{roman}
@@ -72,8 +72,8 @@
 %----------------------------------------------------------------%
 % Konten Laporan
 %----------------------------------------------------------------%
-% \input{chapters/cover-hard} 	% Hardcover (DIKOMENTARI UNTUK TURNITIN)
-% \input{chapters/approval} 		% Lembar Pengesahan (DIKOMENTARI)
+\input{chapters/cover-hard} 	% Hardcover
+\input{chapters/approval} 		% Lembar Pengesahan
 %----------------------------------------------------------------%
 % Aktivasi twoside (agar ada margin gutter 0.5 cm) & nomor halaman selang-seling
 % mulai dari setelah Lembar Pengesahan (Ardoni)
@@ -90,44 +90,44 @@
 }
 \pagestyle{alternatingstyle}
 %----------------------------------------------------------------%
-% \input{chapters/statement} 		% Halaman Pernyataan Orisinalitas (DIKOMENTARI)
-% \input{chapters/publication} 	% Halaman Persetujuan Publikasi (DIKOMENTARI)
-% \input{chapters/forewords} 		% Kata Pengantar (DIKOMENTARI)
+\input{chapters/statement} 		% Halaman Pernyataan Orisinalitas
+\input{chapters/publication} 	% Halaman Persetujuan Publikasi
+\input{chapters/forewords} 		% Kata Pengantar
 \input{chapters/summary} 		% Ringkasan
 \input{chapters/abstract-id} 	% Abstrak (Indonesia)
 \input{chapters/abstract-en} 	% Abstrak (Inggris)
 %----------------------------------------------------------------%
-% Halaman Daftar (DIKOMENTARI UNTUK TURNITIN)
+% Halaman Daftar
 %----------------------------------------------------------------%
-% % Daftar Isi
-% \phantomsection%
-% \addcontentsline{toc}{chapter}{DAFTAR ISI}
-% \tableofcontents
-% % Daftar tabel
-% \phantomsection%
-% \addcontentsline{toc}{chapter}{DAFTAR TABEL}
-% \listoftables
-% % Daftar gambar
-% \phantomsection%
-% \addcontentsline{toc}{chapter}{DAFTAR GAMBAR} % TODO: No halaman ga selang-seling di Daftar? (RDB)
-% \listoffigures
-% % Daftar lampiran
+% Daftar Isi
+\phantomsection%
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\tableofcontents
+% Daftar tabel
+\phantomsection%
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+\listoftables
+% Daftar gambar
+\phantomsection%
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR} % TODO: No halaman ga selang-seling di Daftar? (RDB)
+\listoffigures
+% Daftar lampiran (commented out - tidak diperlukan)
 % \phantomsection%
 % \addcontentsline{toc}{chapter}{DAFTAR LAMPIRAN}
 % \listofmyappendices
-% % Daftar rumus
-% % \pagestyle{daftarrumusstyle}
+% Daftar rumus (empty, commented out)
+% \pagestyle{daftarrumusstyle}
 % \phantomsection%
 % \addcontentsline{toc}{chapter}{DAFTAR RUMUS}
 % \listofmyequations
-% % \thispagestyle{daftarrumusstyle}
-% % \pagebreak
-% %    \input{chapters/symbols}
-% % Daftar kode
+% \thispagestyle{daftarrumusstyle}
+% \pagebreak
+%    \input{chapters/symbols}
+% Daftar kode (empty, commented out)
 % \phantomsection%
 % \addcontentsline{toc}{chapter}{DAFTAR KODE}
 % \lstlistoflistings
-% \pagebreak
+\pagebreak
 
 %----------------------------------------------------------------%
 % Konfigurasi Bab
@@ -145,34 +145,38 @@
 	\fancyhead[]{}
 	\fancyfoot[C]{\thepage}
 }
+% Mulai selang-seling halaman - pastikan BAB I dimulai di halaman ganjil (kanan)
+% Harus cleardoublepage SEBELUM reset page counter agar cek halaman fisik benar
+\cleardoublepage
 % Reset penomoran halaman menjadi 1
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \justifying
-% Mulai selang-seling halaman
-\forceoddpage
-\cleardoublepage
 \pagestyle{alternatingstyle}
 %----------------------------------------------------------------%
 % Daftar Bab
 % Untuk menambahkan daftar bab, buat berkas bab misalnya `chapter-6` di direktori `chapters`, dan masukkan ke sini.
 %----------------------------------------------------------------%
 \input{chapters/chapter-1}
+\cleardoublepage
 \input{chapters/chapter-2}
+\cleardoublepage
 \input{chapters/chapter-3}
+\cleardoublepage
 \input{chapters/chapter-4}
+\cleardoublepage
 \input{chapters/chapter-5}
 %----------------------------------------------------------------%
-% Daftar Pustaka (DIKOMENTARI UNTUK TURNITIN)
-% \newpage
-% \phantomsection%
-% \addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
-% \printbibliography[title={Daftar Pustaka}]
+% Daftar Pustaka
+\cleardoublepage
+\phantomsection%
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\printbibliography[title={Daftar Pustaka}]
 %----------------------------------------------------------------%
 % Lampiran
 %----------------------------------------------------------------%
 % TODO: Tabel Lampiran
-\newpage
+\cleardoublepage
 \appendix
 \setcounter{lampiran}{0}
 \addcontentsline{toc}{chapter}{LAMPIRAN}
